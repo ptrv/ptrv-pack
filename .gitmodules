@@ -1,0 +1,3 @@
+[submodule "vendor/submodules/mk-project"]
+	path = vendor/submodules/mk-project
+	url = https://github.com/mattkeller/mk-project.git
