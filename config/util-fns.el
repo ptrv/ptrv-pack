@@ -23,3 +23,7 @@
   (next-line 1)
   (yank)
   )
+
+(defun refresh-file ()
+  (interactive)
+  (revert-buffer t t t))
