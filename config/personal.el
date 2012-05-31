@@ -26,3 +26,7 @@
             (ibuffer-switch-to-saved-filter-groups "default")))
 
 (global-auto-revert-mode t)
+
+(cond
+ ((and (window-system) (eq system-type 'gnu/linux))
+  (add-to-list 'default-frame-alist '(font . "Inconsolata-12"))))
