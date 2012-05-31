@@ -12,3 +12,5 @@
 (live-load-config-file "supercollider.el")
 
 (setq ido-max-directory-size 100000)
+
+(server-start)
