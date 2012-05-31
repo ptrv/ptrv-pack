@@ -30,3 +30,6 @@
 (cond
  ((and (window-system) (eq system-type 'gnu/linux))
   (add-to-list 'default-frame-alist '(font . "Inconsolata-12"))))
+
+(add-to-list 'package-archives '
+             ("marmalade" . "http://marmalade-repo.org/packages/"))
