@@ -13,10 +13,11 @@
                          (name . "^\\*scratch\\*$")
                          (name . "^\\*Messages\\*$")
                          (name . "^\\*Completions\\*$")
-                         (filename . ".emacs.d")))
+                         (filename . ".emacs.d")
+                         (filename . ".live-packs")))
 
-               ("improcess apps"  (filename . "Development/improcess/apps"))
-               ("improcess lib"   (filename . "Development/improcess/lib"))
+               ;; ("improcess apps"  (filename . "Development/improcess/apps"))
+               ;; ("improcess lib"   (filename . "Development/improcess/lib"))
                ("dired" (mode . dired-mode))
 
                ))))
