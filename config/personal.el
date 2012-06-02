@@ -34,3 +34,11 @@
 (require 'package)
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
+
+(setq c-basic-offset 4)     ; indents 4 chars
+(setq tab-width 4)          ; and 4 char wide for TAB
+(setq indent-tabs-mode nil) ; And force use of spaces
+
+(add-hook 'write-file-hooks
+          (lambda () (if (not indent-tabs-mode)
+                         (untabify (point-min) (point-max)))))
