@@ -46,3 +46,7 @@
 ;; Latex
 (add-hook 'LaTeX-mode-hook 'TeX-PDF-mode)
 (add-hook 'LaTeX-mode-hook 'reftex-mode)
+
+;; gist.el
+(require 'gist)
+(gist-view-gist t)
