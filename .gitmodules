@@ -4,3 +4,6 @@
 [submodule "vendor/snippets/sclang-mode"]
 	path = vendor/snippets/sclang-mode
 	url = git@github.com:ptrv/sclang-mode.git
+[submodule "vendor/submodules/egg"]
+	path = vendor/submodules/egg
+	url = https://github.com/byplayer/egg.git

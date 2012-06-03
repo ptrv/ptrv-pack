@@ -1,7 +1,9 @@
-;; User pack init file
-;;
-;; User this file to initiate the pack configuration.
-;; See README for more information.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ptrv's personal live pack
+
+(live-add-pack-lib "egg")
+(require 'egg)
+
 (live-add-pack-lib "mk-project")
 (require 'mk-project)
 

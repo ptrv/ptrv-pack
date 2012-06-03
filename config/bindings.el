@@ -20,3 +20,6 @@
 (global-set-key [f5] 'refresh-file)
 
 (global-set-key (kbd "C-S-d") 'duplicate-line)
+
+(global-set-key (kbd "C-x g") 'egg-status)
+;; (global-set-key (kbd "C-x g") 'magit-status)
