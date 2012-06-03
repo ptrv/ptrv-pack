@@ -42,3 +42,7 @@
 ; (add-hook 'write-file-hooks
 ;           (lambda () (if (not indent-tabs-mode)
 ;                          (untabify (point-min) (point-max)))))
+
+;; Latex
+(add-hook 'LaTeX-mode-hook 'TeX-PDF-mode)
+(add-hook 'LaTeX-mode-hook 'reftex-mode)
