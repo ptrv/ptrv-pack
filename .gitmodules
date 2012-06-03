@@ -1,9 +1,10 @@
 [submodule "vendor/submodules/mk-project"]
-	path = vendor/submodules/mk-project
-	url = https://github.com/mattkeller/mk-project.git
+        path = vendor/submodules/mk-project
+        url = https://github.com/mattkeller/mk-project.git
+        ignore = dirty
 [submodule "vendor/snippets/sclang-mode"]
-	path = vendor/snippets/sclang-mode
-	url = git@github.com:ptrv/sclang-mode.git
+        path = vendor/snippets/sclang-mode
+        url = git@github.com:ptrv/sclang-mode.git
 [submodule "vendor/submodules/egg"]
-	path = vendor/submodules/egg
-	url = https://github.com/byplayer/egg.git
+        path = vendor/submodules/egg
+        url = https://github.com/byplayer/egg.git
