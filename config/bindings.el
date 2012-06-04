@@ -21,5 +21,4 @@
 
 (global-set-key (kbd "C-S-d") 'duplicate-line)
 
-;; (global-set-key (kbd "C-x g") 'egg-status)
 (global-set-key (kbd "C-x g") 'magit-status)
