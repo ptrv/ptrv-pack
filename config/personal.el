@@ -1,9 +1,11 @@
-(let ((path))
-  (setq path (concat "~/bin:"
-                     "/usr/local/bin:"
-                     "/usr/bin:"
-                     "/bin"))
-  (setenv "PATH" path))
+;; (let ((path))
+;;   (setq path (concat "~/bin:"
+;;                      "/usr/local/bin:"
+;;                      "/usr/bin:"
+;;                      "/bin"))
+;;   (setenv "PATH" path))
+
+(setenv "PATH" (shell-command-to-string "echo $PATH"))
 
 ;;organise ibuffer into handy groups
 (setq ibuffer-saved-filter-groups
