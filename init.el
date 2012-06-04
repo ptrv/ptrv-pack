@@ -1,8 +1,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ptrv's personal live pack
 
-(live-add-pack-lib "egg")
-(require 'egg)
+;; (live-add-pack-lib "egg")
+;; (require 'egg)
 
 (live-add-pack-lib "mk-project")
 (require 'mk-project)
