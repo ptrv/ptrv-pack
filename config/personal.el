@@ -53,3 +53,6 @@
 (setq gist-view-gist t)
 
 (yas/load-directory "~/.emacs.d/packs/dev/power-pack/vendor/checkouts/yasnippet-0.6.1c/snippets/text-mode")
+
+(add-to-list 'auto-mode-alist '("\\.zsh-template$" . shell-script-mode))
+(add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))
