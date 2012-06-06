@@ -27,15 +27,9 @@
           (lambda ()
             (ibuffer-switch-to-saved-filter-groups "default")))
 
+(setq ido-max-directory-size 100000)
+
 (global-auto-revert-mode t)
-
-(cond
- ((and (window-system) (eq system-type 'gnu/linux))
-  (add-to-list 'default-frame-alist '(font . "Inconsolata-12"))))
-
-(require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 (setq c-basic-offset 4)     ; indents 4 chars
 (setq tab-width 4)          ; and 4 char wide for TAB
@@ -45,14 +39,7 @@
 ;           (lambda () (if (not indent-tabs-mode)
 ;                          (untabify (point-min) (point-max)))))
 
-;; Latex
-(add-hook 'LaTeX-mode-hook 'TeX-PDF-mode)
-(add-hook 'LaTeX-mode-hook 'reftex-mode)
-
 ;; gist.el - open gist on browser
 (setq gist-view-gist t)
 
 (yas/load-directory "~/.emacs.d/packs/dev/power-pack/vendor/checkouts/yasnippet-0.6.1c/snippets/text-mode")
-
-(add-to-list 'auto-mode-alist '("\\.zsh-template$" . shell-script-mode))
-(add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))

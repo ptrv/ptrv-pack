@@ -5,11 +5,13 @@
 (require 'mk-project)
 
 (live-load-config-file "util-fns.el")
+(live-load-config-file "look-and-feel.el")
+(live-load-config-file "package-conf.el")
 (live-load-config-file "personal.el")
 (live-load-config-file "bindings.el")
 (live-load-config-file "org-mode-conf.el")
 (live-load-config-file "supercollider.el")
-
-(setq ido-max-directory-size 100000)
+(live-load-config-file "latex-conf.el")
+(live-load-config-file "filetype-conf.el")
 
 (server-start)
