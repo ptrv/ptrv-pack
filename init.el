@@ -13,5 +13,6 @@
 (live-load-config-file "supercollider.el")
 (live-load-config-file "latex-conf.el")
 (live-load-config-file "filetype-conf.el")
+(live-load-config-file "abbrev-conf.el")
 
 (server-start)
