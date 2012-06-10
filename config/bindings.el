@@ -107,10 +107,10 @@
 (define-key clojure-mode-map (kbd "C-c o s") 'overtone-stop)
 
 ;;requires buffer-move
-(global-set-key (kbd "C-c w p")  'buf-move-up)
-(global-set-key (kbd "C-c w n")  'buf-move-down)
-(global-set-key (kbd "C-c w b")  'buf-move-left)
-(global-set-key (kbd "C-c w f")  'buf-move-right)
+(global-set-key (kbd "C-c w u")  'buf-move-up)
+(global-set-key (kbd "C-c w d")  'buf-move-down)
+(global-set-key (kbd "C-c w l")  'buf-move-left)
+(global-set-key (kbd "C-c w r")  'buf-move-right)
 
 ;;fast vertical naviation
 (global-set-key  (kbd "M-P") (lambda () (interactive) (previous-line 10)))
