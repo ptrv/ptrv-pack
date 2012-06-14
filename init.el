@@ -14,7 +14,6 @@
 (live-load-config-file "latex-conf.el")
 (live-load-config-file "filetype-conf.el")
 (live-load-config-file "abbrev-conf.el")
-(live-load-config-file "overtone-conf.el")
 
 (load-file "~/.emacs.d/packs/dev/power-pack/config/quick-jump-conf.el")
 

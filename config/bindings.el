@@ -104,7 +104,7 @@
 (global-set-key (kbd "C-c p s") 'project-status)
 
 ;;overtone shortcuts
-(define-key clojure-mode-map (kbd "C-c o s") 'overtone-stop)
+(define-key clojure-mode-map (kbd "C-c o s") 'live-overtone-stop)
 
 ;;requires buffer-move
 (global-set-key (kbd "C-c w u")  'buf-move-up)
