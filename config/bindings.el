@@ -38,6 +38,7 @@
 ;;d - diff shortcuts
 ;;p - project shortcuts
 ;;o - overtone shortcuts
+;;w - window shortcuts
 
 ;;text manipulation shortcuts
 (global-set-key (kbd "C-c t b")     'untabify-buffer)
@@ -103,8 +104,13 @@
 (global-set-key (kbd "C-c p d") 'project-dired)
 (global-set-key (kbd "C-c p s") 'project-status)
 
+(global-set-key (kbd "C-c w m") 'live-show-messages)
+
 ;;overtone shortcuts
 (define-key clojure-mode-map (kbd "C-c o s") 'live-overtone-stop)
+
+(global-set-key (kbd "C-c w s") 'swap-windows)
+(global-set-key (kbd "C-c w r") 'rotate-windows)
 
 ;;requires buffer-move
 (global-set-key (kbd "C-c w u")  'buf-move-up)

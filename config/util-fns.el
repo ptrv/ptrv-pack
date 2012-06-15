@@ -75,3 +75,30 @@ Symbols matching the text at point are put first in the completion list."
   (if (or arg (not buffer-file-name))
       (find-file (concat "/sudo:root@localhost:" (ido-read-file-name "File: ")))
     (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
+
+;; https://sites.google.com/site/steveyegge2/my-dot-emacs-file
+(defun swap-windows ()
+  "If you have 2 windows, it swaps them."
+  (interactive)
+  (cond ((not (= (count-windows) 2)) (message "You need exactly 2 windows to do this."))
+        (t
+         (let* ((w1 (first (window-list)))
+                (w2 (second (window-list)))
+                (b1 (window-buffer w1))
+                (b2 (window-buffer w2))
+                (s1 (window-start w1))
+                (s2 (window-start w2)))
+           (set-window-buffer w1 b2)
+           (set-window-buffer w2 b1)
+           (set-window-start w1 s2)
+           (set-window-start w2 s1)))))
+
+;; https://github.com/banister/window-rotate-for-emacs
+(defun rotate-windows-helper(x d)
+  (if (equal (cdr x) nil) (set-window-buffer (car x) d)
+    (set-window-buffer (car x) (window-buffer (cadr x))) (rotate-windows-helper (cdr x) d)))
+
+(defun rotate-windows ()
+  (interactive)
+  (rotate-windows-helper (window-list) (window-buffer (car (window-list))))
+  (select-window (car (last (window-list)))))
