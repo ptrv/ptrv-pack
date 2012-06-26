@@ -45,10 +45,6 @@
   ;; If there is more than one, they won't work right.
   ))
 
-(add-hook 'sclang-mode-hook 'yas/minor-mode)
-
-(yas/load-directory (concat (live-pack-lib-dir) "snippets"))
-
 ;; ##### extension for block error messages ####
 (load-file (concat (live-pack-lib-dir) "ext-scel.el"))
 
@@ -62,20 +58,33 @@
             (local-set-key (kbd "'") 'skeleton-pair-insert-maybe)
             ))
 
+(add-hook 'sclang-mode-hook
+          (lambda ()
+            (setq ac-sources
+                  '(ac-source-dictionary
+                    ac-source-words-in-buffer
+                    ac-source-words-in-same-mode-buffers
+                    ac-source-words-in-all-buffer
+                    ;;ac-source-yasnippet
+                    ac-source-semantic))))
+
 (add-to-list 'ac-modes 'sclang-mode)
 (add-to-list 'ac-user-dictionary-files "~/.local/share/SuperCollider/sclang_completion_dict")
 
-(defun sclang-mode-untabify ()
-  (save-excursion
-    (goto-char (point-min))
-    (while (re-search-forward "[ \t]+$" nil t)
-      (delete-region (match-beginning 0) (match-end 0)))
-    (goto-char (point-min))
-    (if (search-forward "\t" nil t)
-        (untabify (1- (point)) (point-max))))
-  nil)
+(add-hook 'sclang-mode-hook 'yas/minor-mode)
+(yas/load-directory (concat (live-pack-lib-dir) "snippets"))
 
-(add-hook 'sclang-mode-hook
-          '(lambda ()
-             (make-local-variable 'write-contents-hooks)
-             (add-hook 'write-contents-hooks 'sclang-mode-untabify)))
+;; (defun sclang-mode-untabify ()
+;;   (save-excursion
+;;     (goto-char (point-min))
+;;     (while (re-search-forward "[ \t]+$" nil t)
+;;       (delete-region (match-beginning 0) (match-end 0)))
+;;     (goto-char (point-min))
+;;     (if (search-forward "\t" nil t)
+;;         (untabify (1- (point)) (point-max))))
+;;   nil)
+
+;; (add-hook 'sclang-mode-hook
+;;           '(lambda ()
+;;              (make-local-variable 'write-contents-hooks)
+;;              (add-hook 'write-contents-hooks 'sclang-mode-untabify)))
