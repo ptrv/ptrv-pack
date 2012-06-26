@@ -5,3 +5,6 @@
 [submodule "vendor/snippets/sclang-mode"]
         path = vendor/snippets/sclang-mode
         url = git@github.com:ptrv/sclang-mode.git
+[submodule "vendor/submodules/magit"]
+	path = vendor/submodules/magit
+	url = https://github.com/magit/magit.git
