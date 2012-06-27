@@ -90,3 +90,4 @@
              (add-hook 'write-contents-hooks 'sclang-mode-untabify)))
 
 (require 'ext-scel)
+(setq sclang-minibuf-results nil)
