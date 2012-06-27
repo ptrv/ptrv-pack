@@ -46,7 +46,7 @@
   ))
 
 ;; ##### extension for block error messages ####
-(load-file (concat (live-pack-lib-dir) "ext-scel.el"))
+;;(load-file (concat (live-pack-lib-dir) "ext-scel.el"))
 
 (add-hook 'sclang-mode-hook
           (lambda ()
@@ -88,3 +88,5 @@
 ;;           '(lambda ()
 ;;              (make-local-variable 'write-contents-hooks)
 ;;              (add-hook 'write-contents-hooks 'sclang-mode-untabify)))
+
+(require 'ext-scel)
