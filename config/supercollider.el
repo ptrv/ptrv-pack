@@ -1,7 +1,8 @@
-(live-add-pack-lib "SuperCollider")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; SuperCollider
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(live-add-pack-lib "SuperCollider")
 
 (require 'sclang)
 (require 'w3m)
