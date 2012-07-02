@@ -92,3 +92,9 @@
 
 (require 'ext-scel)
 (setq sclang-minibuf-results nil)
+
+;; Raise all supercollider windows.
+(define-key sclang-mode-map (kbd "C-c f")
+  (lambda ()
+    (interactive)
+    (sclang-eval-string "Window.allWindows.do(_.front);")))
