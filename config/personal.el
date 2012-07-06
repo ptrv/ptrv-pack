@@ -48,3 +48,5 @@
 
 ;; gist.el - open gist on browser
 (setq gist-view-gist t)
+
+(setq eshell-aliases-file "~/.live-packs/ptrv-pack/eshell/alias")

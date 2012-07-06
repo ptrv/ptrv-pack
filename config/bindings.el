@@ -138,3 +138,8 @@
 ;; Make Emacs use "newline-and-indent" when you hit the Enter key so
 ;; that you don't need to keep using TAB to align yourself when coding.
 (global-set-key "\C-m" 'newline-and-indent)
+
+;; Start eshell or switch to it if it's active.
+(global-set-key (kbd "C-x m") 'eshell)
+;; Start a new eshell even if one is active.
+(global-set-key (kbd "C-x M") (lambda () (interactive) (eshell t)))
