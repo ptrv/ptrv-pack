@@ -26,7 +26,7 @@
  ;; '(sclang-help-path (quote ("~/compiledir/supercollider/build/HelpBase" "~/share/SuperCollider/Extensions/Help")))
  '(sclang-library-configuration-file "~/.sclang.cfg")
  '(sclang-runtime-directory "~/scwork/")
- ;; '(sclang-server-panel "Server.default.makeGui")
+ '(sclang-server-panel "Server.local.makeGui.window.bounds = Rect(5,5,288,98)")
  '(show-paren-mode t nil (paren))
  '(transient-mark-mode t)
  '(w3m-pop-up-frames t)
