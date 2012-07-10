@@ -69,11 +69,6 @@
   (eshell/cd (locate-dominating-file default-directory "src")))
 
 ;;;###autoload
-(defun eshell/cds ()
-  "Change directory to the project's root."
-  (eshell/cd (locate-dominating-file default-directory "src")))
-
-;;;###autoload
 (defun eshell/cdl ()
   "Change directory to the project's root."
   (eshell/cd (locate-dominating-file default-directory "lib")))
