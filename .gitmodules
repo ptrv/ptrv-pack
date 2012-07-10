@@ -8,3 +8,6 @@
 [submodule "vendor/submodules/magit"]
 	path = vendor/submodules/magit
 	url = https://github.com/magit/magit.git
+[submodule "vendor/submodules/pandoc-mode"]
+	path = vendor/submodules/pandoc-mode
+	url = https://github.com/joostkremers/pandoc-mode.git
