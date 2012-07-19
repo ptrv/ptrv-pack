@@ -11,3 +11,4 @@
 [submodule "vendor/submodules/pandoc-mode"]
 	path = vendor/submodules/pandoc-mode
 	url = https://github.com/joostkremers/pandoc-mode.git
+    ignore = untracked
