@@ -1,5 +1,5 @@
 ;; Latex
-;; (add-hook 'LaTeX-mode-hook 'TeX-PDF-mode)
+(add-hook 'LaTeX-mode-hook 'TeX-PDF-mode)
 (add-hook 'LaTeX-mode-hook 'reftex-mode)
 
 (add-hook 'LaTeX-mode-hook 'TeX-source-correlate-mode)
@@ -7,7 +7,7 @@
 
 (eval-after-load "tex"
    '(add-to-list 'TeX-command-list
-                 '("LaTeXMK"
+                 '("latexmk"
                     "latexmk %s"
                     TeX-run-TeX nil t) t))
 
@@ -27,4 +27,4 @@
             (add-to-list 'TeX-expand-list
                          '("%u" okular-make-url))))
 
-(add-hook 'TeX-mode-hook '(lambda () (setq TeX-command-default "LaTeXMK")))
+(add-hook 'TeX-mode-hook '(lambda () (setq TeX-command-default "latexmk")))
