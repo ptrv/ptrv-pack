@@ -50,3 +50,6 @@
 (setq gist-view-gist t)
 
 (setq eshell-aliases-file "~/.live-packs/ptrv-pack/eshell/alias")
+
+;; activate wrap-region mode
+(wrap-region-global-mode t)
