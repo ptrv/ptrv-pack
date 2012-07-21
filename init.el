@@ -2,9 +2,6 @@
 ;; ptrv's personal live pack
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(live-add-pack-lib "magit")
-(require 'magit)
-
 (live-add-pack-lib "mk-project")
 (require 'mk-project)
 
