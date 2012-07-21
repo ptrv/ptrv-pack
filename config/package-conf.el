@@ -11,8 +11,8 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-;; Add in your own as you wish:
-(defvar my-packages '(magit auctex wrap-region go-mode)
+(defvar my-packages '(magit auctex wrap-region go-mode
+                            starter-kit-eshell)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
