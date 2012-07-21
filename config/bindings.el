@@ -21,6 +21,11 @@
 
 (global-set-key [f5] 'refresh-file)
 
+;; Split Windows
+(global-set-key [f6] 'split-window-horizontally)
+(global-set-key [f7] 'split-window-vertically)
+(global-set-key [f8] 'delete-window)
+
 (global-set-key (kbd "C-S-d") 'duplicate-line)
 
 (global-set-key (kbd "C-x g") 'magit-status)
