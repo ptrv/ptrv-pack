@@ -1,5 +1,8 @@
 (require 'package)
 
+(custom-set-variables
+ '(package-user-dir "~/.live-packs/ptrv-pack/elpa"))
+
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 
