@@ -54,6 +54,5 @@
 ;; activate wrap-region mode
 (wrap-region-global-mode t)
 
-;; go-lang completion
-(require 'go-autocomplete)
-(add-hook 'before-save-hook #'gofmt-before-save)
+(yas/load-directory (concat (live-pack-lib-dir) "snippets"))
+;; (yas/load-directory (concat (live-pack-lib-dir) "yasnippet-snippets"))

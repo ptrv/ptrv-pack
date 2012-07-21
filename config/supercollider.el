@@ -63,7 +63,6 @@
 (add-to-list 'ac-user-dictionary-files "~/.sc_completion")
 
 (add-hook 'sclang-mode-hook 'yas/minor-mode)
-(yas/load-directory (concat (live-pack-lib-dir) "snippets"))
 
 (defun sclang-mode-untabify ()
   (save-excursion
