@@ -12,7 +12,7 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(magit auctex wrap-region)
+(defvar my-packages '(magit auctex wrap-region go-mode)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)

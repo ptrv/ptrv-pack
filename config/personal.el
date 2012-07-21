@@ -53,3 +53,6 @@
 
 ;; activate wrap-region mode
 (wrap-region-global-mode t)
+
+;; go-lang completion
+(require 'go-autocomplete)
