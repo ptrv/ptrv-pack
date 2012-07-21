@@ -16,6 +16,7 @@
 (live-load-config-file "filetype-conf.el")
 (live-load-config-file "abbrev-conf.el")
 (live-load-config-file "pandoc-conf.el")
+(live-load-config-file "golang-conf.el")
 
 (load-file "~/.emacs.d/packs/dev/power-pack/config/quick-jump-conf.el")
 
