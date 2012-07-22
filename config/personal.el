@@ -49,7 +49,7 @@
 ;; gist.el - open gist on browser
 (setq gist-view-gist t)
 
-(setq eshell-aliases-file "~/.live-packs/ptrv-pack/eshell/alias")
+(setq eshell-aliases-file "~/.live-packs/ptrv-pack/etc/eshell_aliases")
 
 ;; activate wrap-region mode
 (wrap-region-global-mode t)
