@@ -10,7 +10,7 @@
 ;;organise ibuffer into handy groups
 (setq ibuffer-saved-filter-groups
       (quote (("default"
-               ("IRC"      (mode . erc-mode))
+               ;; ("IRC"      (mode . erc-mode))
                ("emacs" (or
                          (name . "^\\*scratch\\*$")
                          (name . "^\\*Messages\\*$")
@@ -20,6 +20,7 @@
 
                ;; ("improcess apps"  (filename . "Development/improcess/apps"))
                ;; ("improcess lib"   (filename . "Development/improcess/lib"))
+               ("sclang" (mode . sclang-mode))
                ("dired" (mode . dired-mode))
                ))))
 
