@@ -11,6 +11,7 @@
 (setq ibuffer-saved-filter-groups
       (quote (("default"
                ;; ("IRC"      (mode . erc-mode))
+               ("magit" (name . "\\*magit"))
                ("emacs" (or
                          (name . "^\\*scratch\\*$")
                          (name . "^\\*Messages\\*$")
