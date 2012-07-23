@@ -150,3 +150,5 @@
 (global-set-key (kbd "C-x M") (lambda () (interactive) (eshell t)))
 
 (define-key markdown-mode-map (kbd "<tab>") nil)
+
+(global-set-key [C-tab] [M-tab])
