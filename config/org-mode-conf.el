@@ -45,7 +45,10 @@
 ;; Set to <your Dropbox root directory>/MobileOrg.
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
 ;; Set files to push to org-mobile-directory
-(setq org-mobile-files (quote ("~/Dropbox/org/newgtd.org" "~/Dropbox/org/uni.org" "~/Dropbox/org/notes.org")))
+(setq org-mobile-files (quote ("~/Dropbox/org/newgtd.org"
+                               "~/Dropbox/org/uni.org"
+                               "~/Dropbox/org/notes.org"
+                               "~/Dropbox/org/journal.org")))
 ;; Set to the files (or directory of files) you want sync'd
 (setq org-agenda-files (quote ("~/Dropbox/org/newgtd.org" "~/Dropbox/org/uni.org")))
 ;; Set to the name of the file where new notes will be stored
