@@ -11,7 +11,6 @@
 (setq ibuffer-saved-filter-groups
       (quote (("default"
                ;; ("IRC"      (mode . erc-mode))
-               ("magit" (name . "\\*magit"))
                ("emacs" (or
                          (name . "^\\*scratch\\*$")
                          (name . "^\\*Messages\\*$")
@@ -21,8 +20,9 @@
 
                ;; ("improcess apps"  (filename . "Development/improcess/apps"))
                ;; ("improcess lib"   (filename . "Development/improcess/lib"))
-               ("sclang" (mode . sclang-mode))
+               ("magit" (name . "\\*magit"))
                ("dired" (mode . dired-mode))
+               ("sclang" (mode . sclang-mode))
                ))))
 
 (add-hook 'ibuffer-mode-hook
