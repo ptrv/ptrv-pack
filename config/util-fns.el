@@ -102,3 +102,9 @@ Symbols matching the text at point are put first in the completion list."
   (interactive)
   (rotate-windows-helper (window-list) (window-buffer (car (window-list))))
   (select-window (car (last (window-list)))))
+
+;; Makes load time faster.
+(defun byte-recompile-home ()
+  (interactive)
+  (byte-recompile-directory "~/.emacs.d" 0)
+  (byte-recompile-directory "~/.live-packs/ptrv-pack" 0))
