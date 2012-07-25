@@ -152,3 +152,5 @@
 (define-key markdown-mode-map (kbd "<tab>") nil)
 
 (global-set-key [C-tab] [M-tab])
+
+(global-set-key (kbd " C-x C-p") popwin:keymap)
