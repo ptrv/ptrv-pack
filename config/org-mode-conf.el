@@ -40,6 +40,8 @@
             (define-key yas/keymap [tab] 'yas/next-field)))
 
 ;; org-mode
+(setq org-default-notes-file "~/Dropbox/org/captures.org")
+
 ;; Set to the location of your Org files on your local system
 (setq org-directory "~/Dropbox/org")
 ;; Set to <your Dropbox root directory>/MobileOrg.
@@ -48,9 +50,12 @@
 (setq org-mobile-files (quote ("~/Dropbox/org/newgtd.org"
                                "~/Dropbox/org/uni.org"
                                "~/Dropbox/org/notes.org"
-                               "~/Dropbox/org/journal.org")))
+                               "~/Dropbox/org/journal.org"
+                               "~/Dropbox/org/master_thesis.org")))
 ;; Set to the files (or directory of files) you want sync'd
-(setq org-agenda-files (quote ("~/Dropbox/org/newgtd.org" "~/Dropbox/org/uni.org")))
+(setq org-agenda-files (quote ("~/Dropbox/org/newgtd.org"
+                               "~/Dropbox/org/uni.org"
+                               "~/Dropbox/org/master_thesis.org")))
 ;; Set to the name of the file where new notes will be stored
 (setq org-mobile-inbox-for-pull "~/Dropbox/org/from-mobile.org")
 
