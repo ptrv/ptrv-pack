@@ -11,8 +11,12 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(magit auctex wrap-region go-mode
-                            starter-kit-eshell)
+(defvar my-packages '(magit
+                      auctex
+                      wrap-region
+                      go-mode
+                      starter-kit-eshell
+                      ack-and-a-half)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)

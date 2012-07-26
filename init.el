@@ -8,7 +8,9 @@
 (live-load-config-file "package-conf.el")
 (live-load-config-file "util-fns.el")
 (live-load-config-file "look-and-feel.el")
+(live-load-config-file "shell-conf.el")
 (live-load-config-file "personal.el")
+(live-load-config-file "buffer-conf.el")
 (live-load-config-file "bindings.el")
 (live-load-config-file "org-mode-conf.el")
 (live-load-config-file "supercollider.el")
@@ -17,6 +19,7 @@
 (live-load-config-file "abbrev-conf.el")
 (live-load-config-file "pandoc-conf.el")
 (live-load-config-file "golang-conf.el")
+(live-load-config-file "ack-and-a-half-conf.el")
 
 (load-file "~/.emacs.d/packs/dev/power-pack/config/quick-jump-conf.el")
 
