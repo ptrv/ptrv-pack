@@ -92,4 +92,5 @@
         (".*overtone.log" :regexp t :height 30)
         ("*gists*" :height 30)
         ("*sldb.*":regexp t :height 30)
-        ("*Gofmt Errors*" :noselect t)))
+        ("*Gofmt Errors*" :noselect t)
+        ("*Shell Command Output*" :noselect t)))
