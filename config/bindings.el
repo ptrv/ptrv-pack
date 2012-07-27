@@ -153,4 +153,4 @@
 
 (global-set-key [C-tab] [M-tab])
 
-(global-set-key (kbd " C-x C-p") popwin:keymap)
+(global-set-key (kbd " C-x p") popwin:keymap)
