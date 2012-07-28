@@ -12,3 +12,6 @@
 [submodule "vendor/submodules/yasnippet-snippets"]
 	path = vendor/submodules/yasnippet-snippets
 	url = git@github.com:ptrv/yasnippet-snippets.git
+[submodule "vendor/submodules/auto-complete-auctex"]
+	path = vendor/submodules/auto-complete-auctex
+	url = https://github.com/monsanto/auto-complete-auctex.git

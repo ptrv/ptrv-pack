@@ -28,3 +28,6 @@
                          '("%u" okular-make-url))))
 
 (add-hook 'TeX-mode-hook '(lambda () (setq TeX-command-default "latexmk")))
+
+(live-add-pack-lib "auto-complete-auctex")
+(require 'auto-complete-auctex)
