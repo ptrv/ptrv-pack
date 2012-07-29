@@ -21,6 +21,7 @@
 (live-load-config-file "golang-conf.el")
 (live-load-config-file "ack-and-a-half-conf.el")
 (live-load-config-file "python-conf.el")
+(live-load-config-file "html-conf.el")
 
 (load-file "~/.emacs.d/packs/dev/power-pack/config/quick-jump-conf.el")
 
