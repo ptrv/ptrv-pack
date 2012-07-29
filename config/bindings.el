@@ -154,3 +154,9 @@
 (global-set-key [C-tab] [M-tab])
 
 (global-set-key (kbd " C-x p") popwin:keymap)
+
+(require 'iflipb)
+(global-set-key (kbd "C-<next>") 'iflipb-next-buffer)
+(global-set-key (kbd "C-<prior>") 'iflipb-previous-buffer)
+(global-set-key (kbd "<XF86Forward>") 'iflipb-next-buffer)
+(global-set-key (kbd "<XF86Back>") 'iflipb-previous-buffer)
