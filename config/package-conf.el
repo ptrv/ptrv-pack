@@ -16,7 +16,10 @@
                       wrap-region
                       go-mode
                       starter-kit-eshell
-                      ack-and-a-half)
+                      ack-and-a-half
+                      pymacs
+                      flymake-cursor
+                      smart-operator)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
