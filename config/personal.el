@@ -1,3 +1,9 @@
+;; session.el
+;; save a list of open files in $HOME/.emacs.desktop
+;; save the desktop file automatically if it already exists
+(setq desktop-save (quote if-exists))
+(desktop-save-mode 1)
+
 ;; Flymake
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 
