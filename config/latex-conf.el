@@ -16,9 +16,7 @@
                            (expand-file-name (funcall file "pdf" t)
                                              (file-name-directory (TeX-master-file)))
                            "#src:"
-                           (TeX-current-line)
-                           (expand-file-name (funcall file "tex" t)
-                                             (file-name-directory (TeX-master-file)))))
+                           (TeX-current-line) (buffer-file-name)))
 
 (setq TeX-view-program-list '(("Okular" "okular --unique %u")))
 (setq TeX-view-program-selection '((output-pdf "Okular") (output-dvi "Okular")))
