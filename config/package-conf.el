@@ -19,7 +19,8 @@
                       ack-and-a-half
                       pymacs
                       flymake-cursor
-                      smart-operator)
+                      smart-operator
+                      multi-term)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
