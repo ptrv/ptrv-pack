@@ -1,3 +1,5 @@
+(add-hook 'html-mode-hook 'flymake-mode)
+
 (when (load "flymake" t)
   (defun flymake-html-init ()
     (let* ((temp-file (flymake-init-create-temp-buffer-copy

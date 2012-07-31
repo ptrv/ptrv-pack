@@ -4,8 +4,8 @@
 (setq desktop-save (quote if-exists))
 (desktop-save-mode 1)
 
-;; Flymake
-(add-hook 'find-file-hook 'flymake-find-file-hook)
+;; ;; Flymake
+;; (add-hook 'find-file-hook 'flymake-find-file-hook)
 
 ;; ido recent file
 (setq ido-max-directory-size 100000)

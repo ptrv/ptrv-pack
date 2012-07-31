@@ -17,7 +17,7 @@
 
 (add-to-list 'ac-modes 'python-mode)
 
-
+(add-hook 'python-mode-hook 'flymake-mode)
 (when (load "flymake" t)
   (defun flymake-pyflakes-init ()
     (let* ((temp-file (flymake-init-create-temp-buffer-copy
