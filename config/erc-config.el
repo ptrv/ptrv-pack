@@ -18,9 +18,11 @@
   (erc :server "irc.freenode.net" :full-name "Peter V." :port 6667 :nick "ptrv"))
 
 (require 'erc-match)
-(setq erc-keywords '("ptrv" "supercollider"))
+(setq erc-keywords '("ptrv"))
 (erc-match-mode)
 
+(setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE"
+                                "324" "329" "332" "333" "353" "477"))
 
 ;;change wrap width when window is resized
 (make-variable-buffer-local 'erc-fill-column)
