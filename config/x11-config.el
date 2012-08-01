@@ -1,5 +1,3 @@
-(message "in x11-config.el")
-
 ;; x11.el -- X-specific stuff, only loaded if X is available
 
 ;; Maximise the Emacs window
