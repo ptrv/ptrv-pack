@@ -22,6 +22,12 @@
 (live-load-config-file "ack-and-a-half-conf.el")
 (live-load-config-file "python-conf.el")
 (live-load-config-file "html-conf.el")
+(live-load-config-file "erc-config.el")
+
+(defmacro Xlaunch (&rest x)
+  (list 'if (eq window-system 'x) (cons 'progn x)))
+
+(Xlaunch (live-load-config-file "x11-config.el" ))
 
 (load-file "~/.emacs.d/packs/dev/power-pack/config/quick-jump-conf.el")
 

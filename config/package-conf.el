@@ -21,7 +21,8 @@
                       flymake-cursor
                       smart-operator
                       multi-term
-                      session)
+                      session
+                      notify)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
