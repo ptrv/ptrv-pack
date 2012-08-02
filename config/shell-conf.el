@@ -14,8 +14,16 @@
 ;;        (equal system-type 'gnu/linux))
 ;;   (set-exec-path-from-shell-PATH))
 
+;;; Eshell
 (setq eshell-aliases-file "~/.live-packs/ptrv-pack/etc/eshell_aliases")
 
+(defun eshell/clear ()
+  "04Dec2001 - sailor, to clear the eshell buffer."
+  (interactive)
+  (let ((inhibit-read-only t))
+    (erase-buffer)))
+
+;;; Term
 (setq term-default-bg-color "black")
 (setq term-default-fg-color "white")
 
