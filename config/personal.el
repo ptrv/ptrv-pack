@@ -44,10 +44,10 @@
 
 ;; popwin settings
 (setq popwin:special-display-config
-      '(("*Help*"  :height 30 :stick t)
+      '(("*Help*" :height 30 :stick t)
         ("*Completions*" :noselect t)
         ("*compilation*" :noselect t)
-        ("*Messages*" :height 30)
+        ("*Messages*")
         ("*Occur*" :noselect t)
         ("\\*Slime Description.*" :noselect t :regexp t :height 30)
         ("*magit-commit*" :noselect t :height 30 :width 80)
@@ -62,4 +62,5 @@
         ("*gists*" :height 30)
         ("*sldb.*":regexp t :height 30)
         ("*Gofmt Errors*" :noselect t)
+        ("\\*godoc*" :regexp t)
         ("*Shell Command Output*" :noselect t)))
