@@ -23,6 +23,7 @@
 (live-load-config-file "python-conf.el")
 (live-load-config-file "html-conf.el")
 (live-load-config-file "erc-conf.el")
+(live-load-config-file "c-conf.el")
 
 (defmacro Xlaunch (&rest x)
   (list 'if (eq window-system 'x) (cons 'progn x)))

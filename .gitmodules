@@ -16,3 +16,6 @@
     path = vendor/submodules/auto-complete-auctex
     url = https://github.com/monsanto/auto-complete-auctex.git
     ignore = untracked
+[submodule "vendor/submodules/clang-complete-async"]
+	path = vendor/submodules/clang-complete-async
+	url = https://github.com/bodil/emacs-clang-complete-async.git
