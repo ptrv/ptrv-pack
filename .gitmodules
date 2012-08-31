@@ -19,3 +19,6 @@
 [submodule "vendor/submodules/clang-complete-async"]
 	path = vendor/submodules/clang-complete-async
 	url = https://github.com/bodil/emacs-clang-complete-async.git
+[submodule "vendor/submodules/emacs-faust-mode"]
+	path = vendor/submodules/emacs-faust-mode
+	url = https://github.com/rukano/emacs-faust-mode.git
