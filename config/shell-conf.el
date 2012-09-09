@@ -23,6 +23,9 @@
   (let ((inhibit-read-only t))
     (erase-buffer)))
 
+(live-add-pack-lib "emacs-pcomplete-plugins")
+(require 'pcmpl-git)
+
 ;;; Term
 (setq term-default-bg-color "black")
 (setq term-default-fg-color "white")
