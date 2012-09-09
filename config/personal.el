@@ -10,6 +10,8 @@
 ;; ido recent file
 (setq ido-max-directory-size 100000)
 
+(setq sentence-end-double-space nil)
+
 ;; gist.el - open gist on browser
 (setq gist-view-gist t)
 
