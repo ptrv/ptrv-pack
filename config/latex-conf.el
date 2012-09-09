@@ -18,12 +18,19 @@
                            "#src:"
                            (TeX-current-line) (buffer-file-name)))
 
-(setq TeX-view-program-list '(("Okular" "okular --unique %u")))
-(setq TeX-view-program-selection '((output-pdf "Okular") (output-dvi "Okular")))
-(add-hook 'LaTeX-mode-hook
-          (lambda ()
-            (add-to-list 'TeX-expand-list
-                         '("%u" okular-make-url))))
+(cond ((eq system-type 'gnu/linux)
+       (setq TeX-view-program-list '(("Okular" "okular --unique %u")))
+       (setq TeX-view-program-selection '((output-pdf "Okular") (output-dvi "Okular")))
+       (add-hook 'LaTeX-mode-hook
+                 (lambda ()
+                   (add-to-list 'TeX-expand-list
+                                '("%u" okular-make-url)))))
+      ((eq system-type 'darwin)
+       (setq TeX-view-program-selection '((output-pdf "Skim")))
+       (setq TeX-view-program-list
+             '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n %o %b")))
+       ))
+
 
 (add-hook 'TeX-mode-hook '(lambda () (setq TeX-command-default "latexmk")))
 
