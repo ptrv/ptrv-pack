@@ -22,3 +22,6 @@
 [submodule "vendor/submodules/emacs-faust-mode"]
 	path = vendor/submodules/emacs-faust-mode
 	url = https://github.com/ptrv/emacs-faust-mode.git
+[submodule "vendor/submodules/emacs-pcomplete-plugins"]
+	path = vendor/submodules/emacs-pcomplete-plugins
+	url = https://github.com/DamienCassou/emacs-pcomplete-plugins.git
