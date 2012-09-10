@@ -1,6 +1,3 @@
-(cond
- ((and (window-system) (eq system-type 'gnu/linux))
-  (add-to-list 'default-frame-alist '(font . "Inconsolata-14"))))
 
 (global-linum-mode t)
 ;; (setq linum-format (if on-console "%4d " "%4d"))
