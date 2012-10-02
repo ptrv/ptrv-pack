@@ -137,8 +137,8 @@
 
 ;; Show documentation/information with M-RET
 (define-key lisp-mode-shared-map (kbd "M-RET") 'live-lisp-describe-thing-at-point)
-(define-key slime-mode-map (kbd "M-RET") 'slime-describe-symbol)
-(define-key slime-repl-mode-map (kbd "M-RET") 'slime-describe-symbol)
+;; (define-key slime-mode-map (kbd "M-RET") 'slime-describe-symbol)
+;; (define-key slime-repl-mode-map (kbd "M-RET") 'slime-describe-symbol)
 
 ;; Make Emacs use "newline-and-indent" when you hit the Enter key so
 ;; that you don't need to keep using TAB to align yourself when coding.
