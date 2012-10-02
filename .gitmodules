@@ -25,3 +25,6 @@
 [submodule "vendor/submodules/emacs-pcomplete-plugins"]
 	path = vendor/submodules/emacs-pcomplete-plugins
 	url = https://github.com/DamienCassou/emacs-pcomplete-plugins.git
+[submodule "vendor/submodules/emacs-iedit"]
+	path = vendor/submodules/emacs-iedit
+	url = https://github.com/eproxus/emacs-iedit.git
