@@ -23,6 +23,7 @@
 (live-load-config-file "erc-conf.el")
 (live-load-config-file "faust-conf.el")
 (live-load-config-file "iedit-conf.el")
+(live-load-config-file "edit-server-conf.el")
 (cond
  ((eq system-type 'darwin)
   (live-load-config-file "osx-conf.el"))
