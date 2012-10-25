@@ -160,3 +160,7 @@
 (global-set-key (kbd "C-<prior>") 'iflipb-previous-buffer)
 (global-set-key (kbd "<XF86Forward>") 'iflipb-next-buffer)
 (global-set-key (kbd "<XF86Back>") 'iflipb-previous-buffer)
+
+(define-key ac-completing-map "\r" 'ac-complete)
+
+(browse-kill-ring-default-keybindings)
