@@ -1,8 +1,10 @@
 (live-add-pack-lib "python-mode")
+(setq py-install-directory (concat (live-pack-lib-dir) "python-mode"))
 
 (require 'python-mode)
 
 (setq py-load-pymacs-p t)
+(setq py-start-run-py-shell nil)
 
 ;; (require 'smart-operator)
 
@@ -16,17 +18,17 @@
 ;; (pymacs-load "ropemacs" "rope-")
 ;; (setq ropemacs-enable-autoimport t)
 
-;; (add-hook 'python-mode-hook
-;;           (lambda ()
-;;             (setq ac-sources
-;;                   '(ac-source-dictionary
-;;                     ac-source-words-in-buffer
-;;                     ac-source-words-in-same-mode-buffers
-;;                     ac-source-words-in-all-buffer
-;;                     ;;ac-source-yasnippet
-;;                     ac-source-semantic))))
+(add-hook 'python-mode-hook
+          (lambda ()
+            (setq ac-sources
+                  '(ac-source-dictionary
+                    ac-source-words-in-buffer
+                    ac-source-words-in-same-mode-buffers
+                    ac-source-words-in-all-buffer
+                    ;; ac-source-yasnippet
+                    ac-source-semantic))))
 
-;; (add-to-list 'ac-modes 'python-mode)
+(add-to-list 'ac-modes 'python-mode)
 
 ;; (add-hook 'python-mode-hook 'flymake-mode)
 ;; (when (load "flymake" t)
