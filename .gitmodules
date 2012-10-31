@@ -28,3 +28,6 @@
 [submodule "vendor/submodules/emacs-iedit"]
 	path = vendor/submodules/emacs-iedit
 	url = https://github.com/eproxus/emacs-iedit.git
+[submodule "vendor/submodules/python-mode"]
+	path = vendor/submodules/python-mode
+	url = https://github.com/emacsmirror/python-mode.git
