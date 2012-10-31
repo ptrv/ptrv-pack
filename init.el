@@ -40,4 +40,8 @@
 
 (load-file "~/.emacs.d/packs/dev/power-pack/config/quick-jump-conf.el")
 
+(setq projects-file "~/.emacs-projects.el")
+(if (file-exists-p projects-file)
+     (load-file projects-file))
+
 (server-start)
