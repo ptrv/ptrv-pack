@@ -1,5 +1,3 @@
-(setq py-install-directory (concat (live-pack-lib-dir) "python-mode"))
-
 (require 'python-mode)
 
 ;; ;; use IPython
