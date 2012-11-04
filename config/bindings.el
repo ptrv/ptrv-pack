@@ -92,6 +92,7 @@
 (global-set-key (kbd "C-c j f") 'quick-jump-go-forward)
 (global-set-key (kbd "C-c j c") 'quick-jump-clear-all-marker)
 (key-chord-define-global "öj"  'quick-jump-push-marker)
+(global-set-key (kbd "C-ä") 'quick-jump-push-marker)
 
 ;;diff shortcuts
 (global-set-key (kbd "C-c d f") 'diff-buffer-with-file)
