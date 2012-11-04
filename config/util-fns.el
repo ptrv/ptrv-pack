@@ -2,17 +2,17 @@
   "Find a recent file using ido."
   (interactive)
   (let ((file (ido-completing-read "Choose recent file: " recentf-list nil t)))
-        (when file
-          (find-file file))))
+    (when file
+      (find-file file))))
 
 ;; Cosmetic
 
 (defun pretty-lambdas ()
   (font-lock-add-keywords
    nil `(("(?\\(lambda\\>\\)"
-                  (0 (progn (compose-region (match-beginning 1) (match-end 1)
-                                                                        ,(make-char 'greek-iso8859-7 107))
-                                        nil))))))
+          (0 (progn (compose-region (match-beginning 1) (match-end 1)
+                                    ,(make-char 'greek-iso8859-7 107))
+                    nil))))))
 
 (defun duplicate-line()
   (interactive)
@@ -70,11 +70,17 @@ Symbols matching the text at point are put first in the completion list."
            (position (cdr (assoc selected-symbol name-and-pos))))
       (goto-char position))))
 
-(defun sudo-edit (&optional arg)
+(defun sudo-edit-arg (&optional arg)
   (interactive "p")
   (if (or arg (not buffer-file-name))
       (find-file (concat "/sudo:root@localhost:" (ido-read-file-name "File: ")))
     (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
+
+(defun sudo-edit ()
+  (interactive)
+  (if buffer-file-name
+      (find-file (concat "/sudo:root@localhost:" (buffer-file-name)))
+    (sudo-edit-arg)))
 
 ;; https://sites.google.com/site/steveyegge2/my-dot-emacs-file
 (defun swap-windows ()
