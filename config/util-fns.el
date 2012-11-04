@@ -108,3 +108,13 @@ Symbols matching the text at point are put first in the completion list."
   (interactive)
   (byte-recompile-directory "~/.emacs.d" 0)
   (byte-recompile-directory "~/.live-packs/ptrv-pack" 0))
+
+;; Recreate scratch buffer
+(defun create-scratch-buffer nil
+  "create a scratch buffer"
+  (interactive)
+  (switch-to-buffer (get-buffer-create "*scratch*"))
+  (lisp-interaction-mode)
+  (when (zerop (buffer-size))
+    (insert initial-scratch-message)
+    (set-buffer-modified-p nil)))
