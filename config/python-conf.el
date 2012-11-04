@@ -40,6 +40,7 @@
 (setq ropemacs-confirm-saving nil)
 (setq ropemacs-enable-shortcuts nil)
 (setq ropemacs-local-prefix "C-c C-p")
+(setq ropemacs-guess-project t)
 
 (defun load-ropemacs ()
   (interactive)
