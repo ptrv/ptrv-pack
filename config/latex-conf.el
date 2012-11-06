@@ -8,8 +8,18 @@
 (eval-after-load "tex"
    '(add-to-list 'TeX-command-list
                  '("latexmk"
-                    "latexmk %s"
-                    TeX-run-TeX nil t) t))
+                   "latexmk %s"
+                   TeX-run-TeX nil (latex-mode doctex-mode) :help "Run latexmk") t))
+(eval-after-load "tex"
+   '(add-to-list 'TeX-command-list
+                 '("latexmk clean"
+                   "latexmk -c %s"
+                   TeX-run-TeX nil (latex-mode doctex-mode) :help "Run latexmk -c") t))
+(eval-after-load "tex"
+   '(add-to-list 'TeX-command-list
+                 '("latexmk cleanall"
+                   "latexmk -C %s"
+                   TeX-run-TeX nil (latex-mode doctex-mode) :help "Run latexmk -C") t))
 
 (defun okular-make-url () (concat
                            "file://"
@@ -32,7 +42,11 @@
        ))
 
 
-(add-hook 'TeX-mode-hook '(lambda () (setq TeX-command-default "latexmk")))
+(add-hook 'LaTeX-mode-hook '(lambda () (setq TeX-command-default "latexmk")))
+
+;; (add-hook 'LaTeX-mode-hook 'flymake-mode)
+;; (defun flymake-get-tex-args (file-name)
+;;   (list "pdflatex" (list "-file-line-error" "-draftmode" "-interaction=nonstopmode" file-name)))
 
 (live-add-pack-lib "auto-complete-auctex")
 (require 'auto-complete-auctex)
