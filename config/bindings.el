@@ -33,24 +33,30 @@
 ;;mark current function
 (global-set-key (kbd "C-x C-p")     'mark-defun)
 
-;;C-c handy shortcuts
+;; C-c Groups
+;;
+;;e - eval and replace
+;;b - winner undo
+;;f - winner redo
 ;;l - lispy shortcuts (i.e. paredit and clojure specific fns)
 ;;m - emacs eval shortcuts
-;;s - slime eval shortcuts
-;;t - text manipulation shortcuts
+;;t - text shortcuts
 ;;i - utf8 char shortcuts
 ;;j - quick-jump shortcuts
 ;;d - diff shortcuts
 ;;p - project shortcuts
-;;o - overtone shortcuts
-;;w - window shortcuts
+;;s - show popupwindows
+;;w - window and buffer shortcuts
+
+(global-set-key (kbd "C-c C-e")   'slime-eval-last-expression)
+
+;; winner undo and redo
+(global-set-key (kbd "C-c b") 'winner-undo)
+(global-set-key (kbd "C-c f") 'winner-redo)
 
 ;;text manipulation shortcuts
 (global-set-key (kbd "C-c t b")     'untabify-buffer)
 (global-set-key (kbd "C-c t r")     'untabify)
-
-;;C-c C-? bindings
-(global-set-key (kbd "C-c C-e")   'slime-eval-last-expression)
 
 ;;emacs-lisp shortcuts
 (global-set-key (kbd "C-c m s")     'eval-and-replace) ;swap
@@ -60,20 +66,6 @@
 (global-set-key (kbd "C-c m d")     'eval-defun)
 (global-set-key (kbd "C-c m n")     'eval-print-last-sexp)
 (global-set-key (kbd "C-c m r")     'eval-region)
-
-;;slime mode shortcuts
-(global-set-key (kbd "C-c s c")     'slime-connect)
-(global-set-key (kbd "C-c s e e")   'slime-eval-last-expression)
-(global-set-key (kbd "C-c s e b")   'slime-eval-buffer)
-(global-set-key (kbd "C-c s e i")   'slime-eval-describe)
-(global-set-key (kbd "C-c s e a")   'slime-eval-async)
-(global-set-key (kbd "C-c s e d")   'slime-eval-defun)
-(global-set-key (kbd "C-c s e f")   'slime-eval-feature-expression)
-(global-set-key (kbd "C-c s e l")   'slime-eval-for-lisp)
-(global-set-key (kbd "C-c s e m")   'slime-eval-macroexpand-inplace)
-(global-set-key (kbd "C-c s e n")   'slime-eval-print-last-expression)
-(global-set-key (kbd "C-c s e r")   'slime-eval-region)
-(global-set-key (kbd "C-c s e t")   'slime-eval-with-transcript)
 
 ;;funky characters
 (global-set-key (kbd "C-c i l") (lambda () (interactive) (insert "λ")))
@@ -110,7 +102,9 @@
 (global-set-key (kbd "C-c p d") 'project-dired)
 (global-set-key (kbd "C-c p s") 'project-status)
 
-(global-set-key (kbd "C-c w m") 'live-show-messages)
+;; (global-set-key (kbd "C-c s t") 'live-show-ansi-terminal)
+;; (global-set-key (kbd "C-c s n") 'live-new-ansi-terminal)
+(global-set-key (kbd "C-c s m") 'live-show-messages)
 
 ;;overtone shortcuts
 (define-key clojure-mode-map (kbd "C-c o s") 'live-overtone-stop)
@@ -124,22 +118,63 @@
 (global-set-key (kbd "C-c w l")  'buf-move-left)
 (global-set-key (kbd "C-c w r")  'buf-move-right)
 
+(global-set-key (kbd "C-c w .") 'shrink-window-horizontally)
+(global-set-key (kbd "C-c w ,") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-c w /") (lambda () (interactive) (enlarge-window -1)))
+(global-set-key (kbd "C-c w '") (lambda () (interactive) (enlarge-window 1)))
+
+;; ;; paredit
+;; (define-key paredit-mode-map (kbd "C-c l k") 'paredit-splice-sexp-killing-forward)
+;; (define-key paredit-mode-map (kbd "C-c l w") 'paredit-splice-sexp-killing-backward)
+;; (define-key paredit-mode-map (kbd "C-c l l") 'align-cljlet)
+;; (define-key paredit-mode-map (kbd "C-c l t") 'fill-paragraph)
+;; (define-key paredit-mode-map (kbd "C-M-e") 'paredit-backward-barf-sexp)
+;; (define-key paredit-mode-map (kbd "C-M-s") 'paredit-backward-slurp-sexp)
+;; (define-key paredit-mode-map (kbd "C-M-j") 'live-paredit-forward-slurp-sexp-neatly)
+;; (define-key paredit-mode-map (kbd "C-M-y") 'paredit-forward-barf-sexp)
+;; (define-key paredit-mode-map (kbd "C-M-z") 'align-cljlet)
+;; (define-key paredit-mode-map (kbd "M-s") 'paredit-split-sexp)
+;; (define-key paredit-mode-map (kbd "M-j") 'paredit-join-sexps)
+;; (define-key paredit-mode-map (kbd "M-P") 'live-paredit-previous-top-level-form)
+;; (define-key paredit-mode-map (kbd "M-N") 'live-paredit-next-top-level-form)
+;; (define-key paredit-mode-map (kbd "C-M-f") 'live-paredit-forward)
+;; (define-key paredit-mode-map (kbd "M-q") 'live-paredit-reindent-defun)
+;; (define-key paredit-mode-map (kbd "M-d") 'live-paredit-forward-kill-sexp)
+;; (define-key paredit-mode-map (kbd "M-w") 'live-paredit-backward-kill-sexp)
+;; (define-key paredit-mode-map (kbd "M-k") 'live-paredit-backward-kill)
+;; (define-key paredit-mode-map (kbd "M-\\") 'live-paredit-delete-horizontal-space)
+
+;;scroll other window
+(global-set-key (kbd "C-M-ä") 'scroll-other-window)
+(global-set-key (kbd "C-M-ö") 'scroll-other-window-down)
+
 ;;fast vertical naviation
-(global-set-key  (kbd "M-P") (lambda () (interactive) (previous-line 10)))
-(global-set-key  (kbd "M-N") (lambda () (interactive) (next-line 10)))
+(global-set-key  (kbd "M-U") (lambda () (interactive) (previous-line 10)))
+(global-set-key  (kbd "M-D") (lambda () (interactive) (next-line 10)))
 (global-set-key  (kbd "M-p") 'outline-previous-visible-heading)
 (global-set-key  (kbd "M-n") 'outline-next-visible-heading)
 
+;; (global-set-key (kbd "C-s") 'isearch-forward)
+;; (global-set-key (kbd "C-r") 'isearch-backward)
+;; (global-set-key (kbd "C-M-s") 'isearch-forward-regexp)
+;; (global-set-key (kbd "C-M-r") 'isearch-backward-regexp)
+
 ;; Align your code in a pretty way.
 (global-set-key (kbd "C-x \\") 'align-regexp)
+
+;; Activate occur easily inside isearch
+(define-key isearch-mode-map (kbd "C-o")
+  (lambda () (interactive)
+    (let ((case-fold-search isearch-case-fold-search))
+      (occur (if isearch-regexp isearch-string (regexp-quote isearch-string))))))
 
 ;; Ace jump mode
 (global-set-key (kbd "C-o") 'ace-jump-mode)
 
 ;; Show documentation/information with M-RET
 (define-key lisp-mode-shared-map (kbd "M-RET") 'live-lisp-describe-thing-at-point)
-;; (define-key slime-mode-map (kbd "M-RET") 'slime-describe-symbol)
-;; (define-key slime-repl-mode-map (kbd "M-RET") 'slime-describe-symbol)
+(define-key nrepl-mode-map (kbd "M-RET") 'nrepl-doc)
+(define-key nrepl-interaction-mode-map (kbd "M-RET") 'nrepl-doc)
 
 ;; Make Emacs use "newline-and-indent" when you hit the Enter key so
 ;; that you don't need to keep using TAB to align yourself when coding.
@@ -165,3 +200,6 @@
 (define-key ac-completing-map "\r" 'ac-complete)
 
 (browse-kill-ring-default-keybindings)
+
+;;kill regions
+(global-set-key (kbd "C-x C-k") 'kill-region)
