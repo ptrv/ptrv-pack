@@ -5,6 +5,11 @@
        (file-name-as-directory
         (concat (live-pack-lib-dir) "python-mode"))))
 
+(setq py-load-pymacs-p t)
+;; Do not open python shell on start
+(setq py-start-run-py-shell nil)
+
+
 (require 'python-mode)
 
 ;; ;; use IPython
@@ -29,10 +34,6 @@
 (autoload 'pymacs-exec "pymacs" nil t)
 (autoload 'pymacs-load "pymacs" nil t)
 (autoload 'pymacs-autoload "pymacs")
-(setq py-load-pymacs-p t)
-
-;; Do not open python shell on start
-(setq py-start-run-py-shell nil)
 
 ;; ropemacs
 (setq ropemacs-enable-autoimport t)
