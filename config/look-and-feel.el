@@ -16,6 +16,6 @@
   (unless (or (minibufferp) (member major-mode linum-disabled-modes))
     (linum-mode 1)))
 
-(setq ptrv-themes-dir (concat (live-pack-lib-dir) "themes"))
+(defvar ptrv-themes-dir (concat (live-pack-lib-dir) "themes"))
 (load-file (concat  (file-name-as-directory ptrv-themes-dir) "gandalf-ptrv.el"))
 (color-theme-gandalf-ptrv)
