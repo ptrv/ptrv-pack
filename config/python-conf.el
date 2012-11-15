@@ -5,7 +5,7 @@
        (file-name-as-directory
         (concat (live-pack-lib-dir) "python-mode"))))
 
-(setq py-load-pymacs-p t)
+(setq py-load-pymacs-p nil)
 ;; Do not open python shell on start
 (setq py-start-run-py-shell nil)
 
