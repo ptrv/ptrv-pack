@@ -1,6 +1,6 @@
 
 (if (window-system)
     (progn
-      (add-to-list 'default-frame-alist '(font . "Inconsolata-14"))))
+      (add-to-list 'default-frame-alist '(font . "Inconsolata-12"))))
 
 (require 'pcmpl-apt)

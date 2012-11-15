@@ -25,6 +25,7 @@
 (global-set-key [f6] 'split-window-horizontally)
 (global-set-key [f7] 'split-window-vertically)
 (global-set-key [f8] 'delete-window)
+(global-set-key [f9] 'delete-other-windows)
 
 (global-set-key (kbd "C-S-d") 'duplicate-line)
 

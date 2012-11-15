@@ -19,7 +19,8 @@
          (<= (x-display-pixel-height) 800))
        (toggle-fullscreen))
       (t
-       (set-frame-size (selected-frame) 110 60)
+       ;; (set-frame-size (selected-frame) 110 60)
+       (set-frame-size (selected-frame) 130 60)
        (set-frame-position (selected-frame) 200 20)))
 ;; Define a function for making desktop notifications
 (require 'dbus)
