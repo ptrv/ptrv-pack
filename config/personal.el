@@ -68,3 +68,8 @@
         ("*Gofmt Errors*" :noselect t)
         ("\\*godoc*" :regexp t)
         ("*Shell Command Output*" :noselect t)))
+
+(setq live-disable-zone t)
+
+;; debug messages
+(setq debug-on-error t)
