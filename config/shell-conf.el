@@ -26,7 +26,7 @@
 (defun eshell/e (file)
   (find-file-other-window file))
 
-(add-hook 'eshell-mode-hook
+(add-hook 'eshell-prompt-load-hook
           (lambda ()
             (set-face-attribute 'eshell-prompt-face nil :foreground "dark green")))
 
