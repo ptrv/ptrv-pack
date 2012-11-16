@@ -73,3 +73,5 @@
 
 ;; debug messages
 (setq debug-on-error t)
+
+(setq compilation-scroll-output 'first-error)
