@@ -10,7 +10,7 @@
   "Gandalf colour theme by Sam Aaron, modified by ptrv"
   (interactive)
   (color-theme-install
-   '(color-theme-gandalf
+   '(color-theme-gandalf-ptrv
      ((background-color . "grey90")
       (background-mode . light)
       (border-color . "grey95")
@@ -67,7 +67,7 @@
      (minibuffer-prompt ((t (:foreground "dark blue" :background "grey85"))))
 
      ;; magit
-     (magit-item-highlight ((t (:background "gray15"))))
+     (magit-item-highlight ((t (:background "gray25"))))
      (magit-diff-add ((t (:foreground "chartreuse3"))))
      (magit-diff-del ((t (:foreground "violet red"))))
      (magit-section-type ((t (:foreground "deep pink"))))

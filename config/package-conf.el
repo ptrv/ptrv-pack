@@ -24,7 +24,8 @@
                       multi-term
                       session
                       notify
-                      edit-server)
+                      edit-server
+                      color-theme)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)

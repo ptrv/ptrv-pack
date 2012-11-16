@@ -22,8 +22,7 @@
 (setq vc-follow-symlinks t)
 
 ;; add snippets
-(yas/load-directory (concat (live-pack-lib-dir) "snippets"))
-;; (yas/load-directory (concat (live-pack-lib-dir) "yasnippet-snippets"))
+(yas-load-directory (concat (live-pack-lib-dir) "snippets"))
 
 ;;organise ibuffer into handy groups
 (setq ibuffer-saved-filter-groups

@@ -40,6 +40,7 @@
 
 (add-hook 'sclang-mode-hook
           (lambda ()
+            (defvar skeleton-pair)
             (setq skeleton-pair t)
             (local-set-key (kbd "(") 'skeleton-pair-insert-maybe)
             (local-set-key (kbd "{") 'skeleton-pair-insert-maybe)
