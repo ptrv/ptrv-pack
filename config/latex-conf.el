@@ -30,6 +30,9 @@
                            "#src:"
                            (TeX-current-line) (buffer-file-name)))
 
+(defvar TeX-view-program-list)
+(defvar TeX-view-program-selection)
+
 (cond ((eq system-type 'gnu/linux)
 
        ;; ;; SyncTeX basics
@@ -131,9 +134,7 @@
        ;; (setq TeX-view-program-selection '())
        ;; (add-to-list 'TeX-view-program-selection
        ;;              '(output-pdf "EvinceDbus"))
-       (defvar TeX-view-program-list)
        (setq TeX-view-program-list '(("Okular" "okular --unique %u")))
-       (defvar TeX-view-program-selection)
        (setq TeX-view-program-selection '((output-pdf "Okular") (output-dvi "Okular")))
        (add-hook 'LaTeX-mode-hook
                  (lambda ()
