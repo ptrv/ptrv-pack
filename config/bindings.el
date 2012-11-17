@@ -121,8 +121,8 @@
 
 (global-set-key (kbd "C-c w .") 'shrink-window-horizontally)
 (global-set-key (kbd "C-c w ,") 'enlarge-window-horizontally)
-(global-set-key (kbd "C-c w /") (lambda () (interactive) (enlarge-window -1)))
-(global-set-key (kbd "C-c w '") (lambda () (interactive) (enlarge-window 1)))
+(global-set-key (kbd "C-c w <down>") (lambda () (interactive) (enlarge-window -4)))
+(global-set-key (kbd "C-c w <up>") (lambda () (interactive) (enlarge-window 4)))
 
 ;; ;; paredit
 ;; (define-key paredit-mode-map (kbd "C-c l k") 'paredit-splice-sexp-killing-forward)
@@ -204,3 +204,18 @@
 
 ;;kill regions
 (global-set-key (kbd "C-x C-k") 'kill-region)
+
+;; Original idea from
+;; http://www.opensubscriber.com/message/emacs-devel@gnu.org/10971693.html
+(defun comment-dwim-line (&optional arg)
+  "Replacement for the comment-dwim command.
+        If no region is selected and current line is not blank and we are not at the end of the line,
+        then comment current line.
+        Replaces default behaviour of comment-dwim, when it inserts comment at the end of the line."
+  (interactive "*P")
+  (comment-normalize-vars)
+  (if (and (not (region-active-p)) (not (looking-at "[ \t]*$")))
+      (comment-or-uncomment-region (line-beginning-position) (line-end-position))
+    (comment-dwim arg)))
+
+(global-set-key (kbd "M-;") 'comment-dwim-line)
