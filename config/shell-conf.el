@@ -15,6 +15,7 @@
 ;;   (set-exec-path-from-shell-PATH))
 
 ;;; Eshell
+(defvar eshell-aliases-file)
 (setq eshell-aliases-file "~/.live-packs/ptrv-pack/etc/eshell_aliases")
 
 (defun eshell/clear ()
