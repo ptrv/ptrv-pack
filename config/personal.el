@@ -68,6 +68,9 @@
         ("*Gofmt Errors*" :noselect t)
         ("\\*godoc*" :regexp t)
         ("*Shell Command Output*" :noselect t)
+        ("*nREPL error*" :height 30)
+        ("*nREPL doc*" :height 30)
+        ("*Kill Ring*" :height 30)
         ("*project-status*" :noselect t)
         ("*Compile-Log" :height 20)))
 
