@@ -67,11 +67,13 @@
         ("*sldb.*":regexp t :height 30)
         ("*Gofmt Errors*" :noselect t)
         ("\\*godoc*" :regexp t)
-        ("*Shell Command Output*" :noselect t)))
+        ("*Shell Command Output*" :noselect t)
+        ("*project-status*" :noselect t)
+        ("*Compile-Log" :height 20)))
 
 (setq live-disable-zone t)
 
 ;; debug messages
-(setq debug-on-error t)
+(setq debug-on-error nil)
 
 (setq compilation-scroll-output 'first-error)
