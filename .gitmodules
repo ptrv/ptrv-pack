@@ -35,6 +35,3 @@
     path = vendor/submodules/python-mode
     url = https://github.com/emacsmirror/python-mode.git
     ignore = untracked
-[submodule "vendor/submodules/processing2-mode"]
-	path = vendor/submodules/processing2-mode
-	url = git@gist.github.com:4108231.git
