@@ -32,7 +32,8 @@
   (live-load-config-file "supercollider.el")
   (live-load-config-file "python-conf.el")
   (live-load-config-file "c-conf.el")
-  (live-load-config-file "linux-conf.el")))
+  (live-load-config-file "linux-conf.el")
+  (live-load-config-file "processing2-conf.el")))
 
 (defmacro Xlaunch (&rest x)
   (list 'if (eq window-system 'x) (cons 'progn x)))
