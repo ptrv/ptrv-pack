@@ -1,8 +1,8 @@
-(live-add-pack-lib "processing2-mode")
+(live-add-pack-lib "processing2-emacs")
 
-(setq processing-location "~/applications/processing-2.0/processing-java")
-(add-to-list 'auto-mode-alist '("\\.pde$" . processing-mode))
 (autoload 'processing-mode "processing-mode" "Processing mode" t)
+(add-to-list 'auto-mode-alist '("\\.pde$" . processing-mode))
+(setq processing-location "~/applications/processing-2.0/processing-java")
 
 ;; (add-hook 'processing-mode-hook '(lambda ()
 ;;                                    (setq c-basic-offset 2)
@@ -12,3 +12,5 @@
 (add-hook 'processing-mode-hook '(lambda ()
                                    (setq c-basic-offset 2)
                                    (set (make-local-variable 'tab-width) 2)))
+
+(yas-load-directory (concat (live-pack-lib-dir) "processing2-emacs/snippets"))
