@@ -2,5 +2,6 @@
 
 (setq markdown-css-path (expand-file-name
                          (concat
-                          (file-name-directory buffer-file-name)
+                          (file-name-directory
+                           (or load-file-name (buffer-file-name)))
                           "../etc/css/markdown.css")))
