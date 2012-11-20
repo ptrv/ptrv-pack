@@ -23,3 +23,19 @@
 (defvar ptrv-themes-dir (concat (live-pack-lib-dir) "themes"))
 (load-file (concat  (file-name-as-directory ptrv-themes-dir) "gandalf-ptrv.el"))
 (color-theme-gandalf-ptrv)
+
+;; taken from colour-pack
+(load-file (concat (live-pack-dir "dev/colour-pack") "lib/live-fontify-hex.el"))
+(require 'live-fontify-hex)
+
+(font-lock-add-keywords 'lisp-mode
+                        '((live-fontify-hex-colors)))
+
+(font-lock-add-keywords 'emacs-lisp-mode
+                        '((live-fontify-hex-colors)))
+
+(font-lock-add-keywords 'lisp-interaction-mode
+                        '((live-fontify-hex-colors)))
+
+(font-lock-add-keywords 'css-mode
+                        '((live-fontify-hex-colors)))
