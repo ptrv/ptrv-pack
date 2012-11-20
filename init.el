@@ -25,6 +25,7 @@
 (live-load-config-file "iedit-conf.el")
 (live-load-config-file "edit-server-conf.el")
 (live-load-config-file "editing-conf.el")
+(live-load-config-file "markdown-conf.el")
 (cond
  ((eq system-type 'darwin)
   (live-load-config-file "osx-conf.el"))
