@@ -2,9 +2,6 @@
 ;; ptrv's personal live pack
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(live-add-pack-lib "mk-project")
-(require 'mk-project)
-
 (live-load-config-file "package-conf.el")
 (live-load-config-file "util-fns.el")
 (live-load-config-file "look-and-feel.el")
@@ -26,6 +23,7 @@
 (live-load-config-file "edit-server-conf.el")
 (live-load-config-file "editing-conf.el")
 (live-load-config-file "markdown-conf.el")
+(live-load-config-file "projects-conf.el")
 (cond
  ((eq system-type 'darwin)
   (live-load-config-file "osx-conf.el"))
@@ -42,10 +40,5 @@
 (Xlaunch (live-load-config-file "x11-config.el" ))
 
 (load-file "~/.emacs.d/packs/dev/power-pack/config/quick-jump-conf.el")
-
-(setq projects-file "~/.emacs-projects.el")
-(make-directory (file-name-as-directory (concat live-tmp-dir "mk-project-cache")) t)
-(if (file-exists-p projects-file)
-     (load-file projects-file))
 
 (server-start)
