@@ -20,13 +20,13 @@
   (kill-line)
   (yank)
   (open-line 1)
-  (next-line 1)
+  (forward-line 1)
   (yank)
   )
 
 (defun refresh-file ()
   (interactive)
-  (revert-buffer t t t))
+  (revert-buffer t nil t))
 
 (defun ido-imenu ()
   "Update the imenu index and then use ido to select a symbol to navigate to.
