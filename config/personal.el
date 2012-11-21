@@ -80,3 +80,10 @@
 (setq debug-on-error nil)
 
 (setq compilation-scroll-output 'first-error)
+
+;; Do not allow to kill the *scratch* buffer
+(defun unkillable-scratch-buffer ()
+  (if (equal (buffer-name (current-buffer)) "*scratch*")
+      nil
+    t))
+(add-hook 'kill-buffer-query-functions 'unkillable-scratch-buffer)
