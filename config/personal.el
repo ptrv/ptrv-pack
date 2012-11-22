@@ -39,7 +39,7 @@
                ;; ("improcess lib"   (filename . "Development/improcess/lib"))
                ("magit" (name . "\\*magit"))
                ("dired" (mode . dired-mode))
-               ("sclang" (mode . sclang-mode))
+               ;; ("sclang" (mode . sclang-mode))
                ))))
 
 (add-hook 'ibuffer-mode-hook
