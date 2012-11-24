@@ -92,13 +92,12 @@
   )
 (global-set-key (kbd "C-c g") 'gtd)
 
+;; org publish projects file
+(defvar org-publish-projects-file)
+(setq org-publish-projects-file "~/.org-publish-projects.el")
+(if (file-exists-p org-publish-projects-file)
+     (load-file org-publish-projects-file))
 
-(setq org-publish-project-alist
-      '(("orgfiles"
-         :base-directory "~/Dropbox/org"
-         :publishing-directory "~/tmp"
-         :publishing-function org-publish-org-to-html
-         :base-extension "org$")))
 ;; ;; Remember.el
 ;; (add-to-list 'load-path (concat dotfiles-dir "/vendor/remember.el"))
 ;; (require 'remember)
@@ -109,10 +108,11 @@
 
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((ruby . t)
-  (sh . t)
+ '((sh . t)
   (python . t)
   (C . t)
   (octave . t)
   (emacs-lisp . t)
+  (java . t)
+  (latex . t)
   ))
