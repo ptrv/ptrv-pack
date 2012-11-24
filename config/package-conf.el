@@ -5,7 +5,8 @@
 
 (dolist (source '(("melpa" . "http://melpa.milkbox.net/packages/")
                   ("marmalade" . "http://marmalade-repo.org/packages/")
-                  ("elpa" . "http://tromey.com/elpa/")))
+                  ("elpa" . "http://tromey.com/elpa/")
+                  ("org" . "http://orgmode.org/elpa/")))
   (add-to-list 'package-archives source t))
 
 (package-initialize)
@@ -25,7 +26,8 @@
                       session
                       notify
                       edit-server
-                      color-theme)
+                      color-theme
+                      org-plus-contrib)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
