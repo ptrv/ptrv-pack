@@ -27,7 +27,8 @@
                       notify
                       edit-server
                       color-theme
-                      org-plus-contrib)
+                      org-plus-contrib
+                      flycheck)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
