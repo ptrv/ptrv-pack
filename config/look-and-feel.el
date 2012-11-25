@@ -39,3 +39,9 @@
 
 (font-lock-add-keywords 'css-mode
                         '((live-fontify-hex-colors)))
+
+;; nyan-mode
+(live-add-pack-lib "nyan-mode")
+(require 'nyan-mode)
+(setq nyan-bar-length 16)
+(nyan-mode 1)

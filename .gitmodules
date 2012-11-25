@@ -39,3 +39,6 @@
     path = vendor/submodules/processing2-emacs
     url = git@github.com:ptrv/processing2-emacs.git
     ignore = untracked
+[submodule "vendor/submodules/nyan-mode"]
+	path = vendor/submodules/nyan-mode
+	url = git://github.com/TeMPOraL/nyan-mode.git
