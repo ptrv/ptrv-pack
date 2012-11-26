@@ -41,6 +41,7 @@
 ;;f - winner redo
 ;;l - lispy shortcuts (i.e. paredit and clojure specific fns)
 ;;m - emacs eval shortcuts
+;;n - nrepl shortcuts
 ;;t - text shortcuts
 ;;i - utf8 char shortcuts
 ;;j - quick-jump shortcuts
@@ -67,6 +68,9 @@
 (global-set-key (kbd "C-c m d")     'eval-defun)
 (global-set-key (kbd "C-c m n")     'eval-print-last-sexp)
 (global-set-key (kbd "C-c m r")     'eval-region)
+
+;;nrepl
+(global-set-key (kbd "C-c n e b")     'nrepl-eval-buffer)
 
 ;;funky characters
 (global-set-key (kbd "C-c i l") (lambda () (interactive) (insert "λ")))
@@ -221,3 +225,9 @@
     (comment-dwim arg)))
 
 (global-set-key (kbd "M-;") 'comment-dwim-line)
+
+;; multiple-cursors
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
