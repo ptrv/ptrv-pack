@@ -81,5 +81,3 @@
 ;;   (add-to-list 'flymake-allowed-file-name-masks
 ;;                '("\\.py\\'" flymake-pyflakes-init)))
 ;; (load-library "flymake-cursor")
-
-(add-hook 'python-mode-hook 'flycheck-mode)

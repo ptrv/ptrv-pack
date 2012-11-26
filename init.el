@@ -33,6 +33,7 @@
   (live-load-config-file "c-conf.el")
   (live-load-config-file "linux-conf.el")
   (live-load-config-file "processing2-conf.el")))
+(live-load-config-file "flycheck-conf.el")
 
 (defmacro Xlaunch (&rest x)
   (list 'if (eq window-system 'x) (cons 'progn x)))

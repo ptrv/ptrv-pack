@@ -160,4 +160,4 @@
 (define-key LaTeX-mode-map (kbd "C-c ä") 'LaTeX-close-environment)
 (define-key LaTeX-mode-map (kbd "C-c ü") 'TeX-next-error)
 
-(add-hook 'LaTeX-mode-hook 'flycheck-mode)
+;; (add-hook 'LaTeX-mode-hook 'flycheck-mode)

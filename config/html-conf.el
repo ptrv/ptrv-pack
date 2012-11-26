@@ -16,4 +16,3 @@
 ;;                '("line \\([0-9]+\\) column \\([0-9]+\\) - \\(Warning\\|Error\\): \\(.*\\)"
 ;;                  nil 1 2 4))
 ;; )
-(add-hook 'html-mode-hook 'flycheck-mode)
