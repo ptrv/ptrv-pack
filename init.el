@@ -42,4 +42,10 @@
 
 (load-file "~/.emacs.d/packs/dev/power-pack/config/quick-jump-conf.el")
 
+;; local settings
+(defvar ptrv-locals-file "~/.emacs-locals.el")
+(if (file-exists-p ptrv-locals-file)
+     (load-file ptrv-locals-file))
+
+
 (server-start)
