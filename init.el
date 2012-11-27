@@ -47,5 +47,4 @@
 (if (file-exists-p ptrv-locals-file)
      (load-file ptrv-locals-file))
 
-
 (server-start)
