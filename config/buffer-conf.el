@@ -1,5 +1,9 @@
 (global-auto-revert-mode t)
 
+;; Also auto refresh dired, but be quiet about it
+(setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose nil)
+
 (setq-default indent-tabs-mode nil) ; And force use of spaces
 (setq c-basic-offset 4)     ; indents 4 chars
 (setq-default tab-width 4)          ; and 4 char wide for TAB
