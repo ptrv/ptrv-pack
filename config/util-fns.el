@@ -124,3 +124,13 @@ Symbols matching the text at point are put first in the completion list."
   (when (zerop (buffer-size))
     (insert initial-scratch-message)
     (set-buffer-modified-p nil)))
+
+(defun eval-and-replace ()
+  "Replace the preceding sexp with its value."
+  (interactive)
+  (backward-kill-sexp)
+  (condition-case nil
+      (prin1 (eval (read (current-kill 0)))
+             (current-buffer))
+    (error (message "Invalid expression")
+           (insert (current-kill 0)))))
