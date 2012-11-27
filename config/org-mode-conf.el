@@ -10,7 +10,7 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 
 (setq org-log-done t)
-(setq org-replace-disputed-keys t)
+(setq org-replace-disputed-keys nil)
 ;; Override
 (add-hook 'org-mode-hook
           (lambda()
