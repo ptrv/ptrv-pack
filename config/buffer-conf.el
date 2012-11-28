@@ -18,3 +18,26 @@
 ; (add-hook 'write-file-hooks
 ;           (lambda () (if (not indent-tabs-mode)
 ;                          (untabify (point-min) (point-max)))))
+
+;; Do not allow to kill the *scratch* buffer
+(defvar unkillable-scratch-buffer-erase)
+(setq unkillable-scratch-buffer-erase nil)
+(defun toggle-unkillable-scratch-buffer-erase ()
+  (interactive)
+  (if unkillable-scratch-buffer-erase
+      (progn
+        (setq unkillable-scratch-buffer-erase nil)
+        (message "Disable scratch-buffer erase on kill!"))
+    (progn
+      (setq unkillable-scratch-buffer-erase t)
+      (message "Enable scratch-buffer erase on kill!"))))
+
+(defun unkillable-scratch-buffer ()
+  (if (equal (buffer-name (current-buffer)) "*scratch*")
+      (progn
+        (if unkillable-scratch-buffer-erase
+            (delete-region (point-min) (point-max)))
+        nil
+        )
+    t))
+(add-hook 'kill-buffer-query-functions 'unkillable-scratch-buffer)
