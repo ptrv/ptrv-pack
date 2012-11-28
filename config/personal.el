@@ -39,7 +39,7 @@
 			   ("sclang" (mode . sclang-mode))
 			   ("Org" (mode . org-mode))
 			   ("Help" (or (name . "\\*Help\\*")
-						   (name . "\*Apropos\\*")
+						   (name . "\\*Apropos\\*")
 						   (name . "\\*info\\*")))
 			   ))))
 
