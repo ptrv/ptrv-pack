@@ -6,7 +6,7 @@
 (live-load-config-file "util-fns.el")
 (live-load-config-file "look-and-feel.el")
 (live-load-config-file "shell-conf.el")
-(live-load-config-file "personal.el")
+(live-load-config-file "misc-conf.el")
 (live-load-config-file "ibuffer-conf.el")
 (live-load-config-file "popwin-conf.el")
 (live-load-config-file "buffer-conf.el")

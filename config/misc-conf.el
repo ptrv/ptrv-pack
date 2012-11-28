@@ -1,4 +1,4 @@
-;; personal.el
+;; misc-conf.el
 
 ;; session.el
 ;; save a list of open files in $HOME/.emacs.desktop
