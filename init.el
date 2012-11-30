@@ -42,8 +42,6 @@
 
 (Xlaunch (live-load-config-file "x11-config.el" ))
 
-(load-file "~/.emacs.d/packs/dev/power-pack/config/quick-jump-conf.el")
-
 ;; local settings
 (defvar ptrv-locals-file "~/.emacs-locals.el")
 (if (file-exists-p ptrv-locals-file)

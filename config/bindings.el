@@ -52,10 +52,6 @@
 
 (global-set-key (kbd "C-c C-e")   'slime-eval-last-expression)
 
-;; winner undo and redo
-(global-set-key (kbd "C-c b") 'winner-undo)
-(global-set-key (kbd "C-c f") 'winner-redo)
-
 ;;text manipulation shortcuts
 (global-set-key (kbd "C-c t b")     'untabify-buffer)
 (global-set-key (kbd "C-c t r")     'untabify)
@@ -83,14 +79,16 @@
 (global-set-key (kbd "C-c i f") (lambda () (interactive) (insert "♭")))
 (global-set-key (kbd "C-c i p") (lambda () (interactive) (insert "£")))
 
+(require 'quick-jump)
+(quick-jump-default-keybinding)
 (global-set-key (kbd "C-c j p") 'quick-jump-go-back)
 (global-set-key (kbd "C-c j b") 'quick-jump-go-back)
 (global-set-key (kbd "C-c j m") 'quick-jump-push-marker)
 (global-set-key (kbd "C-c j n") 'quick-jump-go-forward)
 (global-set-key (kbd "C-c j f") 'quick-jump-go-forward)
 (global-set-key (kbd "C-c j c") 'quick-jump-clear-all-marker)
-(key-chord-define-global "öj"  'quick-jump-push-marker)
-(global-set-key (kbd "C-ä") 'quick-jump-push-marker)
+(key-chord-define-global "öä"  'quick-jump-push-marker)
+;;(global-set-key (kbd "C-ä") 'quick-jump-push-marker)
 
 ;;diff shortcuts
 (global-set-key (kbd "C-c d f") 'diff-buffer-with-file)
@@ -128,6 +126,11 @@
 (global-set-key (kbd "C-c w ,") 'enlarge-window-horizontally)
 (global-set-key (kbd "C-c w <down>") (lambda () (interactive) (enlarge-window -4)))
 (global-set-key (kbd "C-c w <up>") (lambda () (interactive) (enlarge-window 4)))
+
+;; winner undo and redo
+(global-set-key (kbd "C-c w b") 'winner-undo)
+(global-set-key (kbd "C-c w f") 'winner-redo)
+
 
 ;; ;; paredit
 ;; (define-key paredit-mode-map (kbd "C-c l k") 'paredit-splice-sexp-killing-forward)
@@ -228,9 +231,19 @@
 
 ;; multiple-cursors
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-ä") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-ö") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-ä") 'mc/mark-all-like-this)
 
 ;; expand-regionp
 (global-set-key (kbd "C-ü") 'er/expand-region)
+
+;; iy-go-to-char
+(global-set-key (kbd "C-c f") 'iy-go-to-char)
+(global-set-key (kbd "C-c F") 'iy-go-to-char-backward)
+(global-set-key (kbd "C-c ,") 'iy-go-to-char-continue)
+(global-set-key (kbd "C-c ;") 'iy-go-to-char-continue-backward)
+(defvar iy-go-to-char-key-forward)
+(setq iy-go-to-char-key-forward ?\,)
+(defvar iy-go-to-char-key-backward)
+(setq iy-go-to-char-key-backward ?\;)
