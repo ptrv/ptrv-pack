@@ -70,17 +70,11 @@ Symbols matching the text at point are put first in the completion list."
            (position (cdr (assoc selected-symbol name-and-pos))))
       (goto-char position))))
 
-(defun sudo-edit-arg (&optional arg)
-  (interactive "p")
-  (if (or arg (not buffer-file-name))
-      (find-file (concat "/sudo:root@localhost:" (ido-read-file-name "File: ")))
-    (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
-
-(defun sudo-edit ()
+(defun sudo-edit-this ()
   (interactive)
   (if buffer-file-name
-      (find-file (concat "/sudo:root@localhost:" (buffer-file-name)))
-    (sudo-edit-arg)))
+      (find-alternate-file (concat "/sudo:root@localhost:" (buffer-file-name)))
+    (sudo-edit)))
 
 ;; https://sites.google.com/site/steveyegge2/my-dot-emacs-file
 (defun swap-windows ()

@@ -33,3 +33,11 @@
 
 ;; scroll compilation buffer
 (setq compilation-scroll-output 'first-error)
+
+;; fix tramp backups
+(add-to-list 'bkup-backup-directory-info
+             (list tramp-file-name-regexp ""))
+(setq tramp-bkup-backup-directory-info bkup-backup-directory-info)
+
+;; ;;disable backups of files edited with tramp
+;;(setq tramp-bkup-backup-directory-info nil)
