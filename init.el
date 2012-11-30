@@ -10,7 +10,6 @@
 (live-load-config-file "ibuffer-conf.el")
 (live-load-config-file "popwin-conf.el")
 (live-load-config-file "buffer-conf.el")
-(live-load-config-file "bindings.el")
 (live-load-config-file "org-mode-conf.el")
 (live-load-config-file "latex-conf.el")
 (live-load-config-file "filetype-conf.el")
@@ -36,6 +35,7 @@
   (live-load-config-file "linux-conf.el")
   (live-load-config-file "processing2-conf.el")))
 (live-load-config-file "flycheck-conf.el")
+(live-load-config-file "bindings.el")
 
 (defmacro Xlaunch (&rest x)
   (list 'if (eq window-system 'x) (cons 'progn x)))
