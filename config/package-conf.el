@@ -20,8 +20,6 @@
                       go-mode
                       starter-kit-eshell
                       ack-and-a-half
-                      flymake-cursor
-                      smart-operator
                       multi-term
                       session
                       notify
