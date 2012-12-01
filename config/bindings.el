@@ -50,7 +50,7 @@
 ;;s - show popupwindows
 ;;w - window and buffer shortcuts
 
-(global-set-key (kbd "C-c C-e")   'slime-eval-last-expression)
+(global-set-key (kbd "C-c C-e")   'eval-and-replace)
 
 ;;text manipulation shortcuts
 (global-set-key (kbd "C-c t b")     'untabify-buffer)
@@ -230,7 +230,8 @@
 (global-set-key (kbd "M-;") 'comment-dwim-line)
 
 ;; multiple-cursors
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+;;(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C-c C-ö") 'mc/edit-lines)
 (global-set-key (kbd "C-ä") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-ö") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-ä") 'mc/mark-all-like-this)
