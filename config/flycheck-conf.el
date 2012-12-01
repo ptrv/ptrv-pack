@@ -33,9 +33,13 @@
 ;; modes
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-hook 'nxml-mode-hook 'flycheck-mode)
-(add-hook 'html-mode-hook 'flycheck-mode)
-(add-hook 'LaTeX-mode-hook 'flycheck-mode)
-(add-hook 'python-mode-hook 'flycheck-mode)
-(add-hook 'go-mode-hook 'flycheck-mode)
-;; (add-hook 'lua-mode-hook 'flycheck-mode)
+(defun flycheck-enable-except-on-temp-buffers ()
+  (if (and buffer-file-name (file-exists-p buffer-file-name))
+      (flycheck-mode)))
+
+(add-hook 'nxml-mode-hook 'flycheck-enable-except-on-temp-buffers)
+(add-hook 'sgml-mode-hook 'flycheck-enable-except-on-temp-buffers)
+(add-hook 'LaTeX-mode-hook 'flycheck-enable-except-on-temp-buffers)
+(add-hook 'python-mode-hook 'flycheck-enable-except-on-temp-buffers)
+(add-hook 'go-mode-hook 'flycheck-enable-except-on-temp-buffers)
+;; (add-hook 'lua-mode-hook 'flycheck-enable-except-on-temp-buffers)
