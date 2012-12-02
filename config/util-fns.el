@@ -128,3 +128,19 @@ Symbols matching the text at point are put first in the completion list."
              (current-buffer))
     (error (message "Invalid expression")
            (insert (current-kill 0)))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; http://www.emacswiki.org/emacs/MoveLine
+(defun move-line-up ()
+  "Move current line up."
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2))
+
+(defun move-line-down ()
+  "Move current line down."
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
