@@ -253,3 +253,5 @@
 
 (global-set-key (kbd "M-<up>") 'move-line-region-up)
 (global-set-key (kbd "M-<down>") 'move-line-region-down)
+
+(global-set-key (kbd "M-/") 'hippie-expand)
