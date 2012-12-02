@@ -30,7 +30,8 @@
                       markdown-mode
                       js2-mode
                       apache-mode
-                      yaml-mode)
+                      yaml-mode
+                      org2blog)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
