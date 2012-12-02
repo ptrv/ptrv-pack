@@ -41,3 +41,18 @@
 
 ;; ;;disable backups of files edited with tramp
 ;;(setq tramp-bkup-backup-directory-info nil)
+
+;; hippie-expand functions list
+;; http://trey-jackson.blogspot.de/2007/12/emacs-tip-5-hippie-expand.html
+(setq hippie-expand-try-functions-list
+      '(try-expand-dabbrev
+        try-expand-dabbrev-all-buffers
+        try-expand-dabbrev-from-kill
+        try-complete-file-name-partially
+        try-complete-file-name
+        try-expand-all-abbrevs
+        try-expand-list
+        try-expand-line
+        try-complete-lisp-symbol-partially
+        try-complete-lisp-symbol
+        ))
