@@ -121,6 +121,10 @@
   (latex . t)
   ))
 
+;; Open mailto links in gmail
+(setq org-link-mailto-program
+      '(browse-url "https://mail.google.com/mail/?view=cm&to=%a&su=%s"))
+
 ;; org2blog
 (defvar org-blogs-file "~/.org-blogs.el")
 (if (file-exists-p org-blogs-file)
