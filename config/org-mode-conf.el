@@ -120,3 +120,8 @@
   (java . t)
   (latex . t)
   ))
+
+;; org2blog
+(defvar org-blogs-file "~/.org-blogs.el")
+(if (file-exists-p org-blogs-file)
+     (load-file org-blogs-file))
