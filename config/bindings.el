@@ -27,7 +27,7 @@
 (global-set-key [f8] 'delete-window)
 (global-set-key [f9] 'delete-other-windows)
 
-(global-set-key (kbd "C-S-d") 'duplicate-line)
+(global-set-key (kbd "C-S-d") 'duplicate-start-of-line-or-region)
 
 (global-set-key (kbd "C-x g") 'magit-status)
 
