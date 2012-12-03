@@ -32,7 +32,8 @@
 (setq debug-on-error nil)
 
 ;; scroll compilation buffer
-(setq compilation-scroll-output 'first-error)
+;;(setq compilation-scroll-output 'first-error)
+(setq compilation-scroll-output t)
 
 ;; fix tramp backups
 (add-to-list 'bkup-backup-directory-info

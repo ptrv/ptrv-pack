@@ -26,4 +26,6 @@
         ("*nREPL doc*" :height 30)
         ("*Kill Ring*" :height 30)
         ("*project-status*" :noselect t)
-        ("*Compile-Log" :height 20)))
+        ("*Compile-Log" :height 20)
+        ("*pytest*" :noselect t)
+        ))

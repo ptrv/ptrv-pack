@@ -31,7 +31,8 @@
                       js2-mode
                       apache-mode
                       yaml-mode
-                      org2blog)
+                      org2blog
+                      pytest)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
