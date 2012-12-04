@@ -63,3 +63,9 @@
           (lambda ()
              (set-fill-column 72)
              (auto-fill-mode 1)))
+
+;; Soft word wrap
+(setq longlines-show-hard-newlines t)
+(setq longlines-auto-wrap t)
+(add-hook 'LaTeX-mode-hook 'longlines-mode)
+(add-hook 'markdown-mode-hook 'longlines-mode)
