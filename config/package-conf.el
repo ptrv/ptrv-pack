@@ -32,7 +32,8 @@
                       apache-mode
                       yaml-mode
                       org2blog
-                      pytest)
+                      pytest
+                      flymake-cursor)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
