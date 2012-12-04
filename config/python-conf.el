@@ -3,7 +3,7 @@
 (setq py-install-directory
       (expand-file-name
        (file-name-as-directory
-        (concat (live-pack-lib-dir) "python-mode"))))
+        (concat (live-pack-lib-dir) "python-mode/"))))
 
 (setq py-load-pymacs-p nil)
 ;; Do not open python shell on start
