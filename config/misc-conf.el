@@ -57,3 +57,9 @@
         try-complete-lisp-symbol-partially
         try-complete-lisp-symbol
         ))
+
+;; newline after 72 chars in magit-log-edit-mode
+(add-hook 'magit-log-edit-mode-hook
+          (lambda ()
+             (set-fill-column 72)
+             (auto-fill-mode 1)))
