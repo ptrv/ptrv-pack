@@ -18,8 +18,8 @@
         flycheck-checker-ruby
         flycheck-checker-php
         flycheck-checker-sh
-        flycheck-checker-tex-chktex
         flycheck-checker-tex-lacheck
+        flycheck-checker-tex-chktex
         flycheck-checker-zsh
         flycheck-checker-xml-xmlstarlet
         flycheck-checker-go
