@@ -1,7 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; org-mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; (require 'org-install)
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
 (global-set-key "\C-cl" 'org-store-link)
@@ -64,36 +63,28 @@
 (setq org-mobile-inbox-for-pull "~/Dropbox/org/from-mobile.org")
 
 (setq org-agenda-custom-commands
-      '(
-
-        ("P" "Projects"
+      '(("P" "Projects"
          ((tags "PROJECT")))
-
-        ("H" "Uni and Home Lists"
-         ((agenda)
-          (tags-todo "HOME")
-          (tags-todo "UNI")
-          (tags-todo "COMPUTER")
-          (tags-todo "DVD")
-          (tags-todo "READING")))
-
-        ("W" "Work Lists"
-         ((tags "WORK")))
-
+        ("H" "Home Lists"
+         ((tags "HOME")
+          (tags "COMPUTER")
+          (tags "DVD")
+          (tags "READING")))
+        ("U" "Uni"
+         ((tags "UNI")))
+        ;; ("W" "Work Lists"
+        ;;  ((tags "WORK")))
         ("D" "Daily Action List"
-         (
-          (agenda "" ((org-agenda-ndays 1)
+         ((agenda "" ((org-agenda-ndays 1)
                       (org-agenda-sorting-strategy
                        (quote ((agenda time-up priority-down tag-up) )))
                       (org-deadline-warning-days 0)
                       ))))
-        )
-      )
+        ))
 
 (defun gtd ()
   (interactive)
-  (find-file "~/Dropbox/org/newgtd.org")
-  )
+  (find-file "~/Dropbox/org/newgtd.org"))
 (global-set-key (kbd "C-c g") 'gtd)
 
 ;; org publish projects file
