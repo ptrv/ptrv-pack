@@ -17,9 +17,6 @@
 ;; gist.el - open gist on browser
 (setq gist-view-gist t)
 
-;; activate wrap-region mode
-(wrap-region-global-mode t)
-
 ;; follow version controlled symlinks automatically
 (setq vc-follow-symlinks t)
 
