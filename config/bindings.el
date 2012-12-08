@@ -255,3 +255,5 @@
 (global-set-key (kbd "M-<down>") 'move-line-region-down)
 
 (global-set-key (kbd "M-/") 'hippie-expand)
+
+(global-set-key [f12] 'webjump)

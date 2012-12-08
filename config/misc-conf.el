@@ -66,3 +66,22 @@
 (setq longlines-auto-wrap t)
 (add-hook 'LaTeX-mode-hook 'longlines-mode)
 (add-hook 'markdown-mode-hook 'longlines-mode)
+
+(require 'webjump)
+(setq webjump-sites
+       (append '(("Urban Dictionary" .
+                  [simple-query
+                   "www.urbandictionary.com"
+                   "http://www.urbandictionary.com/define.php?term="
+                   ""])
+                 ("stackoverflow" .
+                  [simple-query
+                   "www.stackoverflow.com"
+                   "http://stackoverflow.com/search?q="
+                   ""])
+                 ("Java API" .
+                  [simple-query
+                   "www.google.com"
+                   "http://www.google.ca/search?hl=en&as_sitesearch=http://java.sun.com/javase/6/docs/api/&q="
+                   ""]))
+               webjump-sample-sites))
