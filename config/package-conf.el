@@ -36,7 +36,8 @@
                       flymake-cursor
                       git-commit-mode
                       gitignore-mode
-                      gitconfig-mode)
+                      gitconfig-mode
+                      gnuplot)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
