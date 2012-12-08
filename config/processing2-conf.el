@@ -2,7 +2,14 @@
 
 (autoload 'processing-mode "processing-mode" "Processing mode" t)
 (add-to-list 'auto-mode-alist '("\\.pde$" . processing-mode))
-(setq processing-location "~/applications/processing-2.0/processing-java")
+
+(cond
+ ((eq system-type 'darwin)
+  (setq processing-location "processing-java"))
+ ((eq system-type 'gnu/linux)
+  (setq processing-location "~/applications/processing-2.0/processing-java"))
+ )
+
 
 (yas-load-directory (concat (live-pack-lib-dir) "processing2-emacs/snippets"))
 

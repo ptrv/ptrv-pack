@@ -25,6 +25,7 @@
 (live-load-config-file "editing-conf.el")
 (live-load-config-file "markdown-conf.el")
 (live-load-config-file "projects-conf.el")
+(live-load-config-file "processing2-conf.el")
 (cond
  ((eq system-type 'darwin)
   (live-load-config-file "osx-conf.el"))
@@ -32,8 +33,7 @@
   (live-load-config-file "supercollider.el")
   (live-load-config-file "python-conf.el")
   (live-load-config-file "c-conf.el")
-  (live-load-config-file "linux-conf.el")
-  (live-load-config-file "processing2-conf.el")))
+  (live-load-config-file "linux-conf.el")))
 (live-load-config-file "flycheck-conf.el")
 (live-load-config-file "bindings.el")
 
