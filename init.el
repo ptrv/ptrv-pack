@@ -42,9 +42,6 @@
 
 (Xlaunch (live-load-config-file "x11-config.el" ))
 
-;; local settings
-(defvar ptrv-locals-file "~/.emacs-locals.el")
-(if (file-exists-p ptrv-locals-file)
-     (load-file ptrv-locals-file))
+(load "~/.emacs-locals.el" 'noerror)
 
 (server-start)

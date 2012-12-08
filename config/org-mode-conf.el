@@ -88,10 +88,7 @@
 (global-set-key (kbd "C-c g") 'gtd)
 
 ;; org publish projects file
-(defvar org-publish-projects-file)
-(setq org-publish-projects-file "~/.org-publish-projects.el")
-(if (file-exists-p org-publish-projects-file)
-     (load-file org-publish-projects-file))
+(load "~/.org-publish-projects.el" 'noerror)
 
 ;; ;; Remember.el
 ;; (add-to-list 'load-path (concat dotfiles-dir "/vendor/remember.el"))
@@ -117,6 +114,4 @@
       '(browse-url "https://mail.google.com/mail/?view=cm&to=%a&su=%s"))
 
 ;; org2blog
-(defvar org-blogs-file "~/.org-blogs.el")
-(if (file-exists-p org-blogs-file)
-     (load-file org-blogs-file))
+(load "~/.org-blogs.el" 'noerror)
