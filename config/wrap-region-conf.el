@@ -7,6 +7,7 @@
 ;; Custom wrappers
 
 (wrap-region-add-wrapper "*" "*" "*" 'markdown-mode)
+(wrap-region-add-wrapper "`" "`" "`" 'markdown-mode)
 
 (wrap-region-add-wrapper "*" "*" "*" 'org-mode)
 (wrap-region-add-wrapper "/" "/" "/" 'org-mode)
