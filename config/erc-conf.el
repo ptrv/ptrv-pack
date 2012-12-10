@@ -1,10 +1,14 @@
-(setq freenode-pass nil) ;; place a copy of this line in ~/.ercpass with correct password
-(load "~/.ercpass")
+;;;;;;;;;;;;;;;;;;;;
+;; erc-conf.el
+;;;;;;;;;;;;;;;;;;;;
+
+(setq freenode-credentials (netrc-machine (netrc-parse "~/.authinfo.gpg") "freenode" t))
 (require 'erc-services)
 (erc-services-mode 1)
 (setq erc-prompt-for-nickserv-password nil)
 (setq erc-nickserv-passwords
-      `((freenode     (("ptrv" . ,freenode-pass)))))
+      `((freenode ((,(netrc-get freenode-credentials "login") .
+                    ,(netrc-get freenode-credentials "password"))))))
 
 ;;IRC
 (require 'erc-join)
@@ -15,7 +19,11 @@
 (defun erc-connect ()
   "Start up erc and connect to freedonde"
   (interactive)
-  (erc :server "irc.freenode.net" :full-name "Peter V." :port 6667 :nick "ptrv"))
+  (erc :server "irc.freenode.net"
+       :full-name "Peter V."
+       :port 6667
+       :nick (netrc-get freenode-credentials "login")
+       ))
 
 (require 'erc-match)
 (setq erc-keywords '("ptrv"))
