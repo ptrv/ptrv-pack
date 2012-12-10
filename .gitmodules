@@ -43,3 +43,7 @@
     path = vendor/submodules/nyan-mode
     url = git://github.com/TeMPOraL/nyan-mode.git
     ignore = untracked
+[submodule "vendor/submodules/nxhtml"]
+    path = vendor/submodules/nxhtml
+    url = https://github.com/emacsmirror/nxhtml.git
+    ignore = untracked
