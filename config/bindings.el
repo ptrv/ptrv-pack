@@ -50,23 +50,23 @@
 ;;s - show popupwindows
 ;;w - window and buffer shortcuts
 
-(global-set-key (kbd "C-c C-e")   'eval-and-replace)
-
 ;;text manipulation shortcuts
-(global-set-key (kbd "C-c t b")     'untabify-buffer)
-(global-set-key (kbd "C-c t r")     'untabify)
+(global-set-key (kbd "C-c t b") 'untabify-buffer)
+(global-set-key (kbd "C-c t r") 'untabify)
 
 ;;emacs-lisp shortcuts
-(global-set-key (kbd "C-c m s")     'eval-and-replace) ;swap
-(global-set-key (kbd "C-c m b")     'eval-buffer)
-(global-set-key (kbd "C-c m e")     'eval-last-sexp)
-(global-set-key (kbd "C-c m i")     'eval-expression)
-(global-set-key (kbd "C-c m d")     'eval-defun)
-(global-set-key (kbd "C-c m n")     'eval-print-last-sexp)
-(global-set-key (kbd "C-c m r")     'eval-region)
+(global-set-key (kbd "C-c C-e") 'eval-and-replace)
+
+(global-set-key (kbd "C-c m s") 'eval-and-replace) ;swap
+(global-set-key (kbd "C-c m b") 'eval-buffer)
+(global-set-key (kbd "C-c m e") 'eval-last-sexp)
+(global-set-key (kbd "C-c m i") 'eval-expression)
+(global-set-key (kbd "C-c m d") 'eval-defun)
+(global-set-key (kbd "C-c m n") 'eval-print-last-sexp)
+(global-set-key (kbd "C-c m r") 'eval-region)
 
 ;;nrepl
-(global-set-key (kbd "C-c n e b")     'nrepl-eval-buffer)
+(global-set-key (kbd "C-c n b") 'nrepl-eval-buffer)
 
 ;;funky characters
 (global-set-key (kbd "C-c i l") (lambda () (interactive) (insert "λ")))
