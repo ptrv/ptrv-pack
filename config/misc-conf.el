@@ -110,3 +110,6 @@
                    "http://www.google.ca/search?hl=en&as_sitesearch=http://java.sun.com/javase/6/docs/api/&q="
                    ""]))
                webjump-sample-sites))
+
+(live-add-pack-lib "arduino-mode")
+(require 'arduino-mode)
