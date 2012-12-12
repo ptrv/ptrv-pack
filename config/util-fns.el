@@ -26,7 +26,7 @@
 
 (defun refresh-file ()
   (interactive)
-  (revert-buffer t nil t))
+  (revert-buffer t t nil))
 
 (defun ido-imenu ()
   "Update the imenu index and then use ido to select a symbol to navigate to.
