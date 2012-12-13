@@ -21,6 +21,7 @@
             (local-set-key [(control shift right)] 'next-buffer)
             ;; (local-set-key [(meta shift right)] 'ido-switch-buffer)
             ;; (local-set-key [(meta shift left)] 'magit-status)
+            (auto-complete-mode -1)
             )
           )
 
