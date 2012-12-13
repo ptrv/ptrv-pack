@@ -7,4 +7,4 @@
 (custom-set-variables
  '(pandoc-binary "/usr/local/bin/pandoc"))
 
-(add-to-list 'auto-mode-alist '("\\.text" .  markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.text$" .  markdown-mode))

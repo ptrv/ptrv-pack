@@ -106,7 +106,7 @@ Symbols matching the text at point are put first in the completion list."
 ;; Makes load time faster.
 (defun byte-recompile-home ()
   (interactive)
-  (byte-recompile-directory "~/.emacs.d" 0)
+  ;;(byte-recompile-directory "~/.emacs.d" 0)
   (byte-recompile-directory "~/.live-packs/ptrv-pack" 0))
 
 ;; Recreate scratch buffer
