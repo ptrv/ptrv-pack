@@ -37,7 +37,8 @@
                       git-commit-mode
                       gitignore-mode
                       gitconfig-mode
-                      gnuplot)
+                      gnuplot
+                      dtrt-indent)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)

@@ -23,7 +23,8 @@
 (add-hook 'c++-mode-hook
           (lambda ()
             (add-to-list 'ac-sources 'ac-source-clang-async)
-            (launch-completion-proc)))
+            (launch-completion-proc)
+            (dtrt-indent-mode 1)))
 
 ;; (require 'auto-complete-clang-async)
 
