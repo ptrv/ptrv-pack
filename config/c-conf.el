@@ -24,7 +24,8 @@
           (lambda ()
             (add-to-list 'ac-sources 'ac-source-clang-async)
             (launch-completion-proc)
-            (dtrt-indent-mode 1)))
+            (dtrt-indent-mode 1)
+            (set (make-local-variable 'before-save-hook) nil)))
 
 ;; (require 'auto-complete-clang-async)
 
