@@ -27,6 +27,11 @@
             (dtrt-indent-mode 1)
             (set (make-local-variable 'before-save-hook) nil)))
 
+(defun set-ff-find-other-file-binding ()
+  (local-set-key  (kbd "C-c o") 'ff-find-other-file))
+(add-hook 'c-mode-hook 'set-ff-find-other-file-binding)
+(add-hook 'c++-mode-hook 'set-ff-find-other-file-binding)
+
 ;; (require 'auto-complete-clang-async)
 
 ;; (defun ac-cc-mode-setup ()
