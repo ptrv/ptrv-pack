@@ -115,4 +115,6 @@
       '(browse-url "https://mail.google.com/mail/?view=cm&to=%a&su=%s"))
 
 ;; org2blog
+(live-add-pack-lib "org2blog")
+(require 'org2blog-autoloads)
 (load "~/.org-blogs.el" 'noerror)

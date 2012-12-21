@@ -48,5 +48,9 @@
     url = https://github.com/emacsmirror/nxhtml.git
     ignore = untracked
 [submodule "vendor/submodules/arduino-mode"]
-	path = vendor/submodules/arduino-mode
-	url = git@github.com:ptrv/arduino-mode.git
+    path = vendor/submodules/arduino-mode
+    url = git@github.com:ptrv/arduino-mode.git
+[submodule "vendor/submodules/org2blog"]
+    path = vendor/submodules/org2blog
+    url = http://github.com/punchagan/org2blog.git
+    ignore = untracked

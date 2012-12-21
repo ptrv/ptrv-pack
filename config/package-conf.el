@@ -31,7 +31,7 @@
                       js2-mode
                       apache-mode
                       yaml-mode
-                      org2blog
+                      xml-rpc
                       pytest
                       flymake-cursor
                       git-commit-mode
