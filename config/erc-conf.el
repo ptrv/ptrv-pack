@@ -1,20 +1,21 @@
 ;;;;;;;;;;;;;;;;;;;;
 ;; erc-conf.el
 ;;;;;;;;;;;;;;;;;;;;
+(setq freenode-user "ptrv")
+(setq freenode-pass nil)
+(load "~/.ercpass" 'noerror)
 
-(setq freenode-credentials (netrc-machine (netrc-parse "~/.authinfo.gpg") "freenode" t))
 (require 'erc-services)
 (erc-services-mode 1)
 (setq erc-prompt-for-nickserv-password nil)
 (setq erc-nickserv-passwords
-      `((freenode ((,(netrc-get freenode-credentials "login") .
-                    ,(netrc-get freenode-credentials "password"))))))
+      `((freenode ((,freenode-user . ,freenode-pass)))))
 
 ;;IRC
 (require 'erc-join)
 (erc-autojoin-mode 1)
 (setq erc-autojoin-channels-alist
-      '(("freenode.net" "#emacs" "#ubuntu" "#supercollider")))
+      '(("freenode.net" "#emacs" "#supercollider" "#crunchbang")))
 
 (defun erc-connect ()
   "Start up erc and connect to freedonde"
@@ -22,7 +23,7 @@
   (erc :server "irc.freenode.net"
        :full-name "Peter V."
        :port 6667
-       :nick (netrc-get freenode-credentials "login")
+       :nick freenode-user
        ))
 
 (require 'erc-match)
