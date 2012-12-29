@@ -26,7 +26,6 @@
                       edit-server
                       color-theme
                       org-plus-contrib
-                      flycheck
                       markdown-mode
                       js2-mode
                       apache-mode
@@ -40,6 +39,8 @@
                       gnuplot
                       dtrt-indent
                       exec-path-from-shell
+                      s
+                      dash
                       )
   "A list of packages to ensure are installed at launch.")
 

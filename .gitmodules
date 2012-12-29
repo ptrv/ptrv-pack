@@ -54,3 +54,6 @@
     path = vendor/submodules/org2blog
     url = http://github.com/punchagan/org2blog.git
     ignore = untracked
+[submodule "vendor/submodules/flycheck"]
+	path = vendor/submodules/flycheck
+	url = https://github.com/lunaryorn/flycheck.git
