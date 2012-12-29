@@ -223,3 +223,21 @@ Symbols matching the text at point are put first in the completion list."
     (setq deactivate-mark nil)
     (exchange-point-and-mark)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; define function to shutdown emacs server instance
+(defun server-shutdown ()
+  "Save buffers, Quit, and Shutdown (kill) server"
+  (interactive)
+  (save-some-buffers)
+  (kill-emacs)
+  )
+
+(defun exit-emacs-client ()
+  "consistent exit emacsclient.
+   if not in emacs client, echo a message in minibuffer, don't exit emacs.
+   if in server mode
+      and editing file, do C-x # server-edit
+      else do C-x 5 0 delete-frame"
+  (interactive)
+  (if server-buffer-clients
+      (server-edit)
+    (delete-frame)))
