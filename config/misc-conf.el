@@ -26,7 +26,7 @@
 (setq live-disable-zone t)
 
 ;; debug messages
-(setq debug-on-error nil)
+(setq debug-on-error t)
 
 ;; scroll compilation buffer
 ;;(setq compilation-scroll-output 'first-error)
@@ -62,6 +62,7 @@
              (auto-fill-mode 1)))
 
 ;; Soft word wrap
+(require 'longlines)
 (setq longlines-show-hard-newlines t)
 (setq longlines-auto-wrap t)
 (add-hook 'LaTeX-mode-hook 'longlines-mode)
@@ -113,3 +114,6 @@
 
 (live-add-pack-lib "arduino-mode")
 (require 'arduino-mode)
+
+(setq browse-url-generic-program (executable-find "google-chrome")
+      browse-url-browser-function 'browse-url-generic)

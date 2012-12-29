@@ -38,6 +38,7 @@
                       gitignore-mode
                       gitconfig-mode
                       gnuplot
+                      dtrt-indent
                       exec-path-from-shell
                       )
   "A list of packages to ensure are installed at launch.")
