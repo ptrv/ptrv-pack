@@ -21,7 +21,7 @@
 (require 'color-theme)
 
 (defvar ptrv-themes-dir (concat (live-pack-lib-dir) "themes"))
-(load-file (concat  (file-name-as-directory ptrv-themes-dir) "gandalf-ptrv.el"))
+(load-file (concat (file-name-as-directory ptrv-themes-dir) "gandalf-ptrv.el"))
 (color-theme-gandalf-ptrv)
 
 ;; taken from colour-pack
