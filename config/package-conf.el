@@ -32,7 +32,6 @@
                       yaml-mode
                       xml-rpc
                       pytest
-                      flymake-cursor
                       git-commit-mode
                       gitignore-mode
                       gitconfig-mode
