@@ -257,3 +257,5 @@
 (global-set-key (kbd "M-/") 'hippie-expand)
 
 (global-set-key [f12] 'webjump)
+
+(global-set-key (kbd "C-c q") 'exit-emacs-client)
