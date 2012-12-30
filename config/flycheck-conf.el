@@ -1,6 +1,8 @@
 (live-add-pack-lib "flycheck")
 (require 'flycheck)
 
+(setq flycheck-ignore-columns t)
+
 ;; (setq flycheck-checkers
 ;;       '(flycheck-checker-bash
 ;;         flycheck-checker-coffee
