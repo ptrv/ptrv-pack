@@ -89,12 +89,10 @@
      (vhl/default-face ((t (:background "grey60"))))
      (undo-tree-visualizer-active-branch-face ((t (:foreground "deep pink" :background "grey40"))))
 
-     (flymake-errline ((t (:background "pink"))))
-     (flymake-warnline ((t (:background "orange"))))
-     ;; (flymake-errline ((t (:underline "ref"))))
-     ;; (flymake-warnline ((t (:underline "orange"))))
-     (error ((t (:background "pink"))))
-     (warning ((t (:background "orange"))))
+     (flycheck-error-face ((t (:background "pink"))))
+     (flycheck-warning-face ((t (:background "orange"))))
+     ;; (error ((t (:background "pink"))))
+     ;; (warning ((t (:background "orange"))))
      )
    ))
 
