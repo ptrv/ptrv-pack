@@ -137,3 +137,23 @@
 (ido-ubiquitous-use-new-completing-read webjump 'webjump)
 ;; (ido-ubiquitous-use-new-completing-read yas-expand 'yasnippet)
 (ido-ubiquitous-use-new-completing-read yas-visit-snippet-file 'yasnippet)
+
+;; iflipb
+(require 'iflipb)
+(setq iflipb-ignore-buffers '("*Ack-and-a-half*"
+                              "*Help*"
+                              "*Compile-Log*"
+                              "*Ibuffer*"
+                              "*Messages*"
+                              "*scratch*"
+                              "*Completions*"
+                              "*magit"
+                              "*Pymacs*"
+                              "*clang-complete*"
+                              "*compilation*"
+                              "*Packages*"
+                              "TAGS"
+                              "*file-index*"
+                              " output*"
+                              ))
+(setq iflipb-wrap-around t)
