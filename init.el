@@ -37,6 +37,7 @@
   (live-load-config-file "linux-conf.el")))
 (live-load-config-file "flycheck-conf.el")
 (live-load-config-file "bindings.el")
+(live-load-config-file "clean-mode-line.el")
 
 (defmacro Xlaunch (&rest x)
   (list 'if (eq window-system 'x) (cons 'progn x)))
