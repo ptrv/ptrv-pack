@@ -40,6 +40,7 @@
                       exec-path-from-shell
                       s
                       dash
+                      ido-ubiquitous
                       )
   "A list of packages to ensure are installed at launch.")
 
