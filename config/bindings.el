@@ -202,6 +202,17 @@
 (global-set-key (kbd " C-z") popwin:keymap)
 
 (require 'iflipb)
+(setq iflipb-ignore-buffers '("*Ack-and-a-half*"
+                              "*Help*"
+                              "*Compile-Log*"
+                              "*Ibuffer*"
+                              "*Messages*"
+                              "*scratch*"
+                              "*Completions*"
+                              "*magit"
+                              ))
+(setq iflipb-wrap-around t)
+
 (global-set-key (kbd "C-<next>") 'iflipb-next-buffer)
 (global-set-key (kbd "C-<prior>") 'iflipb-previous-buffer)
 (global-set-key (kbd "<XF86Forward>") 'iflipb-next-buffer)
