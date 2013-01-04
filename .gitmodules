@@ -4,14 +4,14 @@
         ignore = untracked
 [submodule "vendor/snippets/sclang-mode"]
         path = vendor/snippets/sclang-mode
-        url = git@github.com:ptrv/sclang-mode.git
+        url = https://github.com/ptrv/sclang-mode.git
 [submodule "vendor/submodules/pandoc-mode"]
     path = vendor/submodules/pandoc-mode
     url = https://github.com/joostkremers/pandoc-mode.git
     ignore = untracked
 [submodule "vendor/submodules/yasnippet-snippets"]
     path = vendor/submodules/yasnippet-snippets
-    url = git@github.com:ptrv/yasnippet-snippets.git
+    url = https://github.com/ptrv/yasnippet-snippets.git
 [submodule "vendor/submodules/auto-complete-auctex"]
     path = vendor/submodules/auto-complete-auctex
     url = https://github.com/monsanto/auto-complete-auctex.git
@@ -37,7 +37,7 @@
     ignore = untracked
 [submodule "vendor/submodules/processing2-emacs"]
     path = vendor/submodules/processing2-emacs
-    url = git@github.com:ptrv/processing2-emacs.git
+    url = https://github.com/ptrv/processing2-emacs.git
     ignore = untracked
 [submodule "vendor/submodules/nyan-mode"]
     path = vendor/submodules/nyan-mode
@@ -49,11 +49,11 @@
     ignore = untracked
 [submodule "vendor/submodules/arduino-mode"]
     path = vendor/submodules/arduino-mode
-    url = git@github.com:ptrv/arduino-mode.git
+    url = https://github.com/ptrv/arduino-mode.git
 [submodule "vendor/submodules/org2blog"]
     path = vendor/submodules/org2blog
     url = http://github.com/punchagan/org2blog.git
     ignore = untracked
 [submodule "vendor/submodules/flycheck"]
-	path = vendor/submodules/flycheck
-	url = https://github.com/lunaryorn/flycheck.git
+    path = vendor/submodules/flycheck
+    url = https://github.com/lunaryorn/flycheck.git
