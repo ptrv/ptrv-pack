@@ -13,10 +13,10 @@
     ;; Major modes
     (clojure-mode . "λ")
     (hi-lock-mode . "")
-    (python-mode . "Py")
+    ;; (python-mode . "Py")
     (emacs-lisp-mode . "EL")
     (markdown-mode . "md")
-    (org-mode . "Ο"))
+    (org-mode . "Θ"))
   "Alist for `clean-mode-line'.
 
 When you add a new element to the alist, keep in mind that you
