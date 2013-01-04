@@ -55,3 +55,16 @@
                    (shell-command (concat "chmod u+x " (shell-quote-argument buffer-file-name)))
                    (message
                     (concat "Saved as script: " buffer-file-name)))))
+
+;; iflipb
+(require 'iflipb)
+(setq iflipb-ignore-buffers '("*Ack-and-a-half*"
+                              "*Help*"
+                              "*Compile-Log*"
+                              "*Ibuffer*"
+                              "*Messages*"
+                              "*scratch*"
+                              "*Completions*"
+                              "*magit"
+                              ))
+(setq iflipb-wrap-around t)
