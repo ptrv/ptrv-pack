@@ -66,5 +66,8 @@
                               "*scratch*"
                               "*Completions*"
                               "*magit"
+                              "*Pymacs*"
+                              "*clang-complete*"
+                              "*compilation*"
                               ))
 (setq iflipb-wrap-around t)
