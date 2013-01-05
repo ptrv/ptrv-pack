@@ -33,7 +33,7 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 ;;mark current function
-(global-set-key (kbd "C-x C-p")     'mark-defun)
+(global-set-key (kbd "C-x C-p") 'mark-defun)
 
 ;; C-c Groups
 ;;
@@ -118,10 +118,10 @@
 (global-set-key (kbd "C-c w r") 'rotate-windows)
 
 ;;requires buffer-move
-(global-set-key (kbd "C-c w u")  'buf-move-up)
-(global-set-key (kbd "C-c w d")  'buf-move-down)
-(global-set-key (kbd "C-c w l")  'buf-move-left)
-(global-set-key (kbd "C-c w r")  'buf-move-right)
+(global-set-key (kbd "C-c w u") 'buf-move-up)
+(global-set-key (kbd "C-c w d") 'buf-move-down)
+(global-set-key (kbd "C-c w l") 'buf-move-left)
+(global-set-key (kbd "C-c w r") 'buf-move-right)
 
 (global-set-key (kbd "C-c w .") 'shrink-window-horizontally)
 (global-set-key (kbd "C-c w ,") 'enlarge-window-horizontally)
