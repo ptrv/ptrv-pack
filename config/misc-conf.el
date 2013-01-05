@@ -158,5 +158,6 @@
                               "TAGS"
                               "*file-index*"
                               " output*"
+                              "*tramp/"
                               ))
 (setq iflipb-wrap-around t)
