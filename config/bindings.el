@@ -267,3 +267,5 @@
 (global-set-key (kbd "<C-M-return>") 'open-line-above)
 
 (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
+
+(global-set-key [remap goto-line] 'goto-line-with-feedback)
