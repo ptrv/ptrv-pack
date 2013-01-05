@@ -25,3 +25,8 @@
 (add-to-list 'auto-mode-alist '("lib/snippets" . snippet-mode))
 (add-to-list 'auto-mode-alist '("etc/snippets" . snippet-mode))
 (add-to-list 'auto-mode-alist '("\\.yasnippet$" . snippet-mode))
+
+;; pd-mode
+(autoload 'pd-mode "pd-mode" "autoloaded" t)
+(add-to-list 'auto-mode-alist '("\\.pat$" . pd-mode))
+(add-to-list 'auto-mode-alist '("\\.pd$"  . pd-mode))
