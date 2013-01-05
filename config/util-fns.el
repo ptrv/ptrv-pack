@@ -276,6 +276,7 @@ Symbols matching the text at point are put first in the completion list."
 
 ;; http://whattheemacsd.com/setup-magit.el-01.html
 ;; full screen magit-status
+(require 'magit)
 (defadvice magit-status (around magit-fullscreen activate)
   (window-configuration-to-register :magit-fullscreen)
   ad-do-it
