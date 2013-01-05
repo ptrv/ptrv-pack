@@ -6,8 +6,9 @@
 (define-key global-map (kbd "C-+") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
 
-(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
-(global-set-key (kbd "C-x f") 'recentf-ido-find-file)
+;; (global-set-key (kbd "C-x C-r") 'ido-recentf-open)
+;; (global-set-key (kbd "C-x f") 'recentf-ido-find-file)
+(global-set-key (kbd "C-x f") 'ido-recentf-open)
 (global-set-key (kbd "C-c r") 'revert-buffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
@@ -259,3 +260,10 @@
 (global-set-key [f12] 'webjump)
 
 (global-set-key (kbd "C-c q") 'exit-emacs-client)
+
+(global-set-key (kbd "C-x C-r") 'rename-current-buffer-file)
+
+(global-set-key (kbd "<C-S-return>") 'open-line-below)
+(global-set-key (kbd "<C-M-return>") 'open-line-above)
+
+(define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
