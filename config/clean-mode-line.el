@@ -5,7 +5,7 @@
     (eldoc-mode . "")
     (abbrev-mode . "")
     (undo-tree-mode . " τ")
-    (wrap-region-mode . " ω")
+    (wrap-region-mode . "")
     ;;(volatile-highlights-mode . " υ")
     (elisp-slime-nav-mode . " δ")
     (nrepl-mode . " ηζ")
@@ -16,7 +16,7 @@
     ;; (python-mode . "Py")
     (emacs-lisp-mode . "EL")
     (markdown-mode . "md")
-    (org-mode . "Θ"))
+    (org-mode . "Ο"))
   "Alist for `clean-mode-line'.
 
 When you add a new element to the alist, keep in mind that you
