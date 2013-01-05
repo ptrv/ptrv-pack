@@ -276,17 +276,19 @@ Symbols matching the text at point are put first in the completion list."
 
 ;; http://whattheemacsd.com/setup-magit.el-01.html
 ;; full screen magit-status
-(require 'magit)
-(defadvice magit-status (around magit-fullscreen activate)
-  (window-configuration-to-register :magit-fullscreen)
-  ad-do-it
-  (delete-other-windows))
-
-(defun magit-quit-session ()
-  "Restores the previous window configuration and kills the magit buffer"
-  (interactive)
-  (kill-buffer)
-  (jump-to-register :magit-fullscreen))
+(eval-after-load 'magit
+  '(progn
+     (defadvice magit-status (around magit-fullscreen activate)
+       (window-configuration-to-register :magit-fullscreen)
+       ad-do-it
+       (delete-other-windows))
+     ;; (defun magit-quit-session ()
+     ;;   "Restores the previous window configuration and kills the magit buffer"
+     ;;   (interactive)
+     ;;   (kill-buffer)
+     ;;   (jump-to-register :magit-fullscreen))
+     ;; (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
+    ))
 
 (defun goto-line-with-feedback ()
   "Show line numbers temporarily, while prompting for the line number input"
