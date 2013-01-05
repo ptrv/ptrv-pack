@@ -21,4 +21,4 @@
       (t
        ;; (set-frame-size (selected-frame) 110 60)
        (set-frame-size (selected-frame) 130 60)
-       (set-frame-position (selected-frame) 200 20)))
+       (set-frame-position (selected-frame) 500 20)))
