@@ -14,8 +14,11 @@
 
 (setq sentence-end-double-space nil)
 
-;; gist.el - open gist on browser
+;; gist.el
 (setq gist-view-gist t)
+(add-to-list 'gist-supported-modes-alist '(processing-mode . "pde"))
+(add-to-list 'gist-supported-modes-alist '(conf-mode . "desktop"))
+
 
 ;; follow version controlled symlinks automatically
 (setq vc-follow-symlinks t)
