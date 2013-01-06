@@ -160,6 +160,7 @@
                               "*file-index*"
                               " output*"
                               "*tramp/"
+                              "*project-status*"
                               ))
 (setq iflipb-wrap-around t)
 
