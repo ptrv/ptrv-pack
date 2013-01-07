@@ -30,7 +30,7 @@
        ))
 
 (require 'erc-match)
-(setq erc-keywords '("ptrv"))
+(setq erc-keywords `(,freenode-user))
 (erc-match-mode)
 
 (setq erc-track-exclude-types '("JOIN" "NICK" "PART" "QUIT" "MODE"
