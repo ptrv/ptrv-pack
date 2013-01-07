@@ -64,12 +64,12 @@
              (set-fill-column 72)
              (auto-fill-mode 1)))
 
-;; Soft word wrap
-(require 'longlines)
-(setq longlines-show-hard-newlines t)
-(setq longlines-auto-wrap t)
-(add-hook 'LaTeX-mode-hook 'longlines-mode)
-(add-hook 'markdown-mode-hook 'longlines-mode)
+;; ;; Soft word wrap
+;; (require 'longlines)
+;; (setq longlines-show-hard-newlines t)
+;; (setq longlines-auto-wrap t)
+;; ;; (add-hook 'LaTeX-mode-hook 'longlines-mode)
+;; ;; (add-hook 'markdown-mode-hook 'longlines-mode)
 
 (require 'webjump)
 (setq webjump-sites
