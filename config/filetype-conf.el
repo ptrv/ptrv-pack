@@ -30,3 +30,6 @@
 (autoload 'pd-mode "pd-mode" "autoloaded" t)
 (add-to-list 'auto-mode-alist '("\\.pat$" . pd-mode))
 (add-to-list 'auto-mode-alist '("\\.pd$"  . pd-mode))
+
+;; gitconfig
+(add-to-list 'auto-mode-alist '("gitconfig*" . gitconfig-mode))
