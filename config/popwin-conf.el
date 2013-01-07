@@ -28,4 +28,5 @@
         ("*project-status*" :noselect t)
         ("*Compile-Log" :height 20)
         ("*pytest*" :noselect t)
+        ("*Python*" :stick t)
         ))

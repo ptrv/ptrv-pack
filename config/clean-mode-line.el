@@ -13,7 +13,7 @@
     ;; Major modes
     (clojure-mode . "λ")
     (hi-lock-mode . "")
-    ;; (python-mode . "Py")
+    (python-mode . "Py")
     (emacs-lisp-mode . "EL")
     (markdown-mode . "md")
     (org-mode . "Ο"))
