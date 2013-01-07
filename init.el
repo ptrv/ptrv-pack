@@ -49,3 +49,6 @@
 (require 'server)
 (unless (server-running-p)
   (server-start))
+
+(setq custom-file "~/.emacs-custom.el")
+(load custom-file 'noerror)
