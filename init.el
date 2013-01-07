@@ -2,6 +2,8 @@
 ;; ptrv's personal live pack
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(load "~/.emacs-locals.el" 'noerror)
+
 (live-load-config-file "package-conf.el")
 (live-load-config-file "shell-conf.el")
 (live-load-config-file "util-fns.el")
@@ -43,8 +45,6 @@
   (list 'if (eq window-system 'x) (cons 'progn x)))
 
 (Xlaunch (live-load-config-file "x11-config.el" ))
-
-(load "~/.emacs-locals.el" 'noerror)
 
 (require 'server)
 (unless (server-running-p)

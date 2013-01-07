@@ -1,10 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;
 ;; erc-conf.el
 ;;;;;;;;;;;;;;;;;;;;
-(setq freenode-user "ptrv")
-(setq freenode-pass nil)
-(load "~/.ercpass" 'noerror)
-
+(require 'secrets)
 (require 'erc-services)
 (erc-services-mode 1)
 (setq erc-prompt-for-nickserv-password nil)
