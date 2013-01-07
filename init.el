@@ -46,9 +46,6 @@
 
 (load "~/.emacs-locals.el" 'noerror)
 
-;; only start emacs server when it's not started, I hate warnings.
-(defvar tmpdir (getenv "TMPDIR"))
-(setq server-socket-file
-      (concat (if (string-equal tmpdir nil) "/tmp" tmpdir) "/emacs1000/server"))
-(unless (file-exists-p server-socket-file)
+(require 'server)
+(unless (server-running-p)
   (server-start))
