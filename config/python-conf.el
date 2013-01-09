@@ -1,3 +1,5 @@
+(live-add-pack-lib "Pymacs")
+
 (autoload 'pymacs-apply "pymacs")
 (autoload 'pymacs-call "pymacs")
 (autoload 'pymacs-eval "pymacs" nil t)
