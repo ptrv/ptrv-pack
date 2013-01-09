@@ -10,6 +10,7 @@
     (elisp-slime-nav-mode . " δ")
     (nrepl-mode . " ηζ")
     (nrepl-interaction-mode . " ηζ")
+    (auto-fill-function . " φ")
     ;; Major modes
     (clojure-mode . "λ")
     (hi-lock-mode . "")
