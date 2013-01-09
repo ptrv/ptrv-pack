@@ -29,7 +29,7 @@
 (setq live-disable-zone t)
 
 ;; debug messages
-(setq debug-on-error t)
+(setq debug-on-error nil)
 
 ;; scroll compilation buffer
 ;;(setq compilation-scroll-output 'first-error)
