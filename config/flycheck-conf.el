@@ -1,7 +1,6 @@
 (live-add-pack-lib "flycheck")
 (require 'flycheck)
 
-;; (setq flycheck-ignore-columns t)
 (setq flycheck-highlighting-mode 'lines)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
