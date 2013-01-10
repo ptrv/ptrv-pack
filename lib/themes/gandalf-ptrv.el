@@ -88,6 +88,7 @@
 
      (vhl/default-face ((t (:background "grey60"))))
      (undo-tree-visualizer-active-branch-face ((t (:foreground "deep pink" :background "grey40"))))
+     (markdown-link-face ((t (:background "#FBDE2D"))))
 
      (flycheck-error-face ((t (:background "pink"))))
      (flycheck-warning-face ((t (:background "orange"))))
