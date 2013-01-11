@@ -35,4 +35,4 @@
 (add-hook 'python-mode-hook 'flycheck-mode)
 (add-hook 'lua-mode-hook 'flycheck-mode)
 ;; (add-hook 'go-mode-hook 'flycheck-mode)
-(add-hook 'shell-script-mode 'flycheck-mode)
+(add-hook 'sh-mode-hook 'flycheck-mode)
