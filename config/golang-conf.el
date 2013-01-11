@@ -1,7 +1,9 @@
 ;; go-lang completion
 (require 'go-autocomplete)
 
-(add-hook 'before-save-hook #'gofmt-before-save)
+(add-hook 'go-mode-hook '(lambda ()
+                           (set (make-local-variable 'before-save-hook)
+                                #'gofmt-before-save)))
 
 (add-hook 'go-mode-hook
           (lambda ()
