@@ -42,6 +42,7 @@
                       dash
                       ido-ubiquitous
                       refheap
+                      epc
                       )
   "A list of packages to ensure are installed at launch.")
 
