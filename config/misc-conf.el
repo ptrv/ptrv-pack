@@ -181,3 +181,7 @@
 ;; refheap
 (require 'secrets)
 (require 'refheap)
+
+;; disabled commands
+(put 'downcase-region 'disabled nil)
+(put 'updacase-region 'disabled nil)
