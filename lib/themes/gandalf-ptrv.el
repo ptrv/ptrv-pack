@@ -11,13 +11,15 @@
   (interactive)
   (color-theme-install
    '(color-theme-gandalf-ptrv
-     ((background-color . "grey90")
+     (;; (background-color . "grey90")
+      (background-color . "grey95")
       (background-mode . light)
       (border-color . "grey95")
       (cursor-color . "darkred")
       (foreground-color . "black")
       (mouse-color . "sienna1"))
-     (default ((t (:background "grey90" :foreground "black"))))
+     ;; (default ((t (:background "grey90" :foreground "black"))))
+     (default ((t (:background "grey95" :foreground "black"))))
      (blue ((t (:foreground "blue"))))
      (bold ((t (:bold t))))
      (bold-italic ((t (:bold t))))
