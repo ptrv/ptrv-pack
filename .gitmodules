@@ -27,10 +27,6 @@
     path = vendor/submodules/emacs-pcomplete-plugins
     url = https://github.com/DamienCassou/emacs-pcomplete-plugins.git
     ignore = untracked
-[submodule "vendor/submodules/emacs-iedit"]
-    path = vendor/submodules/emacs-iedit
-    url = https://github.com/eproxus/emacs-iedit.git
-    ignore = untracked
 [submodule "vendor/submodules/processing2-emacs"]
     path = vendor/submodules/processing2-emacs
     url = https://github.com/ptrv/processing2-emacs.git
