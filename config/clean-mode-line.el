@@ -17,7 +17,8 @@
     (python-mode . "Py")
     (emacs-lisp-mode . "EL")
     (markdown-mode . "md")
-    (org-mode . "Ο"))
+    (org-mode . "Ο")
+    (processing-mode . "P5"))
   "Alist for `clean-mode-line'.
 
 When you add a new element to the alist, keep in mind that you
