@@ -43,6 +43,7 @@
                       ido-ubiquitous
                       refheap
                       epc
+                      iflipb
                       )
   "A list of packages to ensure are installed at launch.")
 
