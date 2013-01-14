@@ -30,6 +30,7 @@
 (live-add-pack-lib "emacs-jedi")
 (autoload 'jedi:setup "jedi" nil t)
 (setq jedi:setup-keys t)
+(setq jedi:key-related-names (kbd "C-c ö"))
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
 
