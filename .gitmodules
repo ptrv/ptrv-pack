@@ -44,7 +44,7 @@
     url = https://github.com/ptrv/arduino-mode.git
 [submodule "vendor/submodules/org2blog"]
     path = vendor/submodules/org2blog
-    url = http://github.com/punchagan/org2blog.git
+    url = https://github.com/ptrv/org2blog.git
     ignore = untracked
 [submodule "vendor/submodules/flycheck"]
     path = vendor/submodules/flycheck
