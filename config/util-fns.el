@@ -130,98 +130,151 @@ Symbols matching the text at point are put first in the completion list."
            (insert (current-kill 0)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; http://www.emacswiki.org/emacs/MoveLine
-;; (defun move-line-up ()
-;;   "Move current line up."
+;; http://stackoverflow.com/a/2423919/464831
+(defun move-text-internal (arg)
+   (cond
+    ((and mark-active transient-mark-mode)
+     (if (> (point) (mark))
+            (exchange-point-and-mark))
+     (let ((column (current-column))
+              (text (delete-and-extract-region (point) (mark))))
+       (forward-line arg)
+       (move-to-column column t)
+       (set-mark (point))
+       (insert text)
+       (exchange-point-and-mark)
+       (setq deactivate-mark nil)))
+    (t
+     (beginning-of-line)
+     (when (or (> arg 0) (not (bobp)))
+       (forward-line)
+       (when (or (< arg 0) (not (eobp)))
+            (transpose-lines arg))
+       (forward-line -1)))))
+
+(defun move-text-down (arg)
+   "Move region (transient-mark-mode active) or current line
+  arg lines down."
+   (interactive "*p")
+   (move-text-internal arg))
+
+(defun move-text-up (arg)
+   "Move region (transient-mark-mode active) or current line
+  arg lines up."
+   (interactive "*p")
+   (move-text-internal (- arg)))
+
+;; ;; Duplicate start of line or region, from http://www.emacswiki.org/emacs/DuplicateStartOfLineOrRegion
+;; (defun duplicate-start-of-line-or-region ()
 ;;   (interactive)
-;;   (transpose-lines 1)
-;;   (forward-line -2))
+;;   (if mark-active
+;;       (duplicate-region)
+;;     (duplicate-start-of-line)))
+;; (defun duplicate-start-of-line ()
+;;   (if (bolp)
+;;       (progn
+;;         (end-of-line)
+;;         (duplicate-start-of-line)
+;;         (beginning-of-line))
+;;     (let ((text (buffer-substring (point)
+;;                                   (beginning-of-thing 'line))))
+;;       (forward-line)
+;;       (push-mark)
+;;       (insert text)
+;;       (open-line 1))))
+;; (defun duplicate-region ()
+;;   (let* ((end (region-end))
+;;          (text (buffer-substring (region-beginning) end)))
+;;     (goto-char end)
+;;     (insert text)
+;;     (push-mark end)
+;;     (setq deactivate-mark nil)
+;;     (exchange-point-and-mark)))
 
-;; (defun move-line-down ()
-;;   "Move current line down."
-;;   (interactive)
-;;   (forward-line 1)
-;;   (transpose-lines 1)
-;;   (forward-line -1))
+;; (global-set-key (kbd "C-S-d") 'duplicate-start-of-line-or-region)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; http://www.emacswiki.org/emacs/MoveLineRegion
-(defun move-line (n)
-  "Move the current line up or down by N lines."
-  (interactive "p")
-  (setq col (current-column))
-  (beginning-of-line) (setq start (point))
-  (end-of-line) (forward-char) (setq end (point))
-  (let ((line-text (delete-and-extract-region start end)))
-    (forward-line n)
-    (insert line-text)
-    ;; restore point to original column in moved line
-    (forward-line -1)
-    (forward-char col)))
-
-(defun move-line-up (n)
-  "Move the current line up by N lines."
-  (interactive "p")
-  (move-line (if (null n) -1 (- n))))
-
-(defun move-line-down (n)
-  "Move the current line down by N lines."
-  (interactive "p")
-  (move-line (if (null n) 1 n)))
-
-(defun move-region (start end n)
-  "Move the current region up or down by N lines."
-  (interactive "r\np")
-  (let ((line-text (delete-and-extract-region start end)))
-    (forward-line n)
-    (let ((start (point)))
-      (insert line-text)
-      (setq deactivate-mark nil)
-      (set-mark start))))
-
-(defun move-region-up (start end n)
-  "Move the current line up by N lines."
-  (interactive "r\np")
-  (move-region start end (if (null n) -1 (- n))))
-
-(defun move-region-down (start end n)
-  "Move the current line down by N lines."
-  (interactive "r\np")
-  (move-region start end (if (null n) 1 n)))
-
-(defun move-line-region-up (start end n)
-  (interactive "r\np")
-  (if (region-active-p) (move-region-up start end n) (move-line-up n)))
-
-(defun move-line-region-down (start end n)
-  (interactive "r\np")
-  (if (region-active-p) (move-region-down start end n) (move-line-down n)))
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Duplicate start of line or region, from http://www.emacswiki.org/emacs/DuplicateStartOfLineOrRegion
-(defun duplicate-start-of-line-or-region ()
+;; http://www.emacswiki.org/emacs/basic-edit-toolkit.el
+(defun duplicate-line-or-region-above (&optional reverse)
+  "Duplicate current line or region above.
+By default, duplicate current line above.
+If mark is activate, duplicate region lines above.
+Default duplicate above, unless option REVERSE is non-nil."
   (interactive)
-  (if mark-active
-      (duplicate-region)
-    (duplicate-start-of-line)))
-(defun duplicate-start-of-line ()
-  (if (bolp)
-      (progn
-        (end-of-line)
-        (duplicate-start-of-line)
-        (beginning-of-line))
-    (let ((text (buffer-substring (point)
-                                  (beginning-of-thing 'line))))
-      (forward-line)
-      (push-mark)
-      (insert text)
-      (open-line 1))))
-(defun duplicate-region ()
-  (let* ((end (region-end))
-         (text (buffer-substring (region-beginning) end)))
-    (goto-char end)
-    (insert text)
-    (push-mark end)
-    (setq deactivate-mark nil)
-    (exchange-point-and-mark)))
+  (let ((origianl-column (current-column))
+        duplicate-content)
+    (if mark-active
+        ;; If mark active.
+        (let ((region-start-pos (region-beginning))
+              (region-end-pos (region-end)))
+          ;; Set duplicate start line position.
+          (setq region-start-pos (progn
+                                   (goto-char region-start-pos)
+                                   (line-beginning-position)))
+          ;; Set duplicate end line position.
+          (setq region-end-pos (progn
+                                 (goto-char region-end-pos)
+                                 (line-end-position)))
+          ;; Get duplicate content.
+          (setq duplicate-content (buffer-substring region-start-pos region-end-pos))
+          (if reverse
+              ;; Go to next line after duplicate end position.
+              (progn
+                (goto-char region-end-pos)
+                (forward-line +1))
+            ;; Otherwise go to duplicate start position.
+            (goto-char region-start-pos)))
+      ;; Otherwise set duplicate content equal current line.
+      (setq duplicate-content (buffer-substring
+                               (line-beginning-position)
+                               (line-end-position)))
+      ;; Just move next line when `reverse' is non-nil.
+      (and reverse (forward-line 1))
+      ;; Move to beginning of line.
+      (beginning-of-line))
+    ;; Open one line.
+    (open-line 1)
+    ;; Insert duplicate content and revert column.
+    (insert duplicate-content)
+    (move-to-column origianl-column t)))
+
+(defun duplicate-line-or-region-below ()
+  "Duplicate current line or region below.
+By default, duplicate current line below.
+If mark is activate, duplicate region lines below."
+  (interactive)
+  (duplicate-line-or-region-above t))
+
+(defun duplicate-line-above-comment (&optional reverse)
+  "Duplicate current line above, and comment current line."
+  (interactive)
+  (if reverse
+      (duplicate-line-or-region-below)
+    (duplicate-line-or-region-above))
+  (save-excursion
+    (if reverse
+        (forward-line -1)
+      (forward-line +1))
+    (comment-or-uncomment-region+)))
+
+(defun duplicate-line-below-comment ()
+  "Duplicate current line below, and comment current line."
+  (interactive)
+  (duplicate-line-above-comment t))
+
+(defun comment-or-uncomment-region+ ()
+  "This function is to comment or uncomment a line or a region."
+  (interactive)
+  (let (beg end)
+    (if mark-active
+        (progn
+          (setq beg (region-beginning))
+          (setq end (region-end)))
+      (setq beg (line-beginning-position))
+      (setq end (line-end-position)))
+    (save-excursion
+      (comment-or-uncomment-region beg end))))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; define function to shutdown emacs server instance
 (defun server-shutdown ()

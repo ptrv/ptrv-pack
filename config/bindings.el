@@ -29,8 +29,6 @@
 (global-set-key [f8] 'delete-window)
 (global-set-key [f9] 'delete-other-windows)
 
-(global-set-key (kbd "C-S-d") 'duplicate-start-of-line-or-region)
-
 (global-set-key (kbd "C-x g") 'magit-status)
 
 ;;mark current function
@@ -253,12 +251,16 @@
 (defvar iy-go-to-char-key-backward)
 (setq iy-go-to-char-key-backward ?\;)
 
-(global-set-key (kbd "M-<up>") 'move-line-region-up)
-(global-set-key (kbd "M-<down>") 'move-line-region-down)
-
 (global-set-key (kbd "M-/") 'hippie-expand)
 
 (global-set-key [f12] 'webjump)
+
+(global-set-key (kbd "M-<up>") 'move-text-up)
+(global-set-key (kbd "M-<down>") 'move-text-down)
+
+(global-set-key (kbd "C-S-d") 'duplicate-line-or-region-below)
+
+(global-set-key (kbd "C-S-M-d") 'duplicate-line-below-comment)
 
 (global-set-key (kbd "C-c q") 'exit-emacs-client)
 
