@@ -20,7 +20,6 @@
                       go-mode
                       starter-kit-eshell
                       ack-and-a-half
-                      multi-term
                       session
                       notify
                       edit-server
@@ -44,7 +43,6 @@
                       refheap
                       epc
                       iflipb
-                      ;;helm
                       )
   "A list of packages to ensure are installed at launch.")
 
