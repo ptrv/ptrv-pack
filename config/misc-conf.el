@@ -127,10 +127,10 @@
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
 ;; Use ido everywhere
-;; (require 'ido-ubiquitous)
-;; (ido-ubiquitous-mode 1)
-;; (ido-ubiquitous-disable-in erc-iswitchb)
-;; (ido-ubiquitous-disable-in ispell-change-dictionary)
+(require 'ido-ubiquitous)
+(ido-ubiquitous-mode 1)
+(ido-ubiquitous-disable-in erc-iswitchb)
+;;(ido-ubiquitous-disable-in ispell-change-dictionary)
 
 ;; Fix ido-ubiquitous for newer packages
 (defmacro ido-ubiquitous-use-new-completing-read (cmd package)

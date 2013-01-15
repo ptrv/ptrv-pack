@@ -11,7 +11,6 @@
     (nrepl-mode . " ηζ")
     (nrepl-interaction-mode . " ηζ")
     (auto-fill-function . " φ")
-    (helm-mode . " Η")
     ;; Major modes
     (clojure-mode . "λ")
     (hi-lock-mode . "")

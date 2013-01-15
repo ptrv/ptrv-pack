@@ -22,7 +22,6 @@
 (live-load-config-file "html-conf.el")
 (live-load-config-file "erc-conf.el")
 (live-load-config-file "faust-conf.el")
-(live-load-config-file "helm-conf.el")
 (live-load-config-file "edit-server-conf.el")
 (live-load-config-file "editing-conf.el")
 (live-load-config-file "markdown-conf.el")

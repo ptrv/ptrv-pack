@@ -25,7 +25,7 @@
                       notify
                       edit-server
                       color-theme
-                      org-plus-contrib
+                      ;;org-plus-contrib
                       markdown-mode
                       js2-mode
                       apache-mode
@@ -40,11 +40,11 @@
                       exec-path-from-shell
                       s
                       dash
-                      ;;ido-ubiquitous
+                      ido-ubiquitous
                       refheap
                       epc
                       iflipb
-                      helm
+                      ;;helm
                       )
   "A list of packages to ensure are installed at launch.")
 
