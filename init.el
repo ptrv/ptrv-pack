@@ -28,6 +28,7 @@
 (live-load-config-file "projects-conf.el")
 (live-load-config-file "processing2-conf.el")
 (live-load-config-file "wrap-region-conf.el")
+(live-load-config-file "iedit-conf.el")
 (cond
  ((eq system-type 'darwin)
   (live-load-config-file "osx-conf.el"))
