@@ -2,21 +2,12 @@
 (require 'flycheck)
 
 (setq flycheck-highlighting-mode 'lines)
-
 (unless (and (>= emacs-major-version 24)
              (>= emacs-minor-version 3))
   (add-to-list 'debug-ignored-errors "\\`No more Flycheck errors\\'")
   (add-to-list 'debug-ignored-errors "\\`Flycheck mode disabled\\'")
   (add-to-list 'debug-ignored-errors "\\`Configured syntax checker .* cannot be used\\'"))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; ;; TODO: make this work
-;; (defvar flycheck-checker-go
-;;   '(:command
-;;     ("go" "build" "-o" "/dev/null" source)
-;;     :modes go-mode))
-
-;; (add-to-list 'flycheck-checkers 'flycheck-checker-go)
 
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ;; modes
