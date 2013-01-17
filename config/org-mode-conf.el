@@ -8,6 +8,10 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 
+(setq org-outline-path-complete-in-steps nil)
+(setq org-completion-use-iswitchb nil)
+(setq org-completion-use-ido t)
+
 (setq org-log-done t)
 (setq org-replace-disputed-keys nil)
 (setq org-clock-into-drawer t)
