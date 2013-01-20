@@ -162,3 +162,7 @@
 
 ;; (add-hook 'LaTeX-mode-hook 'flycheck-mode)
 (add-hook 'LaTeX-mode-hook 'auto-fill-mode)
+
+(add-hook 'LaTeX-mode-hook (lambda ()
+                             (interactive)
+                             (wrap-region-remove-wrapper "`")))
