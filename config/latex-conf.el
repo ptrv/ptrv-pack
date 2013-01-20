@@ -1,4 +1,6 @@
 ;; Latex
+(live-add-pack-lib "reftex-4.34/lisp")
+
 (add-hook 'LaTeX-mode-hook 'TeX-PDF-mode)
 (add-hook 'LaTeX-mode-hook 'reftex-mode)
 
@@ -166,3 +168,6 @@
 (add-hook 'LaTeX-mode-hook (lambda ()
                              (interactive)
                              (wrap-region-remove-wrapper "`")))
+
+(custom-set-variables
+ '(reftex-ref-style-default-list (quote ("Hyperref"))))
