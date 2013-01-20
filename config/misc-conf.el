@@ -186,3 +186,8 @@
 ;; disabled commands
 (put 'downcase-region 'disabled nil)
 (put 'updacase-region 'disabled nil)
+
+(live-add-pack-lib "insert-time.el")
+(require 'insert-time)
+(setq insert-date-format "%Y-%m-%d")
+(setq insert-time-format "%H:%M:%S")
