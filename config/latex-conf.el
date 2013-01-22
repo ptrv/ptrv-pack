@@ -170,4 +170,6 @@
                              (wrap-region-remove-wrapper "`")))
 
 (custom-set-variables
- '(reftex-ref-style-default-list (quote ("Hyperref"))))
+ '(reftex-ref-style-default-list (quote ("Hyperref")))
+ ;; '(reftex-cite-format 'natbib)
+ )
