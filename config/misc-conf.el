@@ -133,6 +133,7 @@
 
 (add-to-list 'ido-ubiquitous-command-exceptions 'sh-set-shell)
 (add-to-list 'ido-ubiquitous-command-exceptions 'ispell-change-dictionary)
+(add-to-list 'ido-ubiquitous-command-exceptions 'add-dir-local-variable)
 
 ;; Fix ido-ubiquitous for newer packages
 (defmacro ido-ubiquitous-use-new-completing-read (cmd package)
