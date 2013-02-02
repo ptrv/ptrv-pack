@@ -5,9 +5,7 @@
   '(progn
      (require 'auto-complete-clang-async)
      (setq clang-complete-executable
-           ;; "~/.live-packs/ptrv-pack/lib/clang-complete-async/clang-complete"
-           (concat (live-pack-lib-dir) "clang-complete-async/clang-complete")
-           )
+           (concat ptrv-pack-root-dir "lib/clang-complete-async/clang-complete"))
      (when (not (file-exists-p clang-complete-executable))
        (warn (concat "The clang-complete executable doesn't exist")))
      ;; (when (not (file-exists-p clang-complete-executable))
