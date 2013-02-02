@@ -1,7 +1,7 @@
 (require 'package)
 
 (custom-set-variables
- '(package-user-dir "~/.live-packs/ptrv-pack/elpa"))
+ '(package-user-dir (concat ptrv-pack-root-dir "elpa")))
 
 (dolist (source '(("melpa" . "http://melpa.milkbox.net/packages/")
                   ("marmalade" . "http://marmalade-repo.org/packages/")

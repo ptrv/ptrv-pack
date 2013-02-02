@@ -6,20 +6,29 @@
 ;; Play typing sound
 (defun play-typewriter-sound ()
   (start-process-shell-command "typewriter" nil
-                               "aplay ~/.live-packs/ptrv-pack/etc/sounds/9744__horn__typewriter.wav"))
+                               (concat
+                                "aplay "
+                                ptrv-pack-root-dir
+                                "etc/sounds/9744__horn__typewriter.wav")))
 
 ;; Play bell when cursor is at column 80
 (defun play-typewriter-end ()
   (if (eq (current-column) 80)
       (start-process-shell-command "typewriter" nil
-                                   "aplay ~/.live-packs/ptrv-pack/etc/sounds/eol-bell.wav")))
+                                   (concat
+                                    "aplay "
+                                    ptrv-pack-root-dir
+                                    "etc/sounds/eol-bell.wav"))))
 
 ;; Return sound
 (defun play-typewriter-return ()
   (if (or (eq this-command 'TeX-newline)
           (eq this-command 'newline))
       (start-process-shell-command "typewriter" nil
-                                   "aplay ~/.live-packs/ptrv-pack/etc/sounds/carriage-return.wav")))
+                                   (concat
+                                    "aplay "
+                                    ptrv-pack-root-dir
+                                    "etc/sounds/carriage-return.wav"))))
 
 (defun toggle-typewriter ()
   (interactive)

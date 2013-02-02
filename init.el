@@ -4,6 +4,11 @@
 
 (load "~/.emacs-locals.el" 'noerror)
 
+(setq ptrv-pack-root-dir (file-name-as-directory
+                          (concat
+                           (file-name-directory
+                            (or load-file-name (buffer-file-name))))))
+
 (live-load-config-file "package-conf.el")
 (live-load-config-file "shell-conf.el")
 (live-load-config-file "util-fns.el")

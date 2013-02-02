@@ -18,7 +18,7 @@
 
 ;;; Eshell
 (defvar eshell-aliases-file)
-(setq eshell-aliases-file "~/.live-packs/ptrv-pack/etc/eshell_aliases")
+(setq eshell-aliases-file (concat ptrv-pack-root-dir "etc/eshell_aliases"))
 
 (defun eshell/clear ()
   "04Dec2001 - sailor, to clear the eshell buffer."
