@@ -56,6 +56,3 @@
 [submodule "vendor/submodules/iedit"]
     path = vendor/submodules/iedit
     url = https://github.com/victorhge/iedit.git
-[submodule "vendor/submodules/insert-time.el"]
-    path = vendor/submodules/insert-time.el
-    url = https://github.com/rmm5t/insert-time.el.git
