@@ -43,6 +43,7 @@
                       refheap
                       epc
                       iflipb
+                      find-file-in-project
                       )
   "A list of packages to ensure are installed at launch.")
 
