@@ -194,3 +194,9 @@
 (require 'insert-time)
 (setq insert-date-format "%Y-%m-%d")
 (setq insert-time-format "%H:%M:%S")
+
+;; pomodoro.el
+(require 'pomodoro)
+(pomodoro-add-to-mode-line)
+(setq pomodoro-sound-player "/usr/bin/aplay")
+(setq pomodoro-break-start-sound (concat ptrv-pack-root-dir "etc/sounds/alarm.wav"))
