@@ -3,6 +3,9 @@
 
 (add-hook 'LaTeX-mode-hook 'TeX-PDF-mode)
 (add-hook 'LaTeX-mode-hook 'reftex-mode)
+(setq reftex-plug-into-AUCTeX t)
+(setq TeX-parse-self t)
+(setq TeX-auto-save t)
 
 (add-hook 'LaTeX-mode-hook 'TeX-source-correlate-mode)
 
@@ -173,3 +176,13 @@
  '(reftex-ref-style-default-list (quote ("Hyperref")))
  ;; '(reftex-cite-format 'natbib)
  )
+
+(require 'info-look)
+(info-lookup-add-help
+     :mode 'latex-mode
+     :regexp ".*"
+     :parse-rule "\\\\?[a-zA-Z]+\\|\\\\[^a-zA-Z]"
+     :doc-spec '(("(latex2e)Concept Index" )
+                 ("(latex2e)Command Index")))
+
+(require 'pstricks)
