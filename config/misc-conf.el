@@ -200,3 +200,6 @@
 (pomodoro-add-to-mode-line)
 (setq pomodoro-sound-player "/usr/bin/aplay")
 (setq pomodoro-break-start-sound (concat ptrv-pack-root-dir "etc/sounds/alarm.wav"))
+
+;; IanniX
+(add-to-list 'auto-mode-alist '("\\.nxscript$" . js-mode))
