@@ -60,3 +60,6 @@
     path = vendor/submodules/insert-time
     url = https://github.com/rmm5t/insert-time.el.git
     ignore = untracked
+[submodule "vendor/submodules/chuck-mode"]
+	path = vendor/submodules/chuck-mode
+	url = https://github.com/ptrv/chuck-mode.git

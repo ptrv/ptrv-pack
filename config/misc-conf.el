@@ -203,3 +203,8 @@
 
 ;; IanniX
 (add-to-list 'auto-mode-alist '("\\.nxscript$" . js-mode))
+
+;; ChucK
+(live-add-pack-lib "chuck-mode")
+(require 'chuck-mode)
+(yas-load-directory (concat (live-pack-lib-dir) "chuck-mode/snippets/text-mode"))
