@@ -11,7 +11,7 @@
 ;;IRC
 (require 'erc-join)
 (erc-autojoin-mode 1)
-(cond ((string= system-name "alderan")
+(cond ((string= system-name "alderaan")
        (setq erc-autojoin-channels-alist
              '(("freenode.net" "#emacs" "#supercollider" "#crunchbang" "#debian"))))
       ((string= system-name "anoth")
