@@ -394,3 +394,10 @@ If mark is activate, duplicate region lines below."
          (change (if (string= dic "de_DE-neu") "american" "de_DE-neu")))
     (ispell-change-dictionary change)
     (message "Dictionary switched from %s to %s" dic change)))
+
+;; http://stackoverflow.com/a/4988206
+(defun halve-other-window-height ()
+  "Expand current window to use half of the other window's lines."
+  (interactive)
+  (enlarge-window (/ (window-height (next-window)) 2)))
+(global-set-key (kbd "C-c v") 'halve-other-window-height)
