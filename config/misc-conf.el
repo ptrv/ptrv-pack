@@ -165,6 +165,7 @@
                               " output*"
                               "*tramp/"
                               "*project-status*"
+                              "SCLang:PostBuffer*"
                               ))
 (setq iflipb-wrap-around t)
 
