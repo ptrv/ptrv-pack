@@ -208,3 +208,12 @@
 (live-add-pack-lib "chuck-mode")
 (require 'chuck-mode)
 (yas-load-directory (concat (live-pack-lib-dir) "chuck-mode/snippets/text-mode"))
+
+;; fix whitespace-cleanup
+;; http://stackoverflow.com/a/12958498/464831
+(defadvice whitespace-cleanup (around whitespace-cleanup-indent-tab
+                                      activate)
+  "Fix whitespace-cleanup indent-tabs-mode bug"
+  (let ((whitespace-indent-tabs-mode indent-tabs-mode)
+        (whitespace-tab-width tab-width))
+    ad-do-it))
