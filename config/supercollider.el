@@ -82,6 +82,16 @@
 
 (require 'ext-scel)
 (setq sclang-minibuf-results nil)
+(setq sclang-collapse t)
+
+;; set buffer local keymap to set TAB for jumping to next button in
+;; post window when using ext-scel's collapsible post window text.
+(add-hook 'sclang-mode-hook
+          (lambda ()
+            (when (string= (buffer-name) sclang-post-buffer)
+              (use-local-map (copy-keymap sclang-mode-map))
+              (local-set-key [?\t] 'forward-button)
+              (local-set-key [backtab] 'backward-button))))
 
 ;; Raise all supercollider windows.
 (define-key sclang-mode-map (kbd "C-c f")
