@@ -401,3 +401,25 @@ If mark is activate, duplicate region lines below."
   (interactive)
   (enlarge-window (/ (window-height (next-window)) 2)))
 (global-set-key (kbd "C-c v") 'halve-other-window-height)
+
+;; http://www.emacswiki.org/emacs/WordCount
+(defun count-words-region (start end)
+  (interactive "r")
+  (save-excursion
+    (let ((n 0))
+      (goto-char start)
+      (while (< (point) end)
+        (if (forward-word 1)
+            (setq n (1+ n))))
+      (message "Region has %d words" n)
+      n)))
+
+(defun count-lines-words-region (start end)
+  "Print number of lines words and characters in the region."
+  (interactive "r")
+  (message "Region has %d lines, %d words, %d characters"
+           (count-lines start end)
+           (count-words-region start end)
+           (- end start)))
+
+(defun wc () (interactive) (shell-command (concat "wc " buffer-file-name)))
