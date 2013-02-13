@@ -49,15 +49,15 @@
             (local-set-key (kbd "'") 'skeleton-pair-insert-maybe)
             ))
 
-(add-hook 'sclang-mode-hook
-          (lambda ()
-            (setq ac-sources
-                  '(ac-source-dictionary
-                    ac-source-words-in-buffer
-                    ac-source-words-in-same-mode-buffers
-                    ac-source-words-in-all-buffer
-                    ;;ac-source-yasnippet
-                    ac-source-semantic))))
+;; (add-hook 'sclang-mode-hook
+;;           (lambda ()
+;;             (setq ac-sources
+;;                   '(ac-source-dictionary
+;;                     ac-source-words-in-buffer
+;;                     ac-source-words-in-same-mode-buffers
+;;                     ac-source-words-in-all-buffer
+;;                     ;;ac-source-yasnippet
+;;                     ac-source-semantic))))
 
 (add-to-list 'ac-modes 'sclang-mode)
 ;; (add-to-list 'ac-user-dictionary-files "~/.local/share/SuperCollider/sclang_completion_dict")
@@ -80,9 +80,9 @@
              (make-local-variable 'write-contents-hooks)
              (add-hook 'write-contents-hooks 'sclang-mode-untabify)))
 
-(require 'ext-scel)
-(setq sclang-minibuf-results nil)
-(setq sclang-collapse t)
+;; (require 'ext-scel)
+;; (setq sclang-minibuf-results nil)
+;; (setq sclang-collapse t)
 
 ;; set buffer local keymap to set TAB for jumping to next button in
 ;; post window when using ext-scel's collapsible post window text.
