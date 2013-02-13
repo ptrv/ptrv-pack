@@ -35,6 +35,7 @@
   (yas-load-directory ptrv-yasnippet-dir))
 
 (setq ac-dwim nil)
+(setq ac-ignore-case nil)
 ;;(setq ac-auto-start 3)
 (setq ac-auto-show-menu nil)
 (setq ac-auto-start nil)
