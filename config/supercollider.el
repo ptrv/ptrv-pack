@@ -112,3 +112,8 @@
 (define-key sclang-mode-map (kbd "M-Ö") (lambda ()
                                           (interactive)
                                           (scroll-other-window-down 4)))
+
+(if (fboundp 'completing-read-ido)
+    (progn
+      (add-to-list 'ido-ubiquitous-command-exceptions 'sclang-dump-interface)
+      (add-to-list 'ido-ubiquitous-command-exceptions 'sclang-dump-full-interface)))
