@@ -61,7 +61,11 @@
 
 (add-to-list 'ac-modes 'sclang-mode)
 ;; (add-to-list 'ac-user-dictionary-files "~/.local/share/SuperCollider/sclang_completion_dict")
-(add-to-list 'ac-user-dictionary-files "~/.sc_completion")
+(add-hook 'sclang-mode-hook
+          (lambda ()
+            (interactive)
+            (make-local-variable 'ac-user-dictionary-files)
+            (add-to-list 'ac-user-dictionary-files "~/.sc_completion")))
 
 (add-hook 'sclang-mode-hook 'yas/minor-mode)
 
