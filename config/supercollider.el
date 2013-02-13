@@ -102,3 +102,13 @@
   (lambda ()
     (interactive)
     (sclang-eval-string "Window.allWindows.do(_.front);")))
+
+(define-key sclang-mode-map (kbd "C-c ö") 'sclang-dump-interface)
+(define-key sclang-mode-map (kbd "C-c ü") 'sclang-dump-full-interface)
+(define-key sclang-mode-map (kbd "C-c ä") 'sclang-pop-definition-mark)
+(define-key sclang-mode-map (kbd "M-Ä") (lambda ()
+                                          (interactive)
+                                          (scroll-other-window 4)))
+(define-key sclang-mode-map (kbd "M-Ö") (lambda ()
+                                          (interactive)
+                                          (scroll-other-window-down 4)))
