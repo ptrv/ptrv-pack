@@ -34,6 +34,12 @@
   (yas-load-directory live-yasnippet-dir)
   (yas-load-directory ptrv-yasnippet-dir))
 
+(setq ac-dwim nil)
+;;(setq ac-auto-start 3)
+(setq ac-auto-show-menu nil)
+(setq ac-auto-start nil)
+(ac-set-trigger-key "TAB")
+
 (setq live-disable-zone t)
 
 ;; debug messages
