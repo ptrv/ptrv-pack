@@ -11,7 +11,7 @@
  )
 
 
-(yas-load-directory (concat (live-pack-lib-dir) "processing2-emacs/snippets"))
+;;(yas-load-directory (concat (live-pack-lib-dir) "processing2-emacs/snippets"))
 
 (add-hook 'processing-mode-hook
           (lambda ()

@@ -24,7 +24,15 @@
 (setq vc-follow-symlinks t)
 
 ;; add snippets
-(yas-load-directory (concat (live-pack-lib-dir) "snippets"))
+(setq ptrv-yasnippet-dir (concat (live-pack-lib-dir) "snippets"))
+(yas-load-directory ptrv-yasnippet-dir)
+
+;; (setq yas-snippet-dirs (append 'yas-snippet-dirs 'ptrv-yasnippet-dirs))
+
+(defun ptrv-reload-snippets ()
+  (interactive)
+  (yas-load-directory live-yasnippet-dir)
+  (yas-load-directory ptrv-yasnippet-dir))
 
 (setq live-disable-zone t)
 
@@ -208,7 +216,7 @@
 ;; ChucK
 (live-add-pack-lib "chuck-mode")
 (require 'chuck-mode)
-(yas-load-directory (concat (live-pack-lib-dir) "chuck-mode/snippets/text-mode"))
+;;(yas-load-directory (concat (live-pack-lib-dir) "chuck-mode/snippets/text-mode"))
 
 ;; fix whitespace-cleanup
 ;; http://stackoverflow.com/a/12958498/464831
