@@ -16,6 +16,7 @@
                ("Help" (or (name . "\\*Help\\*")
                            (name . "\\*Apropos\\*")
                            (name . "\\*info\\*")))
+               ("#!-config" (filename . ".cb-config"))
                ))))
 
 (add-hook 'ibuffer-mode-hook
