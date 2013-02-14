@@ -122,8 +122,8 @@
 (global-set-key (kbd "C-c w l") 'buf-move-left)
 (global-set-key (kbd "C-c w r") 'buf-move-right)
 
-(global-set-key (kbd "C-c w .") 'shrink-window-horizontally)
-(global-set-key (kbd "C-c w ,") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-c w .") (lambda () (interactive) (shrink-window-horizontally 4)))
+(global-set-key (kbd "C-c w ,") (lambda () (interactive) (enlarge-window-horizontally 4)))
 (global-set-key (kbd "C-c w <down>") (lambda () (interactive) (enlarge-window -4)))
 (global-set-key (kbd "C-c w <up>") (lambda () (interactive) (enlarge-window 4)))
 
