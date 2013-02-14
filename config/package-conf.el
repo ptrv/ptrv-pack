@@ -24,7 +24,7 @@
                       notify
                       edit-server
                       color-theme
-                      org-plus-contrib
+                      ;;org-plus-contrib
                       markdown-mode
                       js2-mode
                       apache-mode

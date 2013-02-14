@@ -1,6 +1,14 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; org-mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defvar org-mode-dir (concat ptrv-pack-root-dir "lib/org/"))
+(if (file-directory-p org-mode-dir)
+    (progn
+      (add-to-list 'load-path (concat org-mode-dir "lisp"))
+      (add-to-list 'load-path (concat org-mode-dir "contrib/lisp"))
+      (add-to-list 'Info-directory-list
+                   (expand-file-name (concat org-mode-dir "doc")))))
+
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
 (global-set-key "\C-cl" 'org-store-link)

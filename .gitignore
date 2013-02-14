@@ -1,2 +1,6 @@
 *.elc
 elpa/*
+
+# manually installed stable org-mode
+lib/org-*
+lib/org
