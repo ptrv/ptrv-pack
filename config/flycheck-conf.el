@@ -19,8 +19,8 @@
 
 (add-hook 'nxml-mode-hook 'flycheck-enable-except-on-temp-buffers)
 (add-hook 'sgml-mode-hook 'flycheck-enable-except-on-temp-buffers)
-(add-hook 'nxhtml-mode-hook 'flycheck-enable-except-on-temp-buffers)
-;; (add-hook 'sgml-mode-hook 'flycheck-mode)
+;;(add-hook 'nxhtml-mode-hook 'flycheck-enable-except-on-temp-buffers)
+(add-hook 'sgml-mode-hook 'flycheck-mode)
 ;; (add-hook 'nxhtml-mode-hook 'flycheck-mode)
 (add-hook 'LaTeX-mode-hook 'flycheck-mode)
 (add-hook 'python-mode-hook 'flycheck-mode)

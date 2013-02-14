@@ -22,7 +22,7 @@
 (live-load-config-file "pandoc-conf.el")
 (live-load-config-file "golang-conf.el")
 (live-load-config-file "ack-and-a-half-conf.el")
-(live-load-config-file "html-conf.el")
+;;(live-load-config-file "html-conf.el")
 (live-load-config-file "erc-conf.el")
 (live-load-config-file "faust-conf.el")
 (live-load-config-file "edit-server-conf.el")
