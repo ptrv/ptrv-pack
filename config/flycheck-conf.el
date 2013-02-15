@@ -1,4 +1,3 @@
-(live-add-pack-lib "flycheck")
 (require 'flycheck)
 
 (setq flycheck-highlighting-mode 'lines)

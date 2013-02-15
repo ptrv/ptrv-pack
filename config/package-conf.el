@@ -45,6 +45,7 @@
                       iflipb
                       find-file-in-project
                       pomodoro
+                      flycheck
                       )
   "A list of packages to ensure are installed at launch.")
 

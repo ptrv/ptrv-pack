@@ -46,9 +46,6 @@
     path = vendor/submodules/org2blog
     url = https://github.com/punchagan/org2blog.git
     ignore = untracked
-[submodule "vendor/submodules/flycheck"]
-    path = vendor/submodules/flycheck
-    url = https://github.com/lunaryorn/flycheck.git
 [submodule "vendor/submodules/emacs-jedi"]
     path = vendor/submodules/emacs-jedi
     url = https://github.com/tkf/emacs-jedi.git
