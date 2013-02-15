@@ -46,6 +46,7 @@
                       find-file-in-project
                       pomodoro
                       flycheck
+                      pandoc-mode
                       )
   "A list of packages to ensure are installed at launch.")
 

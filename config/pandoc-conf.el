@@ -1,4 +1,3 @@
-(live-add-pack-lib "pandoc-mode")
 (require 'pandoc-mode)
 (add-hook 'pandoc-mode-hook 'pandoc-load-default-settings)
 

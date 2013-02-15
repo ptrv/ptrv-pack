@@ -5,10 +5,6 @@
 [submodule "vendor/snippets/sclang-mode"]
         path = vendor/snippets/sclang-mode
         url = https://github.com/ptrv/sclang-mode.git
-[submodule "vendor/submodules/pandoc-mode"]
-    path = vendor/submodules/pandoc-mode
-    url = https://github.com/joostkremers/pandoc-mode.git
-    ignore = untracked
 [submodule "vendor/submodules/yasnippet-snippets"]
     path = vendor/submodules/yasnippet-snippets
     url = https://github.com/ptrv/yasnippet-snippets.git
