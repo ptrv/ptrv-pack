@@ -46,9 +46,6 @@
     path = vendor/submodules/emacs-jedi
     url = https://github.com/tkf/emacs-jedi.git
     ignore = untracked
-[submodule "vendor/submodules/iedit"]
-    path = vendor/submodules/iedit
-    url = https://github.com/victorhge/iedit.git
 [submodule "vendor/submodules/insert-time"]
     path = vendor/submodules/insert-time
     url = https://github.com/rmm5t/insert-time.el.git

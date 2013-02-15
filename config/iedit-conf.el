@@ -1,5 +1,3 @@
-(live-add-pack-lib "iedit")
-
 (require 'iedit)
 
 ;; (defun iedit-dwim (arg)

@@ -47,6 +47,7 @@
                       pomodoro
                       flycheck
                       pandoc-mode
+                      iedit
                       )
   "A list of packages to ensure are installed at launch.")
 
