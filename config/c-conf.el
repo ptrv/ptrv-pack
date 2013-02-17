@@ -1,3 +1,5 @@
+(setq c-default-style "linux")
+
 (live-add-pack-lib "clang-complete-async")
 
 ;; Hook auto-complete into clang
@@ -20,6 +22,7 @@
 
 (add-hook 'c++-mode-hook
           (lambda ()
+            (setq ac-sources '())
             (add-to-list 'ac-sources 'ac-source-clang-async)
             (launch-completion-proc)
             (dtrt-indent-mode 1)
