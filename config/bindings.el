@@ -16,7 +16,7 @@
 ;; Jump to a definition in the current file. (This is awesome.)
 (global-set-key (kbd "C-x C-i") 'ido-imenu)
 
-(windmove-default-keybindings) ;; Shift+direction
+;(windmove-default-keybindings) ;; Shift+direction
 
 (global-set-key [(control shift left)] 'previous-buffer)
 (global-set-key [(control shift right)] 'next-buffer)
