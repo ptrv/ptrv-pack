@@ -37,7 +37,7 @@
 (setq ac-dwim nil)
 (setq ac-ignore-case nil)
 ;;(setq ac-auto-start 3)
-(setq ac-auto-show-menu nil)
+(setq ac-auto-show-menu t)
 (setq ac-auto-start nil)
 (ac-set-trigger-key "TAB")
 
