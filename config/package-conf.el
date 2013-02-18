@@ -48,6 +48,7 @@
                       flycheck
                       pandoc-mode
                       iedit
+                      glsl-mode
                       )
   "A list of packages to ensure are installed at launch.")
 
