@@ -3,8 +3,7 @@ alias ll ls -l $*
 alias la ls -la $*
 alias c clear
 alias cl clear; ls -l
-alias g git status --short
-alias gst git status
+alias g git status
 alias gl git pull
 alias gp git push
 alias md mkdir -p $*
