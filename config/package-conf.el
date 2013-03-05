@@ -49,6 +49,7 @@
                       pandoc-mode
                       iedit
                       glsl-mode
+                      ag
                       )
   "A list of packages to ensure are installed at launch.")
 
