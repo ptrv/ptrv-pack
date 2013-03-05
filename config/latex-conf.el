@@ -1,20 +1,19 @@
 ;; Latex
-
-(live-add-pack-lib "auctex-11.87")
-(eval-after-load 'info
-  '(add-to-list 'Info-directory-list
-                (concat ptrv-pack-root-dir "lib/auctex-11.87/doc")))
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)
 
 (live-add-pack-lib "reftex-4.34/lisp")
 (eval-after-load 'info
   '(add-to-list 'Info-directory-list
                 (concat ptrv-pack-root-dir "lib/reftex-4.34/doc")))
 
+
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq-default TeX-master nil)
 (add-hook 'LaTeX-mode-hook 'TeX-PDF-mode)
 (add-hook 'LaTeX-mode-hook 'reftex-mode)
 (setq reftex-plug-into-AUCTeX t)
-(setq TeX-parse-self t)
-(setq TeX-auto-save t)
 
 (add-hook 'LaTeX-mode-hook 'TeX-source-correlate-mode)
 
