@@ -1,5 +1,14 @@
 ;; Latex
+
+(live-add-pack-lib "auctex-11.87")
+(eval-after-load 'info
+  '(add-to-list 'Info-directory-list
+                (concat ptrv-pack-root-dir "lib/auctex-11.87/doc")))
+
 (live-add-pack-lib "reftex-4.34/lisp")
+(eval-after-load 'info
+  '(add-to-list 'Info-directory-list
+                (concat ptrv-pack-root-dir "lib/reftex-4.34/doc")))
 
 (add-hook 'LaTeX-mode-hook 'TeX-PDF-mode)
 (add-hook 'LaTeX-mode-hook 'reftex-mode)

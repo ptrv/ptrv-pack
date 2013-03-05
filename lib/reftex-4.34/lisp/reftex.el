@@ -210,7 +210,7 @@ of master file.
 
 ;;;***
 
-;;;### (autoloads nil "reftex-vars" "reftex-vars.el" (19069 43010))
+;;;### (autoloads nil "reftex-vars" "reftex-vars.el" (20731 9985))
 ;;; Generated autoloads from reftex-vars.el
 (put 'reftex-vref-is-default 'safe-local-variable (lambda (x) (or (stringp x) (symbolp x))))
 (put 'reftex-fref-is-default 'safe-local-variable (lambda (x) (or (stringp x) (symbolp x))))

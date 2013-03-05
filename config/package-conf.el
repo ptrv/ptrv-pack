@@ -15,7 +15,7 @@
   (package-refresh-contents))
 
 (defvar my-packages '(magit
-                      auctex
+                      ;;auctex
                       wrap-region
                       go-mode
                       starter-kit-eshell
