@@ -242,3 +242,15 @@
 
 (require 'ag)
 (setq ag-highlight-search t)
+
+(defun whichcmd (cmd)
+  (replace-regexp-in-string
+   "\n" "" (shell-command-to-string (concat "which " cmd))))
+(defun sql-switch-spatialite-sqlite ()
+  (interactive)
+  (let* ((sqlprog sql-sqlite-program)
+         (change (if (string-match "sqlite" sqlprog)
+                     (whichcmd "spatialite")
+                   (whichcmd "sqlite3"))))
+    (setq sql-sqlite-program change)
+    (message "sql-sqlite-program changed from to %s" change)))

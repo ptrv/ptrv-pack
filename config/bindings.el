@@ -270,3 +270,8 @@
 (global-set-key (kbd "<C-M-return>") 'open-line-above)
 
 (global-set-key [remap goto-line] 'goto-line-with-feedback)
+
+(require 'sql)
+(define-key sql-mode-map (kbd "C-c C-p p") 'sql-set-product)
+(define-key sql-mode-map (kbd "C-c C-p i") 'sql-set-sqli-buffer)
+(define-key sql-mode-map (kbd "C-c C-p s") 'sql-switch-spatialite-sqlite)
