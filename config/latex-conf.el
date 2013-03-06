@@ -2,11 +2,10 @@
 (load "auctex.el" nil t t)
 (load "preview-latex.el" nil t t)
 
-(live-add-pack-lib "reftex-4.34/lisp")
+(live-add-pack-lib "reftex/lisp")
 (eval-after-load 'info
   '(add-to-list 'Info-directory-list
-                (concat ptrv-pack-root-dir "lib/reftex-4.34/doc")))
-
+                (concat ptrv-pack-root-dir "lib/reftex/doc")))
 
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)

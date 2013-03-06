@@ -31,14 +31,14 @@
 
 ;;; Code:
 
-(defconst reftex-version "4.34"
+(defconst reftex-version "2012-10-04"
   "Version string for RefTeX.")
 
 ;;; Autoloads
 
 
 ;;;### (autoloads (reftex-add-label-environments) "reftex-auc" "reftex-auc.el"
-;;;;;;  (19069 43000))
+;;;;;;  (20589 60300))
 ;;; Generated autoloads from reftex-auc.el
 
 (autoload 'reftex-add-label-environments "reftex-auc" "\
@@ -60,7 +60,7 @@ the label information is recompiled on next use.
 
 ;;;### (autoloads (reftex-reset-scanning-information reftex-set-cite-format
 ;;;;;;  reftex-mode turn-on-reftex) "reftex-base" "reftex-base.el"
-;;;;;;  (19069 47710))
+;;;;;;  (20589 60300))
 ;;; Generated autoloads from reftex-base.el
 
 (autoload 'turn-on-reftex "reftex-base" "\
@@ -118,7 +118,7 @@ This enforces rescanning the buffer on next use.
 ;;;***
 
 ;;;### (autoloads (reftex-citation) "reftex-cite" "reftex-cite.el"
-;;;;;;  (19024 29391))
+;;;;;;  (20589 60300))
 ;;; Generated autoloads from reftex-cite.el
 
 (autoload 'reftex-citation "reftex-cite" "\
@@ -148,7 +148,7 @@ While entering the regexp, completion on knows citation keys is possible.
 ;;;***
 
 ;;;### (autoloads (reftex-isearch-minor-mode) "reftex-global" "reftex-global.el"
-;;;;;;  (18831 3226))
+;;;;;;  (20589 60300))
 ;;; Generated autoloads from reftex-global.el
 
 (autoload 'reftex-isearch-minor-mode "reftex-global" "\
@@ -158,14 +158,14 @@ the current TeX document.
 
 With no argument, this command toggles
 `reftex-isearch-minor-mode'.  With a prefix argument ARG, turn
-`reftex-isearch-minor-mode' on iff ARG is positive.
+`reftex-isearch-minor-mode' on if ARG is positive, otherwise turn it off.
 
 \(fn &optional ARG)" t nil)
 
 ;;;***
 
 ;;;### (autoloads (reftex-index-phrases-mode) "reftex-index" "reftex-index.el"
-;;;;;;  (19069 42983))
+;;;;;;  (20589 60300))
 ;;; Generated autoloads from reftex-index.el
 
 (autoload 'reftex-index-phrases-mode "reftex-index" "\
@@ -191,14 +191,14 @@ For more information see the RefTeX User Manual.
 
 Here are all local bindings.
 
-\\{reftex-index-phrases-map}
+\\{reftex-index-phrases-mode-map}
 
 \(fn)" t nil)
 
 ;;;***
 
 ;;;### (autoloads (reftex-all-document-files) "reftex-parse" "reftex-parse.el"
-;;;;;;  (18460 11748))
+;;;;;;  (20589 60300))
 ;;; Generated autoloads from reftex-parse.el
 
 (autoload 'reftex-all-document-files "reftex-parse" "\
@@ -210,7 +210,7 @@ of master file.
 
 ;;;***
 
-;;;### (autoloads nil "reftex-vars" "reftex-vars.el" (20731 9985))
+;;;### (autoloads nil "reftex-vars" "reftex-vars.el" (20589 60301))
 ;;; Generated autoloads from reftex-vars.el
 (put 'reftex-vref-is-default 'safe-local-variable (lambda (x) (or (stringp x) (symbolp x))))
 (put 'reftex-fref-is-default 'safe-local-variable (lambda (x) (or (stringp x) (symbolp x))))

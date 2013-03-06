@@ -1,2 +1,0 @@
-@set VERSION 4.34
-@set DATE 2009-08-09
