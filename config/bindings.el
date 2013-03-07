@@ -51,8 +51,8 @@
 ;;w - window and buffer shortcuts
 
 ;;text manipulation shortcuts
-(global-set-key (kbd "C-c t b") 'untabify-buffer)
-(global-set-key (kbd "C-c t r") 'untabify)
+;; (global-set-key (kbd "C-c t b") 'untabify-buffer)
+;; (global-set-key (kbd "C-c t r") 'untabify)
 
 ;;emacs-lisp shortcuts
 (global-set-key (kbd "C-c C-e") 'eval-and-replace)
@@ -275,3 +275,14 @@
 (define-key sql-mode-map (kbd "C-c C-p p") 'sql-set-product)
 (define-key sql-mode-map (kbd "C-c C-p i") 'sql-set-sqli-buffer)
 (define-key sql-mode-map (kbd "C-c C-p s") 'sql-switch-spatialite-sqlite)
+
+(global-set-key (kbd "C-c t")
+                (lambda ()
+                  "Bring up a full-screen eshell or restore previous config."
+                  (interactive)
+                  (if (string= "eshell-mode" major-mode)
+                      (jump-to-register :eshell-fullscreen)
+                    (progn
+                      (window-configuration-to-register :eshell-fullscreen)
+                      (eshell)
+                      (delete-other-windows)))))
