@@ -23,7 +23,7 @@
 (setq org-log-done t)
 (setq org-replace-disputed-keys nil)
 (setq org-clock-into-drawer t)
-(setq org-clock-idle-time 10)
+;;(setq org-clock-idle-time 10)
 (setq org-src-fontify-natively nil)
 ;; Override
 (add-hook 'org-mode-hook
