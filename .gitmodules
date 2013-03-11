@@ -53,3 +53,6 @@
 [submodule "vendor/submodules/chuck-mode"]
 	path = vendor/submodules/chuck-mode
 	url = https://github.com/ptrv/chuck-mode.git
+[submodule "vendor/submodules/pylookup"]
+	path = vendor/submodules/pylookup
+	url = https://github.com/tsgates/pylookup.git
