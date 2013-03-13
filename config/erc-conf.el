@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;
 ;; erc-conf.el
 ;;;;;;;;;;;;;;;;;;;;
-(require 'secrets)
+(require 'my-secrets)
 (require 'erc-services)
 (erc-services-mode 1)
 (setq erc-prompt-for-nickserv-password nil)

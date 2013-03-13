@@ -185,7 +185,7 @@
 (setq iflipb-wrap-around t)
 
 ;; refheap
-(require 'secrets)
+(require 'my-secrets)
 (require 'refheap)
 
 ;; disabled commands
