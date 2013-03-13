@@ -143,3 +143,5 @@
 
   (define-key pure-mode-map (kbd "C-c M-p") 'run-pure)
   (define-key pure-mode-map (kbd "C-x M-p") 'pure-scratchpad))
+
+(require 'ahg)
