@@ -186,10 +186,10 @@
 
 (require 'info-look)
 (info-lookup-add-help
-     :mode 'latex-mode
-     :regexp ".*"
-     :parse-rule "\\\\?[a-zA-Z]+\\|\\\\[^a-zA-Z]"
-     :doc-spec '(("(latex2e)Concept Index" )
-                 ("(latex2e)Command Index")))
+ :mode 'latex-mode
+ :regexp ".*"
+ :parse-rule "\\\\?[a-zA-Z]+\\|\\\\[^a-zA-Z]"
+ :doc-spec '(("(latex2e)Concept Index" )
+             ("(latex2e)Command Index")))
 
 (require 'pstricks)
