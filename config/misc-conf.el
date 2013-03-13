@@ -184,20 +184,6 @@
                               ))
 (setq iflipb-wrap-around t)
 
-;; pure-mode
-(when (require 'pure-mode nil 'noerror)
-  (require 'pure-mode)
-  (add-to-list 'auto-mode-alist '("\\.pure\\(rc\\)?$" . pure-mode))
-  (require 'hideshow)
-  (add-hook 'pure-mode-hook 'hs-minor-mode)
-  (add-hook 'pure-eval-mode-hook
-            (lambda ()
-              (define-key pure-eval-mode-map [up] 'comint-previous-input)
-              (define-key pure-eval-mode-map [down] 'comint-next-input)))
-
-  (define-key pure-mode-map (kbd "C-c M-p") 'run-pure)
-  (define-key pure-mode-map (kbd "C-x M-p") 'pure-scratchpad))
-
 ;; refheap
 (require 'secrets)
 (require 'refheap)
@@ -251,3 +237,34 @@
                    (executable-find "sqlite3"))))
     (setq sql-sqlite-program change)
     (message "sql-sqlite-program changed to %s" change)))
+
+(live-add-pack-lib "misc")
+
+;; pure-mode
+(when (require 'pure-mode nil 'noerror)
+  (require 'pure-mode)
+  (add-to-list 'auto-mode-alist '("\\.pure\\(rc\\)?$" . pure-mode))
+  (require 'hideshow)
+  (add-hook 'pure-mode-hook 'hs-minor-mode)
+  (add-hook 'pure-eval-mode-hook
+            (lambda ()
+              (define-key pure-eval-mode-map [up] 'comint-previous-input)
+              (define-key pure-eval-mode-map [down] 'comint-next-input)))
+
+  (define-key pure-mode-map (kbd "C-c M-p") 'run-pure)
+  (define-key pure-mode-map (kbd "C-x M-p") 'pure-scratchpad))
+
+(autoload 'pd-mode "pd-mode" "autoloaded" t)
+(add-to-list 'auto-mode-alist '("\\.pat$" . pd-mode))
+(add-to-list 'auto-mode-alist '("\\.pd$"  . pd-mode))
+
+(autoload 'desktop-entry-mode "desktop-entry-mode" "Desktop Entry mode" t)
+(add-to-list 'auto-mode-alist
+             '("\\.desktop\\(\\.in\\)?$" . desktop-entry-mode))
+(add-hook 'desktop-entry-mode-hook 'turn-on-font-lock)
+
+(require 'cmake-mode)
+(setq auto-mode-alist
+      (append '(("CMakeLists\\.txt\\'" . cmake-mode)
+                ("\\.cmake\\'" . cmake-mode))
+              auto-mode-alist))

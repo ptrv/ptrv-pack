@@ -50,6 +50,9 @@
                       iedit
                       glsl-mode
                       ag
+                      cmake-mode
+                      pylint
+                      lua-mode
                       )
   "A list of packages to ensure are installed at launch.")
 
