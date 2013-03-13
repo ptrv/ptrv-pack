@@ -19,21 +19,10 @@
 (add-to-list 'gist-supported-modes-alist '(processing-mode . "pde"))
 (add-to-list 'gist-supported-modes-alist '(conf-mode . "desktop"))
 
-
 ;; follow version controlled symlinks automatically
 (setq vc-follow-symlinks t)
 
-;; add snippets
-(setq ptrv-yasnippet-dir (concat (live-pack-lib-dir) "snippets"))
-(yas-load-directory ptrv-yasnippet-dir)
-
-;; (setq yas-snippet-dirs (append 'yas-snippet-dirs 'ptrv-yasnippet-dirs))
-
-(defun ptrv-reload-snippets ()
-  (interactive)
-  (yas-load-directory live-yasnippet-dir)
-  (yas-load-directory ptrv-yasnippet-dir))
-
+;; auto-complete
 (setq ac-dwim t)
 (setq ac-ignore-case nil)
 ;;(setq ac-auto-start 3)
@@ -86,103 +75,12 @@
 ;; ;; (add-hook 'LaTeX-mode-hook 'longlines-mode)
 ;; ;; (add-hook 'markdown-mode-hook 'longlines-mode)
 
-(require 'webjump)
-(setq webjump-sites
-       (append '(("Urban Dictionary" .
-                  [simple-query
-                   "www.urbandictionary.com"
-                   "http://www.urbandictionary.com/define.php?term="
-                   ""])
-                 ("stackoverflow" .
-                  [simple-query
-                   "www.stackoverflow.com"
-                   "http://stackoverflow.com/search?q="
-                   ""])
-                 ("askubuntu" .
-                  [simple-query
-                   "www.askubuntu.com"
-                   "http://askubuntu.com/search?q="
-                   ""])
-                 ("superuser" .
-                  [simple-query
-                   "www.superuser.com"
-                   "http://superuser.com/search?q="
-                   ""])
-                 ("tex.stackexchange" .
-                  [simple-query
-                   "tex.stackexchange.com"
-                   "http://tex.stackexchange.com/search?q="
-                   ""])
-                 ("math.stackexchange" .
-                  [simple-query
-                   "math.stackexchange.com"
-                   "http://math.stackexchange.com/search?q="
-                   ""])
-                 ("leo" .
-                  [simple-query
-                   "dict.leo.org"
-                   "http://dict.leo.org/ende?search="
-                   ""])
-                 ("Java API" .
-                  [simple-query
-                   "www.google.com"
-                   "http://www.google.ca/search?hl=en&as_sitesearch=http://java.sun.com/javase/6/docs/api/&q="
-                   ""]))
-               webjump-sample-sites))
 
 (live-add-pack-lib "arduino-mode")
 (require 'arduino-mode)
 
 (setq browse-url-generic-program (executable-find "google-chrome")
       browse-url-browser-function 'browse-url-generic)
-
-;; lua-mode
-(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
-(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
-(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
-
-;; Use ido everywhere
-(require 'ido-ubiquitous)
-(ido-ubiquitous-mode 1)
-(ido-ubiquitous-disable-in erc-iswitchb)
-
-(add-to-list 'ido-ubiquitous-command-exceptions 'sh-set-shell)
-(add-to-list 'ido-ubiquitous-command-exceptions 'ispell-change-dictionary)
-(add-to-list 'ido-ubiquitous-command-exceptions 'add-dir-local-variable)
-
-;; Fix ido-ubiquitous for newer packages
-(defmacro ido-ubiquitous-use-new-completing-read (cmd package)
-  `(eval-after-load ,package
-     '(defadvice ,cmd (around ido-ubiquitous-new activate)
-        (let ((ido-ubiquitous-enable-compatibility nil))
-          ad-do-it))))
-
-(ido-ubiquitous-use-new-completing-read webjump 'webjump)
-;; (ido-ubiquitous-use-new-completing-read yas-expand 'yasnippet)
-(ido-ubiquitous-use-new-completing-read yas-visit-snippet-file 'yasnippet)
-
-;; iflipb
-(require 'iflipb)
-(setq iflipb-ignore-buffers '("*Ack-and-a-half*"
-                              "*Help*"
-                              "*Compile-Log*"
-                              "*Ibuffer*"
-                              "*Messages*"
-                              "*scratch*"
-                              "*Completions*"
-                              "*magit"
-                              "*Pymacs*"
-                              "*clang-complete*"
-                              "*compilation*"
-                              "*Packages*"
-                              "TAGS"
-                              "*file-index*"
-                              " output*"
-                              "*tramp/"
-                              "*project-status*"
-                              "SCLang:PostBuffer*"
-                              ))
-(setq iflipb-wrap-around t)
 
 ;; refheap
 (require 'my-secrets)
@@ -204,9 +102,6 @@
 (setq pomodoro-break-start-sound (concat ptrv-pack-root-dir "etc/sounds/alarm.wav"))
 (setq pomodoro-work-start-sound (concat ptrv-pack-root-dir "etc/sounds/alarm.wav"))
 
-;; IanniX
-(add-to-list 'auto-mode-alist '("\\.nxscript$" . js-mode))
-
 ;; ChucK
 (live-add-pack-lib "chuck-mode")
 (require 'chuck-mode)
@@ -220,12 +115,6 @@
   (let ((whitespace-indent-tabs-mode indent-tabs-mode)
         (whitespace-tab-width tab-width))
     ad-do-it))
-
-(autoload 'glsl-mode "glsl-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.glsl\\'" . glsl-mode))
-(add-to-list 'auto-mode-alist '("\\.vert\\'" . glsl-mode))
-(add-to-list 'auto-mode-alist '("\\.frag\\'" . glsl-mode))
-(add-to-list 'auto-mode-alist '("\\.geom\\'" . glsl-mode))
 
 (require 'ag)
 (setq ag-highlight-search t)
@@ -254,18 +143,3 @@
 
   (define-key pure-mode-map (kbd "C-c M-p") 'run-pure)
   (define-key pure-mode-map (kbd "C-x M-p") 'pure-scratchpad))
-
-(autoload 'pd-mode "pd-mode" "autoloaded" t)
-(add-to-list 'auto-mode-alist '("\\.pat$" . pd-mode))
-(add-to-list 'auto-mode-alist '("\\.pd$"  . pd-mode))
-
-(autoload 'desktop-entry-mode "desktop-entry-mode" "Desktop Entry mode" t)
-(add-to-list 'auto-mode-alist
-             '("\\.desktop\\(\\.in\\)?$" . desktop-entry-mode))
-(add-hook 'desktop-entry-mode-hook 'turn-on-font-lock)
-
-(require 'cmake-mode)
-(setq auto-mode-alist
-      (append '(("CMakeLists\\.txt\\'" . cmake-mode)
-                ("\\.cmake\\'" . cmake-mode))
-              auto-mode-alist))
