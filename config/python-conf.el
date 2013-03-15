@@ -140,7 +140,7 @@
   "Run pylookup-update and create the database at `pylookup-db-file'." t)
 
 (require 'python)
-(define-key python-mode-map (kbd "C-c h") 'pylookup-lookup)
+(define-key python-mode-map (kbd "C-c L") 'pylookup-lookup)
 
 (autoload 'pylint "pylint")
 (add-hook 'python-mode-hook 'pylint-add-menu-items)
