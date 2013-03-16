@@ -12,6 +12,7 @@
     (nrepl-interaction-mode . " ηζ")
     (auto-fill-function . " φ")
     (autopair-mode . "")
+    (lambda-mode . "")
     ;; Major modes
     (clojure-mode . "λ")
     (hi-lock-mode . "")

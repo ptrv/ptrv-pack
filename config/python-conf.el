@@ -147,3 +147,5 @@
 (add-hook 'python-mode-hook 'pylint-add-key-bindings)
 
 (add-hook 'python-mode-hook #'(lambda () (autopair-mode)))
+
+(add-hook 'python-mode-hook #'lambda-mode 1)
