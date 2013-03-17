@@ -16,38 +16,20 @@
      (setq w3m-auto-show 1)
      ))
 
-;; (setq w3m-key-binding 'info)
-(custom-set-variables
- '(pop-up-frames nil)
- '(pop-up-windows t)
- '(sclang-auto-scroll-post-buffer nil)
- '(sclang-eval-line-forward nil)
- '(sclang-help-path (quote ("/usr/local/share/SuperCollider/Help" "~/.local/share/SuperCollider/Extensions")))
- ;; '(sclang-help-path (quote ("~/compiledir/supercollider/build/HelpBase" "~/share/SuperCollider/Extensions/Help")))
- '(sclang-library-configuration-file "~/.sclang.cfg")
- '(sclang-runtime-directory "~/scwork/")
- '(sclang-server-panel "Server.local.makeGui.window.bounds = Rect(5,5,288,98)")
- '(show-paren-mode t nil (paren))
- '(transient-mark-mode t)
- '(w3m-pop-up-frames t)
- '(w3m-pop-up-windows nil)
- '(inhibit-startup-screen t)
- (custom-set-faces
-  ))
+(setq w3m-key-binding 'info)
+(setq sclang-auto-scroll-post-buffer nil)
+(setq sclang-eval-line-forward nil)
+(setq sclang-help-path '("/usr/local/share/SuperCollider/Help" "~/.local/share/SuperCollider/Extensions"))
+(setq sclang-library-configuration-file "~/.sclang.cfg")
+(setq sclang-runtime-directory "~/scwork/")
+(setq sclang-server-panel "Server.local.makeGui.window.bounds = Rect(5,5,288,98)")
+(setq w3m-pop-up-frames t)
+(setq w3m-pop-up-windows nil)
 
 ;; ##### extension for block error messages ####
 ;;(load-file (concat (live-pack-lib-dir) "ext-scel.el"))
 
-(add-hook 'sclang-mode-hook
-          (lambda ()
-            (defvar skeleton-pair)
-            (setq skeleton-pair t)
-            (local-set-key (kbd "(") 'skeleton-pair-insert-maybe)
-            (local-set-key (kbd "{") 'skeleton-pair-insert-maybe)
-            (local-set-key (kbd "[") 'skeleton-pair-insert-maybe)
-            (local-set-key (kbd "\"") 'skeleton-pair-insert-maybe)
-            (local-set-key (kbd "'") 'skeleton-pair-insert-maybe)
-            ))
+;;(add-hook 'sclang-mode-hook (lambda () (autopair-mode)))
 
 ;; (add-hook 'sclang-mode-hook
 ;;           (lambda ()
