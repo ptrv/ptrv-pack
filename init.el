@@ -47,6 +47,7 @@
   (live-load-config-file "typewriter-conf.el")))
 (live-load-config-file "flycheck-conf.el")
 (live-load-config-file "bindings.el")
+(live-load-config-file "autopair-conf.el")
 (live-load-config-file "clean-mode-line.el")
 
 (defmacro Xlaunch (&rest x)

@@ -192,7 +192,3 @@
 (add-hook 'emacs-lisp-mode-hook #'lambda-mode 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; autopair.el
-(autopair-global-mode)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
