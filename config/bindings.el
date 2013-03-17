@@ -287,3 +287,8 @@
                       (window-configuration-to-register :eshell-fullscreen)
                       (eshell)
                       (delete-other-windows)))))
+
+(global-set-key (kbd "M-j")
+                (lambda ()
+                  (interactive)
+                  (join-line -1)))
