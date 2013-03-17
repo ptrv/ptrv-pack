@@ -423,3 +423,8 @@ If mark is activate, duplicate region lines below."
 ;;            (- end start)))
 
 ;; (defun wc () (interactive) (shell-command (concat "wc " buffer-file-name)))
+
+(defun xml-format ()
+  (interactive)
+  (save-excursion
+    (shell-command-on-region (point-min) (point-max) "xmllint --format -" (buffer-name) t)))
