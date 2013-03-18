@@ -3,13 +3,31 @@
 (defvar typewriter-mode nil)
 ;;(setq typewriter-mode t)
 
+;; (defun play-typewriter-sound ()
+;;   (if (equal (this-command-keys) (kbd "RET"))
+;;       nil
+;;     (let ((data-directory "~/.live-packs/ptrv-pack/etc/sounds"))
+;;       (play-sound `(sound :file "9744__horn__typewriter.wav")))))
+
+;; (defun play-typewriter-end ()
+;;   (let ((data-directory "~/.live-packs/ptrv-pack/etc/sounds"))
+;;     (if (eq (current-column) 80)
+;;         (play-sound `(sound :file "eol-bell.wav")))))
+
+;; (defun play-typewriter-return ()
+;;   (if (equal (this-command-keys) (kbd "RET"))
+;;       (let ((data-directory "~/.live-packs/ptrv-pack/etc/sounds"))
+;;         (play-sound `(sound :file "carriage-return.wav")))))
+
 ;; Play typing sound
 (defun play-typewriter-sound ()
-  (start-process-shell-command "typewriter" nil
-                               (concat
-                                "aplay "
-                                ptrv-pack-root-dir
-                                "etc/sounds/9744__horn__typewriter.wav")))
+  (if (equal (this-command-keys) (kbd "RET"))
+      nil
+    (start-process-shell-command "typewriter" nil
+                                 (concat
+                                  "aplay "
+                                  ptrv-pack-root-dir
+                                  "etc/sounds/9744__horn__typewriter.wav"))))
 
 ;; Play bell when cursor is at column 80
 (defun play-typewriter-end ()
@@ -22,8 +40,7 @@
 
 ;; Return sound
 (defun play-typewriter-return ()
-  (if (or (eq this-command 'TeX-newline)
-          (eq this-command 'newline))
+  (if (equal (this-command-keys) (kbd "RET"))
       (start-process-shell-command "typewriter" nil
                                    (concat
                                     "aplay "
