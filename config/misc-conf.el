@@ -152,18 +152,18 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; pure-mode
-(when (require 'pure-mode nil 'noerror)
-  (require 'pure-mode)
-  (add-to-list 'auto-mode-alist '("\\.pure\\(rc\\)?$" . pure-mode))
-  (require 'hideshow)
-  (add-hook 'pure-mode-hook 'hs-minor-mode)
-  (add-hook 'pure-eval-mode-hook
-            (lambda ()
-              (define-key pure-eval-mode-map [up] 'comint-previous-input)
-              (define-key pure-eval-mode-map [down] 'comint-next-input)))
-
-  (define-key pure-mode-map (kbd "C-c M-p") 'run-pure)
-  (define-key pure-mode-map (kbd "C-x M-p") 'pure-scratchpad))
+(autoload 'pure-mode "pure-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.pure\\(rc\\)?$" . pure-mode))
+(eval-after-load "pure-mode"
+  '(progn
+     ;; (require 'hideshow)
+     (add-hook 'pure-mode-hook 'hs-minor-mode)
+     (add-hook 'pure-eval-mode-hook
+               (lambda ()
+                 (define-key pure-eval-mode-map [up] 'comint-previous-input)
+                 (define-key pure-eval-mode-map [down] 'comint-next-input)))
+     (define-key pure-mode-map (kbd "C-c M-p") 'run-pure)
+     (define-key pure-mode-map (kbd "C-x M-p") 'pure-scratchpad)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; mercurial
