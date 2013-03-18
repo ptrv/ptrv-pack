@@ -17,7 +17,7 @@
 (exec-path-from-shell-initialize)
 
 ;;; Eshell
-(defvar eshell-aliases-file)
+;; (eval-when-compile (require 'eshell nil t))
 (setq eshell-aliases-file (concat ptrv-pack-root-dir "etc/eshell_aliases"))
 
 (defun eshell/clear ()

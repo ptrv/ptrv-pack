@@ -16,7 +16,6 @@
 
 (add-hook 'LaTeX-mode-hook 'TeX-source-correlate-mode)
 
-(defvar TeX-source-correlate-method)
 (setq TeX-source-correlate-method 'synctex)
 
 (eval-after-load "tex"
@@ -41,9 +40,6 @@
                                              (file-name-directory (TeX-master-file)))
                            "#src:"
                            (TeX-current-line) (buffer-file-name)))
-
-(defvar TeX-view-program-list)
-(defvar TeX-view-program-selection)
 
 (cond ((eq system-type 'gnu/linux)
 

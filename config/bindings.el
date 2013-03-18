@@ -241,15 +241,14 @@
 (global-set-key (kbd "C-ü") 'er/expand-region)
 
 ;; iy-go-to-char
+(eval-when-compile (require 'iy-go-to-char nil t))
 (global-set-key (kbd "M-m") 'iy-go-to-char)
 (global-set-key (kbd "M-M") 'iy-go-to-char-backward)
 (global-set-key (kbd "C-c f") 'iy-go-to-char)
 (global-set-key (kbd "C-c F") 'iy-go-to-char-backward)
 (global-set-key (kbd "C-c ,") 'iy-go-to-char-continue)
 (global-set-key (kbd "C-c ;") 'iy-go-to-char-continue-backward)
-(defvar iy-go-to-char-key-forward)
 (setq iy-go-to-char-key-forward ?\,)
-(defvar iy-go-to-char-key-backward)
 (setq iy-go-to-char-key-backward ?\;)
 
 (global-set-key (kbd "M-/") 'hippie-expand)
@@ -293,5 +292,6 @@
                   (interactive)
                   (join-line -1)))
 
-(global-set-key (kbd "<f11>") 'toggle-fold)
+;; (global-set-key (kbd "<f11>") 'toggle-fold)
+(global-set-key (kbd "<f11>") 'hs-toggle-hiding)
 (global-set-key (kbd "S-<f11>") 'toggle-fold-all)

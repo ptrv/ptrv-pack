@@ -67,6 +67,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; emacs-jedi
 (live-add-pack-lib "emacs-jedi")
+(eval-when-compile (require 'jedi nil t))
 (autoload 'jedi:setup "jedi" nil t)
 (setq jedi:setup-keys t)
 (add-hook 'python-mode-hook 'jedi:setup)
@@ -123,9 +124,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; pylookup
 (live-add-pack-lib "pylookup")
-(setq pylookup-dir (concat ptrv-pack-root-dir "lib/pylookup"))
-
 (eval-when-compile (require 'pylookup))
+(setq pylookup-dir (concat ptrv-pack-root-dir "lib/pylookup"))
 (setq pylookup-program (concat pylookup-dir "/pylookup.py"))
 (setq pylookup-db-file (concat pylookup-dir "/pylookup.db"))
 
