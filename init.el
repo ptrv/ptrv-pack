@@ -46,6 +46,7 @@
   (live-load-config-file "linux-conf.el")
   (live-load-config-file "typewriter-conf.el")))
 (live-load-config-file "flycheck-conf.el")
+(live-load-config-file "hs-minor-mode-conf.el")
 (live-load-config-file "bindings.el")
 (live-load-config-file "autopair-conf.el")
 (live-load-config-file "clean-mode-line.el")
