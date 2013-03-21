@@ -35,7 +35,7 @@ Symbols matching the text at point are put first in the completion list."
   (imenu--make-index-alist)
   (let ((name-and-pos '())
         (symbol-names '()))
-    (flet ((addsymbols (symbol-list)
+    (cl-flet ((addsymbols (symbol-list)
                        (when (listp symbol-list)
                          (dolist (symbol symbol-list)
                            (let ((name nil) (position nil))
@@ -349,7 +349,8 @@ If mark is activate, duplicate region lines below."
   (unwind-protect
       (progn
         (linum-mode 1)
-        (goto-line (read-number "Goto line: ")))
+        (goto-char (point-min))
+        (forward-line (1- (read-number "Goto line: "))))
     (linum-mode -1)))
 
 (defun toggle-window-split ()
