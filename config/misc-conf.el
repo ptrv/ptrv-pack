@@ -196,3 +196,13 @@
 (require 'smart-operator)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; tea-time
+(require 'tea-time)
+(setq tea-time-sound (concat ptrv-pack-root-dir "etc/sounds/alarm.wav"))
+(cond
+ ((eq system-type 'darwin)
+  (setq tea-time-sound-command "afplay %s"))
+ ((eq system-type 'gnu/linux)
+  (setq tea-time-sound-command "aplay %s")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

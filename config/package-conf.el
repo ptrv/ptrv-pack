@@ -56,6 +56,7 @@
                       lua-mode
                       ahg
                       autopair
+                      tea-time
                       )
   "A list of packages to ensure are installed at launch.")
 
