@@ -300,3 +300,8 @@
 ;; autopair-newline interferes with cua-rotate-rectangle (default binding "\r")
 (eval-after-load 'cua-rect
   '(define-key cua--rectangle-keymap (kbd "M-<return>") 'cua-rotate-rectangle))
+
+(eval-after-load "flyspell-mode"
+  '(progn
+     (define-key flyspell-mode-map (kbd "C-:") 'flyspell-auto-correct-word)
+     (define-key flyspell-mode-map (kbd "C-.") 'ispell-word)))
