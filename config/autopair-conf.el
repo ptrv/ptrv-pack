@@ -2,10 +2,9 @@
 ;; autopair-conf.el
 (autopair-global-mode)
 
-(add-hook 'lisp-mode-hook #'(lambda () (autopair-mode -1)))
-(add-hook 'emacs-lisp-mode-hook #'(lambda () (autopair-mode -1)))
-(add-hook 'clojure-mode-hook #'(lambda () (autopair-mode -1)))
-(add-hook 'nrepl-mode-hook #'(lambda () (autopair-mode -1)))
+(defadvice enable-paredit-mode (before disable-autopair activate)
+  (setq autopair-dont-activate t)
+  (autopair-mode -1))
 
 (add-hook 'python-mode-hook
           #'(lambda ()
