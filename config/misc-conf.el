@@ -170,21 +170,6 @@
 (require 'ahg)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; make nxml outline work with gpx files
-(eval-after-load 'nxml-mode
-  '(progn
-     (defun gpx-setup ()
-       (when (and (stringp buffer-file-name)
-                  (string-match "\\.gpx\\'" buffer-file-name))
-         (make-local-variable 'nxml-section-element-name-regexp)
-         (setq nxml-section-element-name-regexp "trk\\|trkpt\\|wpt")
-         (make-local-variable 'nxml-heading-element-name-regexp)
-         (setq nxml-heading-element-name-regexp "name\\|time")
-         ))
-     (add-hook 'nxml-mode-hook 'gpx-setup)
-     (setq nxml-slash-auto-complete-flag t)))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; lambda-mode
 (require 'lambda-mode)
 (setq lambda-symbol (string (make-char 'greek-iso8859-7 107)))
