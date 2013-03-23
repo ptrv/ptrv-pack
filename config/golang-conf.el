@@ -17,7 +17,6 @@ See URL `https://github.com/dougm/goflymake'."
            :command '("goflymake" source)
            :error-patterns '(("^\\(?1:.*\\):\\(?2:[0-9]+\\): \\(?4:.*\\)$" error))
            :modes 'go-mode)
-         ;;(add-to-list 'flycheck-checkers 'go-goflymake)
-         (setq flycheck-checkers (append flycheck-checkers '(go-goflymake)))
+         (add-to-list 'flycheck-checkers 'go-goflymake)
          )
      (warn "goflymake not found")))
