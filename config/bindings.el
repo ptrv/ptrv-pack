@@ -295,3 +295,7 @@
 ;; (global-set-key (kbd "<f11>") 'toggle-fold)
 (global-set-key (kbd "<f11>") 'hs-toggle-hiding)
 (global-set-key (kbd "S-<f11>") 'toggle-fold-all)
+
+;; autopair-newline interferes with cua-rotate-rectangle (default binding "\r")
+(eval-after-load 'cua-rect
+  '(define-key cua--rectangle-keymap (kbd "M-<return>") 'cua-rotate-rectangle))
