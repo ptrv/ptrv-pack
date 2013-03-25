@@ -96,6 +96,8 @@
      (flycheck-warning-face ((t (:background "orange"))))
      ;; (error ((t (:background "pink"))))
      ;; (warning ((t (:background "orange"))))
+     (flymake-errline ((t (:background "pink"))))
+     (flymake-warnline ((t (:background "orange"))))
      )
    ))
 
