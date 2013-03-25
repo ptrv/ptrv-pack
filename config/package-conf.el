@@ -57,6 +57,8 @@
                       ahg
                       autopair
                       tea-time
+                      json-mode
+                      iy-go-to-char
                       )
   "A list of packages to ensure are installed at launch.")
 
