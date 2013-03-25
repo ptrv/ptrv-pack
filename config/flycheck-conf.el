@@ -26,4 +26,4 @@
 (add-hook 'lua-mode-hook 'flycheck-mode)
 ;; (add-hook 'go-mode-hook 'flycheck-mode)
 (add-hook 'sh-mode-hook 'flycheck-mode)
-(add-hook 'go-mode-hook 'flycheck-mode)
+;;(add-hook 'go-mode-hook 'flycheck-mode)
