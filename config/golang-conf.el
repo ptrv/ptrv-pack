@@ -50,16 +50,12 @@
      (define-key go-mode-map (kbd "C-c C-b") 'go-build)
      (define-key go-mode-map (kbd "C-c C-t") 'go-test)
      (define-key go-mode-map (kbd "C-c C-u") 'go-chk)
-
-     ;; flycheck goflymake checker
-     (flycheck-declare-checker go-goflymake
-             "A Go syntax and style checker using the go utility.
-
-See URL `https://github.com/ptrv/goflymake'."
-             :command '("goflymake" "flycheck-" source-inplace)
-             :error-patterns '(("^\\(?1:.*\\):\\(?2:[0-9]+\\): \\(?4:.*\\)$" error))
-             :modes 'go-mode)
-     (add-to-list 'flycheck-checkers 'go-goflymake)
      ))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; flycheck support
+(add-to-list 'load-path (concat (getenv "GOPATH")
+                                "/src/github.com/ptrv/goflymake"))
+(require 'go-flycheck)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
