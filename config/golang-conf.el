@@ -26,3 +26,28 @@ See URL `https://github.com/dougm/goflymake'."
 
 (add-to-list 'go-mode-hook 'hs-minor-mode)
 (add-to-list 'go-mode-hook 'flycheck-mode)
+
+(defun go-build ()
+  "compile project"
+  (interactive)
+  (compile "go build"))
+
+(defun go-test ()
+  "test project"
+  (interactive)
+    (compile "go test -v"))
+
+(defun go-chk ()
+  "gocheck project"
+  (interactive)
+    (compile "go test -gocheck.vv"))
+
+(defun go-run ()
+  "go run current buffer"
+  (interactive)
+    (compile (concat "go run " buffer-file-name)))
+
+(define-key go-mode-map (kbd "C-c C-r") 'go-run)
+(define-key go-mode-map (kbd "C-c C-b") 'go-build)
+(define-key go-mode-map (kbd "C-c C-t") 'go-test)
+(define-key go-mode-map (kbd "C-c C-u") 'go-chk)
