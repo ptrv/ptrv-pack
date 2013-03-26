@@ -42,12 +42,16 @@
       (call-interactively fold-fun)
     (hs-toggle-hiding)))
 
-(define-key hs-minor-mode-map (kbd "C-c @ h") 'hs-hide-block)
-(define-key hs-minor-mode-map (kbd "C-c @ H") 'hs-hide-all)
-(define-key hs-minor-mode-map (kbd "C-c @ s") 'hs-show-block)
-(define-key hs-minor-mode-map (kbd "C-c @ S") 'hs-show-all)
-(define-key hs-minor-mode-map (kbd "C-c @ l") 'hs-hide-level)
-(define-key hs-minor-mode-map (kbd "C-c @ c") 'hs-toggle-hiding)
+(setq hs-minor-mode-map
+      (let ((map (make-sparse-keymap)))
+        (define-key map (kbd "C-c @ h")   'hs-hide-block)
+        (define-key map (kbd "C-c @ H")   'hs-show-block)
+        (define-key map (kbd "C-c @ s")	  'hs-hide-all)
+        (define-key map (kbd "C-c @ S")	  'hs-show-all)
+        (define-key map (kbd "C-c @ l")   'hs-hide-level)
+        (define-key map (kbd "C-c @ c")   'hs-toggle-hiding)
+        (define-key map [(shift mouse-2)] 'hs-mouse-toggle-hiding)
+        map))
 
 (defadvice goto-line (after expand-after-goto-line
                             activate compile)
