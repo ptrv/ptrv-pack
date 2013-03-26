@@ -7,3 +7,4 @@ alias g git status
 alias gl git pull
 alias gp git push
 alias md mkdir -p $*
+alias gop cd $GOPATH
