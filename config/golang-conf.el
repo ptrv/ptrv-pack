@@ -26,7 +26,5 @@
 
 (add-to-list 'go-mode-hook 'hs-minor-mode)
 
-(require 'smart-operator)
-
 (add-to-list 'load-path (concat (getenv "GOPATH") "/src/github.com/ptrv/goflymake"))
 (require 'go-flymake)
