@@ -1,12 +1,8 @@
 ;; hs-minor-mode-conf.el
 
 (add-hook 'c-mode-common-hook 'hs-minor-mode)
-(add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
-(add-hook 'java-mode-hook 'hs-minor-mode)
-(add-hook 'lisp-mode-hook 'hs-minor-mode)
-(add-hook 'perl-mode-hook 'hs-minor-mode)
-(add-hook 'sh-mode-hook 'hs-minor-mode)
-(add-hook 'python-mode-hook 'hs-minor-mode)
+(dolist (x '(emacs-lisp lisp java perl sh python))
+  (add-hook (intern (concat (symbol-name x) "-mode-hook")) 'hs-minor-mode))
 
 (require 'hideshow)
 ;; https://github.com/Hawstein/my-emacs/blob/master/_emacs/hs-minor-mode-settings.el
