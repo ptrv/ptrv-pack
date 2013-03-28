@@ -17,9 +17,10 @@
 (add-hook 'go-mode-hook (lambda ()
                           (make-local-variable 'before-save-hook)
                           (setq before-save-hook 'gofmt-before-save)))
-(add-to-list 'go-mode-hook 'hs-minor-mode)
-(add-to-list 'go-mode-hook 'flycheck-mode)
-
+(add-hook 'go-mode-hook 'hs-minor-mode)
+(add-hook 'go-mode-hook 'flycheck-mode)
+(add-hook 'go-mode-hook (lambda ()
+                          (local-set-key (kbd "M-.") 'godef-jump)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; compile fucntions
 (defun go-build ()
@@ -50,6 +51,8 @@
      (define-key go-mode-map (kbd "C-c C-b") 'go-build)
      (define-key go-mode-map (kbd "C-c C-t") 'go-test)
      (define-key go-mode-map (kbd "C-c C-u") 'go-chk)
+     (define-key go-mode-map (kbd "C-c C-p") 'go-goto-imports)
+     (define-key go-mode-map (kbd "C-c C-z") 'go-remove-unused-imports)
      ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
