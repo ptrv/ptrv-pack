@@ -305,3 +305,5 @@
   '(progn
      (define-key flyspell-mode-map (kbd "C-:") 'flyspell-auto-correct-word)
      (define-key flyspell-mode-map (kbd "C-.") 'ispell-word)))
+
+(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
