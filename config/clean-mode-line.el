@@ -13,6 +13,7 @@
     (auto-fill-function . " φ")
     (autopair-mode . "")
     (lambda-mode . "")
+    (projectile-mode . "")
     ;; Major modes
     (clojure-mode . "λ")
     (hi-lock-mode . "")

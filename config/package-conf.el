@@ -59,6 +59,7 @@
                       tea-time
                       json-mode
                       iy-go-to-char
+                      projectile
                       )
   "A list of packages to ensure are installed at launch.")
 
