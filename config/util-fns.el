@@ -484,7 +484,7 @@ file of a buffer in an external program."
                     " "
                     buffer-file-name))))
 
-;;http://emacsredux.com/blog/2013/03/27/indent-region-or-buffer/
+;; http://emacsredux.com/blog/2013/03/27/indent-region-or-buffer/
 (defun indent-buffer ()
   "Indent the currently visited buffer."
   (interactive)
@@ -501,3 +501,11 @@ file of a buffer in an external program."
       (progn
         (indent-buffer)
         (message "Indented buffer.")))))
+
+;; http://emacsredux.com/blog/2013/03/28/indent-defun/
+(defun indent-defun ()
+  "Indent the current defun."
+  (interactive)
+  (save-excursion
+    (mark-defun)
+    (indent-region (region-beginning) (region-end))))

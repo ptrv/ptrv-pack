@@ -307,3 +307,4 @@
      (define-key flyspell-mode-map (kbd "C-.") 'ispell-word)))
 
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
+(global-set-key (kbd "C-M-z") 'indent-defun)
