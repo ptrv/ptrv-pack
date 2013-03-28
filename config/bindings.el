@@ -253,7 +253,8 @@
 
 (global-set-key (kbd "M-/") 'hippie-expand)
 
-(global-set-key [f12] 'webjump)
+(global-set-key (kbd "<f12>") 'google)
+(global-set-key (kbd "S-<f12>") 'webjump)
 
 (global-set-key (kbd "M-<up>") 'move-text-up)
 (global-set-key (kbd "M-<down>") 'move-text-down)
