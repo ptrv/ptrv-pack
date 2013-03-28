@@ -7,9 +7,9 @@
 (define-key global-map (kbd "C--") 'text-scale-decrease)
 
 ;;(global-set-key (kbd "C-x f") 'ido-recentf-open)
-(global-set-key (kbd "C-x F") 'live-recentf-ido-find-file)
+(global-set-key (kbd "C-x f") 'live-recentf-ido-find-file)
 ;;(global-set-key (kbd "C-x f") 'recentf-open-files)
-(global-set-key (kbd "C-x f") 'find-file-in-project)
+;; (global-set-key (kbd "C-x f") 'find-file-in-project)
 
 (global-set-key (kbd "C-c r") 'revert-buffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
