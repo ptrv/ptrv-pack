@@ -62,3 +62,17 @@
 (require 'go-flycheck)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Fix *Gofmt errors* window when using popwin
+(eval-after-load 'go-mode
+  '(progn
+     (defadvice gofmt--process-errors (around gofmt--process-errors-new
+                                              (filename tmpfile errbuf)
+                                              activate)
+       (with-current-buffer errbuf
+         (goto-char (point-min))
+         (insert "gofmt errors:\n")
+         (while (search-forward-regexp (concat "^\\(" (regexp-quote tmpfile) "\\):") nil t)
+           (replace-match (file-name-nondirectory filename) t t nil 1))
+         (compilation-mode)
+         (display-buffer errbuf)))))
