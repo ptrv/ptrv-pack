@@ -1,4 +1,6 @@
 ;; popwin-conf.el
+(require 'popwin)
+(popwin-mode 1)
 
 ;; popwin settings
 (setq popwin:special-display-config

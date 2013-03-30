@@ -60,6 +60,7 @@
                       json-mode
                       iy-go-to-char
                       projectile
+                      popwin
                       )
   "A list of packages to ensure are installed at launch.")
 
