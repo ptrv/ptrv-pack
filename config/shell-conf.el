@@ -35,6 +35,7 @@
 
 (live-add-pack-lib "emacs-pcomplete-plugins")
 (require 'pcmpl-git)
+(require 'pcmpl-go)
 
 ;;; Term
 (setq term-default-bg-color "black")
