@@ -267,8 +267,8 @@
 
 (global-set-key (kbd "C-x C-r") 'rename-current-buffer-file)
 
-(global-set-key (kbd "<C-S-return>") 'open-line-below)
-(global-set-key (kbd "<C-M-return>") 'open-line-above)
+(global-set-key (kbd "<C-M-return>") 'open-line-below)
+(global-set-key (kbd "<C-S-return>") 'open-line-above)
 
 (global-set-key [remap goto-line] 'goto-line-with-feedback)
 
