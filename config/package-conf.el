@@ -61,6 +61,7 @@
                       iy-go-to-char
                       projectile
                       popwin
+                      edit-server-htmlize
                       )
   "A list of packages to ensure are installed at launch.")
 
