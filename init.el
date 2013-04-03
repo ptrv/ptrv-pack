@@ -25,6 +25,7 @@
 (live-load-config-file "abbrev-conf.el")
 (live-load-config-file "pandoc-conf.el")
 (live-load-config-file "golang-conf.el")
+(live-load-config-file "clojure-conf.el")
 (live-load-config-file "ack-and-a-half-conf.el")
 ;;(live-load-config-file "html-conf.el")
 (live-load-config-file "xml-conf.el")

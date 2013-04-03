@@ -52,3 +52,6 @@
 [submodule "vendor/submodules/pylookup"]
 	path = vendor/submodules/pylookup
 	url = https://github.com/tsgates/pylookup.git
+[submodule "vendor/submodules/kibit-mode"]
+	path = vendor/submodules/kibit-mode
+	url = https://github.com/aredington/kibit-mode.git
