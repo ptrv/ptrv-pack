@@ -13,13 +13,13 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(flycheck-declare-checker clojure-kibit
-  "A Clojure code analyzer using the kibit utility."
-  :command `(,(concat kibit-mode-path "bin/kibit-flymake.sh") source)
-  :error-patterns '(("\\(?1:.*\\):\\(?2:[0-9]+\\): \\(?4:ERROR: .* CORRECTION: .*\\)" error))
-  :modes 'clojure-mode)
+;; (flycheck-declare-checker clojure-kibit
+;;   "A Clojure code analyzer using the kibit utility."
+;;   :command `(,(concat kibit-mode-path "bin/kibit-flymake.sh") source)
+;;   :error-patterns '(("\\(?1:.*\\):\\(?2:[0-9]+\\): \\(?4:ERROR: .* CORRECTION: .*\\)" error))
+;;   :modes 'clojure-mode)
 
-(add-to-list 'flycheck-checkers 'clojure-kibit)
+;; (add-to-list 'flycheck-checkers 'clojure-kibit)
 
 ;;(add-hook 'clojure-mode-hook 'flycheck-mode)
 

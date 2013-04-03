@@ -191,12 +191,3 @@
   (setq tea-time-sound-command "aplay %s")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; push-mark when switching to nrepl via C-c C-z
-(defadvice nrepl-switch-to-repl-buffer (around
-                                        nrepl-switch-to-repl-buffer-with-mark
-                                        activate)
-  (with-current-buffer (current-buffer)
-    (push-mark)
-    ad-do-it))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
