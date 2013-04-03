@@ -62,6 +62,7 @@
                       projectile
                       popwin
                       edit-server-htmlize
+                      move-text
                       )
   "A list of packages to ensure are installed at launch.")
 

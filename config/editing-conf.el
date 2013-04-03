@@ -13,3 +13,8 @@
 
 ;; Subword mode (consider CamelCase chunks as words)
 (global-subword-mode 1)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; move-text
+(require 'move-text)
+(move-text-default-bindings)
