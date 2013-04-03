@@ -55,3 +55,4 @@
 [submodule "vendor/submodules/kibit-mode"]
 	path = vendor/submodules/kibit-mode
 	url = https://github.com/aredington/kibit-mode.git
+    ignore = untracked
