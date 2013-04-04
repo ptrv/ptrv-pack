@@ -13,6 +13,7 @@
     (autopair-mode . "")
     (lambda-mode . "")
     (projectile-mode . "")
+    (kibit-mode . " κ")
     ;; Major modes
     (nrepl-mode . "ηζ")
     (clojure-mode . "λ")
