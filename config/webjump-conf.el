@@ -41,5 +41,15 @@
                   [simple-query
                    "www.google.com"
                    "http://www.google.ca/search?hl=en&as_sitesearch=http://java.sun.com/javase/6/docs/api/&q="
+                   ""])
+                 ("ClojureDocs" .
+                  [simple-query
+                   "clojuredocs.org"
+                   "http://clojuredocs.org/search?q="
+                   ""])
+                 ("Clojars" .
+                  [simple-query
+                   "clojars.org"
+                   "https://clojars.org/search?q="
                    ""]))
                webjump-sample-sites))
