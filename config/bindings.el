@@ -256,8 +256,8 @@
 (global-set-key (kbd "<f12>") 'google)
 (global-set-key (kbd "S-<f12>") 'webjump)
 
-(global-set-key (kbd "M-<up>") 'move-text-up)
-(global-set-key (kbd "M-<down>") 'move-text-down)
+;; (global-set-key (kbd "M-<up>") 'move-text-up)
+;; (global-set-key (kbd "M-<down>") 'move-text-down)
 
 (global-set-key (kbd "C-S-d") 'duplicate-line-or-region-below)
 
