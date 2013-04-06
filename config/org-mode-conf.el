@@ -130,3 +130,15 @@
 (live-add-pack-lib "org2blog")
 (require 'org2blog-autoloads)
 (load "~/.org-blogs.el" 'noerror)
+
+;; org-present
+(live-add-pack-lib "org-present")
+(autoload 'org-present "org-present" nil t)
+(add-hook 'org-present-mode-hook
+          (lambda ()
+            (org-present-big)
+            (org-display-inline-images)))
+(add-hook 'org-present-mode-quit-hook
+          (lambda ()
+            (org-present-small)
+            (org-remove-inline-images)))

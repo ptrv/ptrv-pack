@@ -58,3 +58,6 @@
 [submodule "vendor/submodules/ergoemacs"]
 	path = vendor/submodules/ergoemacs
 	url = https://code.google.com/p/ergoemacs/
+[submodule "vendor/submodules/org-present"]
+	path = vendor/submodules/org-present
+	url = https://github.com/rlister/org-present.git
