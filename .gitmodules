@@ -55,3 +55,6 @@
 [submodule "vendor/submodules/4clj-el"]
 	path = vendor/submodules/4clj-el
 	url = https://github.com/dcluna/4clj-el.git
+[submodule "vendor/submodules/ergoemacs"]
+	path = vendor/submodules/ergoemacs
+	url = https://code.google.com/p/ergoemacs/

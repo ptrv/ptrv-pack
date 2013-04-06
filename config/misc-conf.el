@@ -191,3 +191,17 @@
   (setq tea-time-sound-command "aplay %s")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; xah lee modes
+(autoload 'xmsi-mode "xmsi-math-symbols-input"
+  "Load xmsi minor mode for inputting math/Unicode symbols." t)
+(eval-after-load "xmsi-math-symbols-input"
+  '(progn
+     (define-key xmsi-keymap (kbd "S-SPC") 'nil)
+     (define-key xmsi-keymap (kbd "C-c C-8") 'xmsi-change-to-symbol)))
+
+
+;; xub-mode
+(autoload 'xub-mode "xub-mode" "Load xub-mode for browsing Unicode." t)
+(defalias 'unicode-browser 'xub-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

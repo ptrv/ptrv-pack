@@ -1,0 +1,1 @@
+../vendor/submodules/ergoemacs/packages/xub-mode.el
