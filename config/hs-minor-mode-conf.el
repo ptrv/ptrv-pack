@@ -4,6 +4,17 @@
 (dolist (x '(emacs-lisp lisp java perl sh python))
   (add-hook (intern (concat (symbol-name x) "-mode-hook")) 'hs-minor-mode))
 
+(setq hs-minor-mode-map
+      (let ((map (make-sparse-keymap)))
+        (define-key map (kbd "C-c @ h")   'hs-hide-block)
+        (define-key map (kbd "C-c @ H")   'hs-show-block)
+        (define-key map (kbd "C-c @ s")	  'hs-hide-all)
+        (define-key map (kbd "C-c @ S")	  'hs-show-all)
+        (define-key map (kbd "C-c @ l")   'hs-hide-level)
+        (define-key map (kbd "C-c @ c")   'hs-toggle-hiding)
+        (define-key map [(shift mouse-2)] 'hs-mouse-toggle-hiding)
+        map))
+
 (require 'hideshow)
 ;; https://github.com/Hawstein/my-emacs/blob/master/_emacs/hs-minor-mode-settings.el
 (setq hs-isearch-open t)
@@ -37,17 +48,6 @@
   (if fold-fun
       (call-interactively fold-fun)
     (hs-toggle-hiding)))
-
-(setq hs-minor-mode-map
-      (let ((map (make-sparse-keymap)))
-        (define-key map (kbd "C-c @ h")   'hs-hide-block)
-        (define-key map (kbd "C-c @ H")   'hs-show-block)
-        (define-key map (kbd "C-c @ s")	  'hs-hide-all)
-        (define-key map (kbd "C-c @ S")	  'hs-show-all)
-        (define-key map (kbd "C-c @ l")   'hs-hide-level)
-        (define-key map (kbd "C-c @ c")   'hs-toggle-hiding)
-        (define-key map [(shift mouse-2)] 'hs-mouse-toggle-hiding)
-        map))
 
 (defadvice goto-line (after expand-after-goto-line
                             activate compile)
