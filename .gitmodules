@@ -52,3 +52,6 @@
 	path = vendor/submodules/kibit-mode
 	url = https://github.com/aredington/kibit-mode.git
     ignore = untracked
+[submodule "vendor/submodules/4clj-el"]
+	path = vendor/submodules/4clj-el
+	url = https://github.com/dcluna/4clj-el.git
