@@ -29,8 +29,6 @@
 ;; ##### extension for block error messages ####
 ;;(load-file (concat (live-pack-lib-dir) "ext-scel.el"))
 
-;;(add-hook 'sclang-mode-hook (lambda () (autopair-mode)))
-
 ;; (add-hook 'sclang-mode-hook
 ;;           (lambda ()
 ;;             (setq ac-sources
@@ -40,16 +38,6 @@
 ;;                     ac-source-words-in-all-buffer
 ;;                     ;;ac-source-yasnippet
 ;;                     ac-source-semantic))))
-
-(add-to-list 'ac-modes 'sclang-mode)
-;; (add-to-list 'ac-user-dictionary-files "~/.local/share/SuperCollider/sclang_completion_dict")
-(add-hook 'sclang-mode-hook
-          (lambda ()
-            (interactive)
-            (make-local-variable 'ac-user-dictionary-files)
-            (add-to-list 'ac-user-dictionary-files "~/.sc_completion")))
-
-(add-hook 'sclang-mode-hook 'yas/minor-mode)
 
 (defun sclang-mode-untabify ()
   (save-excursion
@@ -61,39 +49,48 @@
         (untabify (1- (point)) (point-max))))
   nil)
 
-(add-hook 'sclang-mode-hook
-          '(lambda ()
-             (make-local-variable 'write-contents-hooks)
-             (add-hook 'write-contents-hooks 'sclang-mode-untabify)))
-
 ;; (require 'ext-scel)
 ;; (setq sclang-minibuf-results nil)
 ;; (setq sclang-collapse t)
 
-;; set buffer local keymap to set TAB for jumping to next button in
-;; post window when using ext-scel's collapsible post window text.
-(add-hook 'sclang-mode-hook
-          (lambda ()
-            (when (string= (buffer-name) sclang-post-buffer)
-              (use-local-map (copy-keymap sclang-mode-map))
-              (local-set-key [?\t] 'forward-button)
-              (local-set-key [backtab] 'backward-button))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; hooks
+(defun supercollider-init ()
+  (add-to-list 'ac-modes 'sclang-mode)
+  (make-local-variable 'ac-user-dictionary-files)
+  (add-to-list 'ac-user-dictionary-files "~/.sc_completion")
+  ;; (add-to-list 'ac-user-dictionary-files
+  ;;              "~/.local/share/SuperCollider/sclang_completion_dict")
+  (yas-minor-mode 1)
+  (make-local-variable 'write-contents-hooks)
+  (add-hook 'write-contents-hooks 'sclang-mode-untabify)
 
-;; Raise all supercollider windows.
-(define-key sclang-mode-map (kbd "C-c f")
-  (lambda ()
-    (interactive)
-    (sclang-eval-string "Window.allWindows.do(_.front);")))
+  ;; set buffer local keymap to set TAB for jumping to next button in
+  ;; post window when using ext-scel's collapsible post window text.
+  (when (string= (buffer-name) sclang-post-buffer)
+    (use-local-map (copy-keymap sclang-mode-map))
+    (local-set-key [?\t] 'forward-button)
+    (local-set-key [backtab] 'backward-button))
 
-(define-key sclang-mode-map (kbd "C-c ö") 'sclang-dump-interface)
-(define-key sclang-mode-map (kbd "C-c ü") 'sclang-dump-full-interface)
-(define-key sclang-mode-map (kbd "C-c ä") 'sclang-pop-definition-mark)
-(define-key sclang-mode-map (kbd "M-Ä") (lambda ()
-                                          (interactive)
-                                          (scroll-other-window 4)))
-(define-key sclang-mode-map (kbd "M-Ö") (lambda ()
-                                          (interactive)
-                                          (scroll-other-window-down 4)))
+  ;; Raise all supercollider windows.
+  (define-key sclang-mode-map (kbd "C-c f")
+    (lambda ()
+      (interactive)
+      (sclang-eval-string "Window.allWindows.do(_.front);")))
+
+  (define-key sclang-mode-map (kbd "C-c ö") 'sclang-dump-interface)
+  (define-key sclang-mode-map (kbd "C-c ü") 'sclang-dump-full-interface)
+  (define-key sclang-mode-map (kbd "C-c ä") 'sclang-pop-definition-mark)
+  (define-key sclang-mode-map (kbd "M-Ä") (lambda ()
+                                            (interactive)
+                                            (scroll-other-window 4)))
+  (define-key sclang-mode-map (kbd "M-Ö") (lambda ()
+                                            (interactive)
+                                            (scroll-other-window-down 4)))
+  )
+(add-hook 'sclang-mode-hook 'supercollider-init)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (if (fboundp 'completing-read-ido)
     (progn
