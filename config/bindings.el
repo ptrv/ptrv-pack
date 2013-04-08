@@ -239,6 +239,7 @@
 
 ;; expand-regionp
 (global-set-key (kbd "C-ü") 'er/expand-region)
+(global-set-key (kbd "C-Ü") 'er/contract-region)
 
 ;; iy-go-to-char
 (eval-when-compile (require 'iy-go-to-char nil t))
