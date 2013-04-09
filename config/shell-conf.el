@@ -33,10 +33,13 @@
           (lambda ()
             (set-face-attribute 'eshell-prompt-face nil :foreground "dark green")))
 
-(live-add-pack-lib "emacs-pcomplete-plugins")
-(require 'pcmpl-git)
+(live-add-pack-lib "pcomplete-plugins")
 (require 'pcmpl-go)
 (require 'pcmpl-lein)
+(require 'pcmpl-apt)
+
+;; pcmpl-git from MELPA: https://github.com/leoliu/pcmpl-git-el
+(require 'pcmpl-git)
 
 ;;; Term
 (setq term-default-bg-color "black")
