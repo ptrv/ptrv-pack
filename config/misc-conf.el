@@ -219,3 +219,6 @@
 (add-hook 'after-save-hook 'check-parens nil t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; litable
+(live-add-pack-lib "litable")
+(require 'litable)
