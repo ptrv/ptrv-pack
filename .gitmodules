@@ -55,9 +55,6 @@
 [submodule "vendor/submodules/4clj-el"]
 	path = vendor/submodules/4clj-el
 	url = https://github.com/dcluna/4clj-el.git
-[submodule "vendor/submodules/ergoemacs"]
-	path = vendor/submodules/ergoemacs
-	url = https://code.google.com/p/ergoemacs/
 [submodule "vendor/submodules/org-present"]
 	path = vendor/submodules/org-present
 	url = https://github.com/rlister/org-present.git
