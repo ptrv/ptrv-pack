@@ -12,7 +12,7 @@
 (require 'erc-join)
 (erc-autojoin-mode 1)
 (setq erc-autojoin-channels-alist
-      '(("freenode.net" "#emacs" "#clojure" "#overtone")))
+      '(("freenode.net" "#emacs" "#clojure" "#overtone" "#go-nuts")))
 
 (cond ((string= system-name "alderaan")
        (setq erc-autojoin-channels-alist
