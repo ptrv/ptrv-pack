@@ -59,3 +59,8 @@
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+
+;; ChucK
+(live-add-pack-lib "chuck-mode")
+(autoload 'chuck-mode "chuck-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.ck$" . chuck-mode))

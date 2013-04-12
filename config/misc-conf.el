@@ -109,17 +109,11 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; pomodoro.el
-(require 'pomodoro)
+(autoload 'pomodoro-add-to-mode-line "pomodoro" t)
 (pomodoro-add-to-mode-line)
 (setq pomodoro-sound-player "/usr/bin/aplay")
 (setq pomodoro-break-start-sound (concat ptrv-pack-root-dir "etc/sounds/alarm.wav"))
 (setq pomodoro-work-start-sound (concat ptrv-pack-root-dir "etc/sounds/alarm.wav"))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ChucK
-(live-add-pack-lib "chuck-mode")
-(require 'chuck-mode)
-;;(yas-load-directory (concat (live-pack-lib-dir) "chuck-mode/snippets/text-mode"))
 
 ;; fix whitespace-cleanup
 ;; http://stackoverflow.com/a/12958498/464831
@@ -132,7 +126,6 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; the silver searcher
-(require 'ag)
 (setq ag-highlight-search t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -171,18 +164,17 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; lambda-mode
-(require 'lambda-mode)
+(autoload 'lambda-mode "lambda-mode" nil t)
 (setq lambda-symbol (string (make-char 'greek-iso8859-7 107)))
-
 (add-hook 'emacs-lisp-mode-hook #'lambda-mode 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(require 'smart-operator)
+;; smart-operator
+(autoload 'smart-operator-mode "smart-operator" nil t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; tea-time
-(require 'tea-time)
+(autoload 'tea-time "tea-time" nil t)
 (setq tea-time-sound (concat ptrv-pack-root-dir "etc/sounds/alarm.wav"))
 (cond
  ((eq system-type 'darwin)

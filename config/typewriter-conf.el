@@ -1,6 +1,6 @@
 ;; typewriter-conf.el
 
-(require 'typewriter-mode)
+(autoload 'typewriter-mode "typewriter-mode" nil t)
 (setq typewriter-sound-default (concat
                                 ptrv-pack-root-dir
                                 "etc/sounds/9744__horn__typewriter.wav"))

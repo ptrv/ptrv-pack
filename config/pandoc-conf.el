@@ -1,4 +1,7 @@
-(require 'pandoc-mode)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; pandoc-conf.el
+
+(autoload 'turn-on-pandoc "pandoc-mode" nil t)
 (add-hook 'pandoc-mode-hook 'pandoc-load-default-settings)
 
 (add-hook 'markdown-mode-hook 'turn-on-pandoc)
