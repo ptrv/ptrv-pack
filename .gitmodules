@@ -58,9 +58,6 @@
 [submodule "vendor/submodules/org-present"]
 	path = vendor/submodules/org-present
 	url = https://github.com/rlister/org-present.git
-[submodule "vendor/submodules/litable"]
-	path = vendor/submodules/litable
-	url = https://github.com/ptrv/litable.git
 [submodule "vendor/submodules/projectile"]
 	path = vendor/submodules/projectile
 	url = https://github.com/bbatsov/projectile.git
