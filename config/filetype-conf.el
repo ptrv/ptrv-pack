@@ -9,7 +9,7 @@
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.xml$" . nxml-mode))
 
-(require 'yaml-mode)
+;;(require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
 
@@ -35,7 +35,7 @@
 (add-to-list 'auto-mode-alist '("gitconfig*" . gitconfig-mode))
 
 ;; cmake
-(require 'cmake-mode)
+(autoload 'cmake-mode "cmake-mode" "cmake-mode" t)
 (add-to-list 'auto-mode-alist '("CMakeLists\\.txt\\'" . cmake-mode))
 (add-to-list 'auto-mode-alist '("\\.cmake\\'" . cmake-mode))
 

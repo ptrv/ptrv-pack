@@ -5,11 +5,14 @@
 
 (live-add-pack-lib "kibit-mode")
 
-(require 'kibit-mode)
+;;(require 'kibit-mode)
+(autoload 'kibit-mode "kibit-mode" "kibit-mode" nil)
 (add-hook 'clojure-mode-hook 'kibit-mode)
 
-(define-key kibit-mode-keymap (kbd "C-c C-n") 'nil)
-(define-key kibit-mode-keymap (kbd "C-c k c") 'kibit-check)
+(eval-after-load "kibit-mode"
+'(progn
+   (define-key kibit-mode-keymap (kbd "C-c C-n") 'nil)
+   (define-key kibit-mode-keymap (kbd "C-c k c") 'kibit-check)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -35,6 +38,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 4clojure
 (live-add-pack-lib "4clj-el")
-(require 'four-clj)
+;;(require 'four-clj)
+(autoload '4clojure-problem "four-clj" "" t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -15,7 +15,7 @@
         (define-key map [(shift mouse-2)] 'hs-mouse-toggle-hiding)
         map))
 
-(require 'hideshow)
+;;(require 'hideshow)
 ;; https://github.com/Hawstein/my-emacs/blob/master/_emacs/hs-minor-mode-settings.el
 (setq hs-isearch-open t)
 
@@ -51,6 +51,12 @@
 
 (defadvice goto-line (after expand-after-goto-line
                             activate compile)
+  "hideshow-expand affected block when using goto-line in a collapsed buffer"
+  (save-excursion
+    (hs-show-block)))
+
+(defadvice goto-line-with-feedback (after expand-after-goto-line-with-feedback
+                                          activate compile)
   "hideshow-expand affected block when using goto-line in a collapsed buffer"
   (save-excursion
     (hs-show-block)))

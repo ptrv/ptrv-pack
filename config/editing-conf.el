@@ -16,5 +16,4 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; move-text
-(require 'move-text)
 (move-text-default-bindings)

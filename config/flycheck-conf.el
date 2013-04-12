@@ -1,4 +1,4 @@
-(require 'flycheck)
+;;(require 'flycheck)
 
 (setq flycheck-highlighting-mode 'lines)
 (unless (and (>= emacs-major-version 24)

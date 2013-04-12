@@ -1,8 +1,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; flymake-conf.el
 
-(require 'flymake)
-(require 'flymake-cursor)
+;;(require 'flymake)
+;;(require 'flymake-cursor)
 
 (defvar flymake-mode-map
   (let ((map (make-sparse-keymap)))

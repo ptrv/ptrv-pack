@@ -1,4 +1,4 @@
-(require 'edit-server)
+(autoload 'edit-server-start "edit-server" "" t)
 
 (add-hook 'edit-server-start-hook 'edit-server-maybe-dehtmlize-buffer)
 (add-hook 'edit-server-done-hook 'edit-server-maybe-htmlize-buffer)

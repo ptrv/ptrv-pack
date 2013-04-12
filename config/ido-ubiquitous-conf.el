@@ -1,7 +1,7 @@
 ;; ido-ubiquitous-conf.el
 
 ;; Use ido everywhere
-(require 'ido-ubiquitous)
+;;(require 'ido-ubiquitous)
 (ido-ubiquitous-mode 1)
 (ido-ubiquitous-disable-in erc-iswitchb)
 
@@ -9,6 +9,7 @@
 (add-to-list 'ido-ubiquitous-command-exceptions 'ispell-change-dictionary)
 (add-to-list 'ido-ubiquitous-command-exceptions 'add-dir-local-variable)
 (add-to-list 'ido-ubiquitous-command-exceptions 'ahg-do-command)
+;;(add-to-list 'ido-ubiquitous-command-exceptions 'godoc)
 
 ;; Fix ido-ubiquitous for newer packages
 (defmacro ido-ubiquitous-use-new-completing-read (cmd package)
