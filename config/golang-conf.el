@@ -107,4 +107,17 @@ See URL `https://golang.org/cmd/go'."
        :error-patterns '(("^\\(?1:.*\\):\\(?2:[0-9]+\\): \\(?4:.*\\)$" error))
        :modes 'go-mode)
 
-     (add-to-list 'flycheck-checkers 'go-goflycheck)))
+     (add-to-list 'flycheck-checkers 'go-goflycheck)
+
+     (flycheck-declare-checker go
+       "A Go syntax and style checker using the gofmt utility go build tools.
+
+       See URL `http://golang.org/cmd/gofmt/'."
+       :command '("gofmt" source)
+       :error-patterns '(("^\\(?1:.*\\):\\(?2:[0-9]+\\):\\(?3:[0-9]+\\): \\(?4:.*\\)$" error))
+       :modes 'go-mode
+       :next-checkers '((no-errors . go-goflycheck))
+       )
+
+     (add-to-list 'flycheck-checkers 'go)
+     ))
