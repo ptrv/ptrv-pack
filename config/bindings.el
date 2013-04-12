@@ -311,3 +311,6 @@
 
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 (global-set-key (kbd "C-M-z") 'indent-defun)
+
+(global-set-key (kbd "C-x j") 'dired-jump)
+(global-set-key (kbd "C-x 4 j") 'dired-jump-other-window)
