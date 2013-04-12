@@ -66,7 +66,7 @@
                         tea-time
                         json-mode
                         iy-go-to-char
-                        ;;projectile
+                        projectile
                         popwin
                         edit-server-htmlize
                         move-text
