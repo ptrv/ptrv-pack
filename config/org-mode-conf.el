@@ -109,7 +109,7 @@
 ;; (setq remember-annotation-functions '(org-remember-annotation))
 ;; (setq remember-handler-functions '(org-remember-handler))
 ;; (add-hook 'remember-mode-hook 'org-remember-apply-template)
-(require 'org-latex)
+;;(require 'org-latex)
 
 (org-babel-do-load-languages
  'org-babel-load-languages

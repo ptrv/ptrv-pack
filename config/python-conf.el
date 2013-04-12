@@ -87,7 +87,10 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; pytest
-(require 'pytest)
+(autoload 'pytest-all "pytest" nil t)
+(autoload 'pytest-module "pytest" nil t)
+(autoload 'pytest-one "pytest" nil t)
+(autoload 'pytest-directory "pytest" nil t)
 (setq pytest-global-name "py.test")
 (add-hook 'python-mode-hook
           (lambda ()

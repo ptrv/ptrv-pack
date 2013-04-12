@@ -188,4 +188,6 @@
  :doc-spec '(("(latex2e)Concept Index" )
              ("(latex2e)Command Index")))
 
-(require 'pstricks)
+(eval-after-load 'latex-mode
+  '(progn
+     (require 'pstricks)))

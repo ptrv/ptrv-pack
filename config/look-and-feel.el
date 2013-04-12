@@ -17,10 +17,10 @@
 
 (global-hl-line-mode 1)
 
-(require 'color-theme)
-
 (defvar ptrv-themes-dir (concat (live-pack-lib-dir) "themes"))
-(load-file (concat (file-name-as-directory ptrv-themes-dir) "gandalf-ptrv.el"))
+(add-to-list 'load-path ptrv-themes-dir)
+;; (load-file (concat (file-name-as-directory ptrv-themes-dir) "gandalf-ptrv.el"))
+(autoload 'color-theme-gandalf-ptrv "gandalf-ptrv" nil nil)
 (color-theme-gandalf-ptrv)
 
 ;; taken from colour-pack
