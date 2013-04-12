@@ -41,6 +41,6 @@
 
 ;; nyan-mode
 (live-add-pack-lib "nyan-mode")
-(require 'nyan-mode)
 (setq nyan-bar-length 16)
+(autoload 'nyan-mode "nyan-mode" nil t)
 (nyan-mode 1)

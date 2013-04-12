@@ -2,6 +2,8 @@
 ;; ptrv's personal live pack
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(require 'my-secrets)
+
 (load "~/.emacs-locals.el" 'noerror)
 
 (setq ptrv-pack-root-dir (file-name-directory

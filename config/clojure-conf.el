@@ -5,8 +5,7 @@
 
 (live-add-pack-lib "kibit-mode")
 
-;;(require 'kibit-mode)
-(autoload 'kibit-mode "kibit-mode" "kibit-mode" nil)
+(autoload 'kibit-mode "kibit-mode" nil t)
 (add-hook 'clojure-mode-hook 'kibit-mode)
 
 (eval-after-load "kibit-mode"
@@ -38,7 +37,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 4clojure
 (live-add-pack-lib "4clj-el")
-;;(require 'four-clj)
-(autoload '4clojure-problem "four-clj" "" t)
+(autoload '4clojure-problem "four-clj" nil t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

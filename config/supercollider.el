@@ -5,7 +5,6 @@
 (live-add-pack-lib "SuperCollider")
 
 (require 'sclang)
-;;(require 'w3m)
 
 (eval-after-load "w3m"
   '(progn

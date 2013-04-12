@@ -9,7 +9,6 @@
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.xml$" . nxml-mode))
 
-;;(require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
 
@@ -64,3 +63,8 @@
 (live-add-pack-lib "chuck-mode")
 (autoload 'chuck-mode "chuck-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.ck$" . chuck-mode))
+
+;; arduino
+(live-add-pack-lib "arduino-mode")
+(autoload 'arduino-mode "arduino-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.ino\\'" . arduino-mode))

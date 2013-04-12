@@ -2,7 +2,7 @@
 ;;     (progn
 ;;       (add-to-list 'default-frame-alist '(font . "Inconsolata-12"))))
 (add-to-list 'default-frame-alist '(font . "Inconsolata-12"))
-(require 'pcmpl-apt)
+(autoload 'pcomplete/apt-get "pcmpl-apt" nil nil)
 
 (defun setup-frame-hook (frame)
   ;; (run-with-idle-timer 0.2 nil 'toggle-frame-maximized)

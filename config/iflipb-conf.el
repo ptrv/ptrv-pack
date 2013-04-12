@@ -1,6 +1,6 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; iflipb-conf.el
 
-;;(require 'iflipb)
 (setq iflipb-ignore-buffers '("*Ack-and-a-half*"
                               "*Help*"
                               "*Compile-Log*"

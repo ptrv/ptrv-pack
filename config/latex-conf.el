@@ -180,7 +180,7 @@
  ;; '(reftex-cite-format 'natbib)
  )
 
-(require 'info-look)
+(autoload 'info-lookup-add-help "info-look" nil nil)
 (info-lookup-add-help
  :mode 'latex-mode
  :regexp ".*"

@@ -5,5 +5,5 @@
 ;; (load "~/.emacs-projects.el" 'noerror)
 
 (live-add-pack-lib "projectile")
-(require 'projectile)
+(autoload 'projectile-global-mode "projectile" nil t)
 (projectile-global-mode)

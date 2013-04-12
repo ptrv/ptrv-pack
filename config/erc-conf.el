@@ -1,15 +1,13 @@
 ;;;;;;;;;;;;;;;;;;;;
 ;; erc-conf.el
 ;;;;;;;;;;;;;;;;;;;;
-(require 'my-secrets)
-;;(require 'erc-services)
+
 (erc-services-mode 1)
 (setq erc-prompt-for-nickserv-password nil)
 (setq erc-nickserv-passwords
       `((freenode ((,freenode-user . ,freenode-pass)))))
 
 ;;IRC
-;;(require 'erc-join)
 (erc-autojoin-mode 1)
 (setq erc-autojoin-channels-alist
       '(("freenode.net" "#emacs" "#clojure" "#overtone" "#go-nuts")))
@@ -36,7 +34,6 @@
        :nick freenode-user
        ))
 
-;;(require 'erc-match)
 (setq erc-keywords `(,freenode-user))
 (erc-match-mode)
 

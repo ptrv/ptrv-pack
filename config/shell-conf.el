@@ -34,12 +34,8 @@
             (set-face-attribute 'eshell-prompt-face nil :foreground "dark green")))
 
 (live-add-pack-lib "pcomplete-plugins")
-(require 'pcmpl-go)
-(require 'pcmpl-lein)
-(require 'pcmpl-apt)
-
-;; pcmpl-git from MELPA: https://github.com/leoliu/pcmpl-git-el
-(require 'pcmpl-git)
+(autoload 'pcomplete/go "pcmpl-go" nil nil)
+(autoload 'pcomplete/lein "pcmpl-lein" nil nil)
 
 ;;; Term
 (setq term-default-bg-color "black")

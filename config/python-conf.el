@@ -104,7 +104,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; info
-(require 'info-look)
+(autoload 'info-lookup-add-help "info-look" nil nil)
 (info-lookup-add-help
  :mode 'python-mode
  :regexp "[[:alnum:]_]+"

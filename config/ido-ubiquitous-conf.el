@@ -1,7 +1,6 @@
 ;; ido-ubiquitous-conf.el
 
 ;; Use ido everywhere
-;;(require 'ido-ubiquitous)
 (ido-ubiquitous-mode 1)
 (ido-ubiquitous-disable-in erc-iswitchb)
 

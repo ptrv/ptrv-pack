@@ -15,7 +15,6 @@
         (define-key map [(shift mouse-2)] 'hs-mouse-toggle-hiding)
         map))
 
-;;(require 'hideshow)
 ;; https://github.com/Hawstein/my-emacs/blob/master/_emacs/hs-minor-mode-settings.el
 (setq hs-isearch-open t)
 

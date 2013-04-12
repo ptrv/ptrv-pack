@@ -1,5 +1,7 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; popwin-conf.el
-(require 'popwin)
+
+(autoload 'popwin-mode "popwin" nil t)
 (popwin-mode 1)
 
 ;; popwin settings

@@ -91,15 +91,6 @@
 ;; ;; (add-hook 'LaTeX-mode-hook 'longlines-mode)
 ;; ;; (add-hook 'markdown-mode-hook 'longlines-mode)
 
-
-(live-add-pack-lib "arduino-mode")
-(require 'arduino-mode)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; refheap
-(require 'my-secrets)
-(require 'refheap)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; insert-time
 (live-add-pack-lib "insert-time")

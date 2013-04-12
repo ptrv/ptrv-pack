@@ -1,9 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; flymake-conf.el
 
-;;(require 'flymake)
-;;(require 'flymake-cursor)
-
 (defvar flymake-mode-map
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "M-n") 'flymake-goto-next-error)

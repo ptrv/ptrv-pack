@@ -80,8 +80,7 @@
 ;; (global-set-key (kbd "C-c i f") (lambda () (interactive) (insert "♭")))
 ;; (global-set-key (kbd "C-c i p") (lambda () (interactive) (insert "£")))
 
-;;(require 'quick-jump)
-(autoload 'quick-jump-default-keybinding "quick-jump" "" nil)
+(autoload 'quick-jump-default-keybinding "quick-jump" nil nil)
 (quick-jump-default-keybinding)
 (global-set-key (kbd "C-c j p") 'quick-jump-go-back)
 (global-set-key (kbd "C-c j b") 'quick-jump-go-back)
@@ -118,7 +117,6 @@
 (global-set-key (kbd "C-c w s") 'swap-windows)
 (global-set-key (kbd "C-c w r") 'rotate-windows)
 
-;;requires buffer-move
 (global-set-key (kbd "C-c w u") 'buf-move-up)
 (global-set-key (kbd "C-c w d") 'buf-move-down)
 (global-set-key (kbd "C-c w l") 'buf-move-left)
