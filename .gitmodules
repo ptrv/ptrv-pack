@@ -55,6 +55,8 @@
 [submodule "vendor/submodules/4clj-el"]
 	path = vendor/submodules/4clj-el
 	url = https://github.com/dcluna/4clj-el.git
+    ignore = untracked
 [submodule "vendor/submodules/org-present"]
 	path = vendor/submodules/org-present
 	url = https://github.com/rlister/org-present.git
+    ignore = untracked
