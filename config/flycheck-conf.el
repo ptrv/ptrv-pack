@@ -23,6 +23,7 @@
 (add-hook 'python-mode-hook 'flycheck-mode)
 (add-hook 'lua-mode-hook 'flycheck-mode)
 (add-hook 'sh-mode-hook 'flycheck-mode)
+(add-hook 'json-mode-hook 'flycheck-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; cpplint.py checker
