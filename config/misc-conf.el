@@ -84,14 +84,6 @@
              (auto-fill-mode 1)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ;; Soft word wrap
-;; (require 'longlines)
-;; (setq longlines-show-hard-newlines t)
-;; (setq longlines-auto-wrap t)
-;; ;; (add-hook 'LaTeX-mode-hook 'longlines-mode)
-;; ;; (add-hook 'markdown-mode-hook 'longlines-mode)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; insert-time
 (live-add-pack-lib "insert-time")
 (require 'insert-time)
@@ -140,7 +132,6 @@
 (add-to-list 'auto-mode-alist '("\\.pure\\(rc\\)?$" . pure-mode))
 (eval-after-load "pure-mode"
   '(progn
-     ;; (require 'hideshow)
      (add-hook 'pure-mode-hook 'hs-minor-mode)
      (add-hook 'pure-eval-mode-hook
                (lambda ()

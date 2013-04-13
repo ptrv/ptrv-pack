@@ -142,12 +142,18 @@
 (autoload 'pylookup-update "pylookup"
   "Run pylookup-update and create the database at `pylookup-db-file'." t)
 
-(require 'python)
-(define-key python-mode-map (kbd "C-c L") 'pylookup-lookup)
+(eval-after-load 'python
+  '(progn
+     (define-key python-mode-map (kbd "C-c L") 'pylookup-lookup)))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; pylint
 (autoload 'pylint "pylint")
 (add-hook 'python-mode-hook 'pylint-add-menu-items)
 (add-hook 'python-mode-hook 'pylint-add-key-bindings)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; hooks
 
 ;;(add-hook 'python-mode-hook #'(lambda () (autopair-mode)))
 

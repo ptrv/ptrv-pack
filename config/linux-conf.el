@@ -11,7 +11,7 @@
 (add-hook 'after-make-frame-functions 'setup-frame-hook)
 
 ;; Define a function for making desktop notifications
-(require 'dbus)
+(autoload 'dbus-call-method "dbus" nil nil)
 (defun dbus-send-desktop-notification (summary body icon timeout)
   "call notification-daemon method METHOD with ARGS over dbus"
   (dbus-call-method
@@ -42,7 +42,6 @@
 
 ;; (add-hook 'erc-text-matched-hook 'erc-global-notify)
 
-(require 'notify)
 (defun my-notify-erc (match-type nickuserhost message)
   "Notify when a message is received."
   (unless (posix-string-match "^\\** *Users on #" message)

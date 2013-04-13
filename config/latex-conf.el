@@ -19,20 +19,19 @@
 (setq TeX-source-correlate-method 'synctex)
 
 (eval-after-load "tex"
-   '(add-to-list 'TeX-command-list
-                 '("latexmk"
-                   "latexmk %s"
-                   TeX-run-TeX nil (latex-mode doctex-mode) :help "Run latexmk") t))
-(eval-after-load "tex"
-   '(add-to-list 'TeX-command-list
-                 '("latexmk clean"
-                   "latexmk -c %s"
-                   TeX-run-TeX nil (latex-mode doctex-mode) :help "Run latexmk -c") t))
-(eval-after-load "tex"
-   '(add-to-list 'TeX-command-list
-                 '("latexmk cleanall"
-                   "latexmk -C %s"
-                   TeX-run-TeX nil (latex-mode doctex-mode) :help "Run latexmk -C") t))
+  '(progn
+     (add-to-list 'TeX-command-list
+                  '("latexmk"
+                    "latexmk %s"
+                    TeX-run-TeX nil (latex-mode doctex-mode) :help "Run latexmk") t)
+     (add-to-list 'TeX-command-list
+                  '("latexmk clean"
+                    "latexmk -c %s"
+                    TeX-run-TeX nil (latex-mode doctex-mode) :help "Run latexmk -c") t)
+     (add-to-list 'TeX-command-list
+                  '("latexmk cleanall"
+                    "latexmk -C %s"
+                    TeX-run-TeX nil (latex-mode doctex-mode) :help "Run latexmk -C") t)))
 
 (defun okular-make-url () (concat
                            "file://"
