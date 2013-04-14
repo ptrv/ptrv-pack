@@ -18,7 +18,7 @@
         ("*magit-process*" :noselect t :height 15 :width 80)
         ("\\*Slime Inspector.*" :regexp t :height 30)
         ("*Ido Completions*" :noselect t :height 30)
-        ("*eshell*" :height 30)
+        ;;("*eshell*" :height 20)
         ("\\*ansi-term\\*.*" :regexp t :height 30)
         ("*shell*" :height 30)
         (".*overtone.log" :regexp t :height 30)

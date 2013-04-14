@@ -278,6 +278,7 @@
      (define-key sql-mode-map (kbd "C-c C-p i") 'sql-set-sqli-buffer)
      (define-key sql-mode-map (kbd "C-c C-p s") 'sql-switch-spatialite-sqlite)))
 
+;; http://irreal.org/blog/?p=1742
 (global-set-key (kbd "C-c t")
                 (lambda ()
                   "Bring up a full-screen eshell or restore previous config."
