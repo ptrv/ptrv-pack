@@ -37,6 +37,8 @@
 (autoload 'pcomplete/go "pcmpl-go" nil nil)
 (autoload 'pcomplete/lein "pcmpl-lein" nil nil)
 
+(require 'eshell-ac-pcomplete)
+
 ;;; Term
 (setq term-default-bg-color "black")
 (setq term-default-fg-color "white")
