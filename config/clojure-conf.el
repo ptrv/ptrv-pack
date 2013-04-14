@@ -23,7 +23,7 @@
 
 ;; (add-to-list 'flycheck-checkers 'clojure-kibit)
 
-;;(add-hook 'clojure-mode-hook 'flycheck-mode)
+(add-hook 'clojure-mode-hook (lambda () (flycheck-mode -1)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; push-mark when switching to nrepl via C-c C-z
