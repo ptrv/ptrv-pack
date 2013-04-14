@@ -57,6 +57,11 @@
     (setq files-list (s-join " " go-list-result))
     (compile (concat "go run " files-list))))
 
+(defun go-run-buffer ()
+  "go run current buffer"
+  (interactive)
+  (compile (concat "go run " buffer-file-name)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -67,10 +72,11 @@
   (hs-minor-mode 1)
   ;;(flycheck-mode-on-safe)
   (local-set-key (kbd "M-.") 'godef-jump)
-  (define-key go-mode-map (kbd "C-c C-c r") 'go-run)
+  (define-key go-mode-map (kbd "C-c C-c c") 'go-run)
+  (define-key go-mode-map (kbd "C-c C-c r") 'go-run-buffer)
   (define-key go-mode-map (kbd "C-c C-c b") 'go-build)
   (define-key go-mode-map (kbd "C-c C-c t") 'go-test)
-  (define-key go-mode-map (kbd "C-c C-c c") 'go-chk)
+  (define-key go-mode-map (kbd "C-c C-c g") 'go-chk)
   (define-key go-mode-map (kbd "C-c i") 'go-goto-imports)
   (define-key go-mode-map (kbd "C-c C-r") 'go-remove-unused-imports)
   (define-key go-mode-map "." 'go-dot-complete))
