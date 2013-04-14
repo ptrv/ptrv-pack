@@ -29,17 +29,32 @@
 (defun go-test ()
   "test project"
   (interactive)
-    (compile "go test -v"))
+  (compile "go test -v"))
 
 (defun go-chk ()
   "gocheck project"
   (interactive)
-    (compile "go test -gocheck.vv"))
+  (compile "go test -gocheck.vv"))
 
 (defun go-run ()
-  "go run current buffer"
+  "go run current package"
   (interactive)
-    (compile (concat "go run " buffer-file-name)))
+  (let (files-list
+        go-list-result
+        go-list-result-list)
+    ;; get package files as list
+    (setq go-list-result-list
+          (s-split ","
+                   (car (process-lines
+                         "go" "list" "-f"
+                         "{{range .GoFiles}}{{.}},{{end}}"))
+                   t))
+    ;; escape space in file names
+    (setq go-list-result
+          (loop for i in go-list-result-list
+                collect (s-replace " " "\\ " i)))
+    (setq files-list (s-join " " go-list-result))
+    (compile (concat "go run " files-list))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
