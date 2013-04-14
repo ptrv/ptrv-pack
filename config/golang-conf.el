@@ -12,6 +12,13 @@
                                 "/src/github.com/nsf/gocode/emacs"))
 (require 'go-autocomplete)
 
+(defun go-dot-complete ()
+  "Insert dot and complete code at point."
+  (interactive)
+  (insert ".")
+  (unless (ac-cursor-on-diable-face-p)
+    (auto-complete)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; compile fucntions
 (defun go-build ()
@@ -50,7 +57,8 @@
   (define-key go-mode-map (kbd "C-c C-c c") 'go-chk)
   (define-key go-mode-map (kbd "C-c i") 'go-goto-imports)
   (define-key go-mode-map (kbd "C-c C-r") 'go-remove-unused-imports)
-  )
+
+  (define-key go-mode-map "." 'go-dot-complete))
 
 (add-hook 'go-mode-hook 'go-mode-init)
 
