@@ -8,8 +8,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; go-lang completion
-(add-to-list 'load-path (concat (getenv "GOPATH")
-                                "/src/github.com/nsf/gocode/emacs"))
+(add-to-list 'load-path (concat
+                         (car (split-string (getenv "GOPATH") ":"))
+                         "/src/github.com/nsf/gocode/emacs"))
 (require 'go-autocomplete)
 
 (defun go-dot-complete ()
@@ -72,15 +73,15 @@
   (define-key go-mode-map (kbd "C-c C-c c") 'go-chk)
   (define-key go-mode-map (kbd "C-c i") 'go-goto-imports)
   (define-key go-mode-map (kbd "C-c C-r") 'go-remove-unused-imports)
-
   (define-key go-mode-map "." 'go-dot-complete))
 
 (add-hook 'go-mode-hook 'go-mode-init)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; flycheck support
-(add-to-list 'load-path (concat (getenv "GOPATH")
-                                "/src/github.com/ptrv/goflymake"))
+(add-to-list 'load-path (concat
+                         (car (split-string (getenv "GOPATH") ":"))
+                         "/src/github.com/ptrv/goflymake"))
 (require 'go-flycheck)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
