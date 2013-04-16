@@ -60,3 +60,6 @@
 	path = vendor/submodules/org-present
 	url = https://github.com/rlister/org-present.git
     ignore = untracked
+[submodule "vendor/submodules/emacs-clang-complete-async"]
+	path = vendor/submodules/emacs-clang-complete-async
+	url = https://github.com/Golevka/emacs-clang-complete-async.git
