@@ -1,14 +1,14 @@
 (setq c-default-style "linux")
 
-(live-add-pack-lib "clang-complete-async")
+(live-add-pack-lib "emacs-clang-complete-async")
 
 ;; Hook auto-complete into clang
 (eval-after-load "cc-mode"
   '(progn
      (require 'auto-complete-clang-async)
-     (setq clang-complete-executable
-           (concat ptrv-pack-root-dir "lib/clang-complete-async/clang-complete"))
-     (when (not (file-exists-p clang-complete-executable))
+     (setq ac-clang-complete-executable
+           (concat ptrv-pack-root-dir "lib/emacs-clang-complete-async/clang-complete"))
+     (when (not (file-exists-p ac-clang-complete-executable))
        (warn (concat "The clang-complete executable doesn't exist")))
      ;; (when (not (file-exists-p clang-complete-executable))
      ;;   (warn (concat "The clang-complete executable doesn't exist - please run "
@@ -22,9 +22,9 @@
 
 (add-hook 'c++-mode-hook
           (lambda ()
-            (setq ac-sources '())
-            (add-to-list 'ac-sources 'ac-source-clang-async)
-            (launch-completion-proc)
+            (unless (string-match ".*flycheck.*" buffer-file-name)
+              (setq ac-sources '(ac-source-clang-async))
+              (ac-clang-launch-completion-process))
             (dtrt-indent-mode 1)
             (set (make-local-variable 'before-save-hook) nil)))
 
