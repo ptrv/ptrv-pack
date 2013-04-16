@@ -20,6 +20,10 @@
   (unless (ac-cursor-on-diable-face-p)
     (auto-complete)))
 
+(setcar (nthcdr 1 ac-source-go)
+        '(candidate-face . ac-clang-candidate-face))
+(setcar (nthcdr 2 ac-source-go)
+        '(selection-face . ac-clang-selection-face))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; compile fucntions
 (defun go-build ()
